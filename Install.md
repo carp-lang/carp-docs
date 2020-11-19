@@ -1,8 +1,6 @@
 # Installation
 
-## Latest release
-
-See [https://github.com/carp-lang/Carp/releases](https://github.com/carp-lang/Carp/releases).
+Carp is mainly developed on macOS, but it also works fine on Linux. There is ongoing work on Windows support but it's not completely done yet.
 
 ## Building the Carp executable from source
 
