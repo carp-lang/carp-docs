@@ -261,6 +261,33 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#free">
+                    <h3 id="free">
+                        free
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ptr a)] ())
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>Free a pointer, deallocating the memory associated with it.
+Carp's borrow checker handles deallocation automatically for managed types. The Ptr type is unmanaged, so pointers allocated with functions such as <code>Pointer.unsafe-alloc</code> need to be deallocated manually using this function.
+Users need to manually verify that this operation is safe.</p>
+<pre><code>(let-do [x (Pointer.unsafe-alloc @&quot;c&quot;)]
+  (Pointer.set x @&quot;carp&quot;)
+  (println* (Pointer.to-value x))
+  (Pointer.free x))
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#from-long">
                     <h3 id="from-long">
                         from-long
@@ -316,6 +343,26 @@
                 </pre>
                 <p class="doc">
                     
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#set">
+                    <h3 id="set">
+                        set
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ptr a), a] ())
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>Sets the value of a pointer.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -416,6 +463,54 @@
                 <p class="doc">
                     <p>converts a pointer to a value.</p>
 <p>The user will have to ensure themselves that this is a safe operation.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#unsafe-alloc">
+                    <h3 id="unsafe-alloc">
+                        unsafe-alloc
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [a] (Ptr a))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>Allocate a new pointer to the value <code>a</code>.
+This pointer won't be managed by Carp's borrow checker and will cause memory leaks unless explicitly freed using <code>Pointer.free</code>.</p>
+<p>See <code>Unsafe.leak</code> if you want to prevent Carp's automatic memory management from deallocating a value without performing an allocation.</p>
+<pre><code>(let-do [x (Pointer.unsafe-alloc @&quot;c&quot;)]
+  (Pointer.set x @&quot;carp&quot;)
+  (println* (Pointer.to-value x))
+  (Pointer.free x))
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#unsafe-set">
+                    <h3 id="unsafe-set">
+                        unsafe-set
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ptr a), b] ())
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>Sets the value of a pointer to a value of any type.
+The user will have to ensure this operation is safe.</p>
 
                 </p>
             </div>
