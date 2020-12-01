@@ -181,22 +181,22 @@
                 </div>
             </div>
             <h1>
-                Test
+                Function
             </h1>
             <div class="module-description">
                 
             </div>
             <div class="binder">
-                <a class="anchor" href="#State">
-                    <h3 id="State">
-                        State
+                <a class="anchor" href="#Arity0">
+                    <h3 id="Arity0">
+                        Arity0
                     </h3>
                 </a>
                 <div class="description">
                     module
                 </div>
                 <p class="sig">
-                    Module
+                    
                 </p>
                 <span>
                     
@@ -206,282 +206,219 @@
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#assert-equal">
-                    <h3 id="assert-equal">
-                        assert-equal
+                <a class="anchor" href="#Arity1">
+                    <h3 id="Arity1">
+                        Arity1
                     </h3>
                 </a>
                 <div class="description">
-                    defn
+                    module
                 </div>
                 <p class="sig">
-                    (Fn [(Ref State a), b, b, (Ref c d)] State)
+                    
                 </p>
-                <pre class="args">
-                    (assert-equal state x y descr)
-                </pre>
+                <span>
+                    
+                </span>
                 <p class="doc">
-                    <p>Assert that x and y are equal. Equality needs to be implemented for their type.</p>
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity2">
+                    <h3 id="Arity2">
+                        Arity2
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity3">
+                    <h3 id="Arity3">
+                        Arity3
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity4">
+                    <h3 id="Arity4">
+                        Arity4
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity5">
+                    <h3 id="Arity5">
+                        Arity5
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity6">
+                    <h3 id="Arity6">
+                        Arity6
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity7">
+                    <h3 id="Arity7">
+                        Arity7
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity8">
+                    <h3 id="Arity8">
+                        Arity8
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#Arity9">
+                    <h3 id="Arity9">
+                        Arity9
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#unsafe-env-ptr">
+                    <h3 id="unsafe-env-ptr">
+                        unsafe-env-ptr
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ref a b)] (Ptr ()))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>returns  void pointer to the environment captured by a lambda.</p>
+<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
+<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
+does not exceed the lifetime of the function it's used on.</p>
 
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#assert-error">
-                    <h3 id="assert-error">
-                        assert-error
+                <a class="anchor" href="#unsafe-ptr">
+                    <h3 id="unsafe-ptr">
+                        unsafe-ptr
                     </h3>
                 </a>
                 <div class="description">
-                    defn
+                    template
                 </div>
                 <p class="sig">
-                    (Fn [(Ref State a), (Ref (Result b c) d), (Ref e f)] State)
+                    (Fn [(Ref a b)] (Ptr ()))
                 </p>
-                <pre class="args">
-                    (assert-error state x descr)
-                </pre>
+                <span>
+                    
+                </span>
                 <p class="doc">
-                    <p>Assert that x is an <code>Error</code>.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-exit">
-                    <h3 id="assert-exit">
-                        assert-exit
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), Int, (Fn [] () b), (Ref c d)] State)
-                </p>
-                <pre class="args">
-                    (assert-exit state exit-code f descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that function f exits with exit code exit-code.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-false">
-                    <h3 id="assert-false">
-                        assert-false
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), Bool, (Ref b c)] State)
-                </p>
-                <pre class="args">
-                    (assert-false state x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x is false.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-just">
-                    <h3 id="assert-just">
-                        assert-just
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), (Ref (Maybe b) c), (Ref d e)] State)
-                </p>
-                <pre class="args">
-                    (assert-just state x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x is a <code>Just</code>.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-not-equal">
-                    <h3 id="assert-not-equal">
-                        assert-not-equal
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), b, b, (Ref c d)] State)
-                </p>
-                <pre class="args">
-                    (assert-not-equal state x y descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x and y are not equal. Equality needs to be implemented for their type.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-nothing">
-                    <h3 id="assert-nothing">
-                        assert-nothing
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), (Ref (Maybe b) c), (Ref d e)] State)
-                </p>
-                <pre class="args">
-                    (assert-nothing state x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x is a <code>Nothing</code>.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-op">
-                    <h3 id="assert-op">
-                        assert-op
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), b, c, (Ref d e), (Fn [b, c] Bool f)] State)
-                </p>
-                <pre class="args">
-                    (assert-op state x y descr op)
-                </pre>
-                <p class="doc">
-                    <p>Assert that op returns true when given x and y.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-ref-equal">
-                    <h3 id="assert-ref-equal">
-                        assert-ref-equal
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), b, b, (Ref c d)] State)
-                </p>
-                <pre class="args">
-                    (assert-ref-equal state x y descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x and y are equal by reference. Reference equality needs to be implemented for their type.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-signal">
-                    <h3 id="assert-signal">
-                        assert-signal
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), Int, (Fn [] () b), (Ref c d)] State)
-                </p>
-                <pre class="args">
-                    (assert-signal state signal x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that function f aborts with OS signal signal.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-success">
-                    <h3 id="assert-success">
-                        assert-success
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), (Ref (Result b c) d), (Ref e f)] State)
-                </p>
-                <pre class="args">
-                    (assert-success state x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x is a <code>Success</code>.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-true">
-                    <h3 id="assert-true">
-                        assert-true
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a), Bool, (Ref b c)] State)
-                </p>
-                <pre class="args">
-                    (assert-true state x descr)
-                </pre>
-                <p class="doc">
-                    <p>Assert that x is true.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#print-test-results">
-                    <h3 id="print-test-results">
-                        print-test-results
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref State a)] ())
-                </p>
-                <pre class="args">
-                    (print-test-results state)
-                </pre>
-                <p class="doc">
-                    <p>Print test results.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#reset">
-                    <h3 id="reset">
-                        reset
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [State] State)
-                </p>
-                <pre class="args">
-                    (reset state)
-                </pre>
-                <p class="doc">
-                    <p>Reset test state.</p>
+                    <p>returns a void pointer to the function passed in.</p>
+<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
+<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
+does not exceed the lifetime of the function it's used on.</p>
 
                 </p>
             </div>
