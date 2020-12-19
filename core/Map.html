@@ -184,7 +184,11 @@
                 Map
             </h1>
             <div class="module-description">
-                
+                <p>is a hashmap datatype, i.e. a key-value structure. It allows you to put in
+pairs of keys and values and look them up by key.</p>
+<p>Implementation notes: it is a dense double-array-backed structure that
+grows and shrinks based on load.</p>
+
             </div>
             <div class="binder">
                 <a class="anchor" href="#=">
@@ -302,26 +306,6 @@
                 </pre>
                 <p class="doc">
                     <p>Create an empty map.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#create-with-len">
-                    <h3 id="create-with-len">
-                        create-with-len
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [Int] (Map a b))
-                </p>
-                <pre class="args">
-                    (create-with-len len)
-                </pre>
-                <p class="doc">
-                    <p>Create an empty map with a given number of buckets. High numbers reduce the possibility of hash collisions while increasing the memory footprint.</p>
 
                 </p>
             </div>
@@ -486,6 +470,26 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#grow">
+                    <h3 id="grow">
+                        grow
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Map a b)] (Map a b))
+                </p>
+                <pre class="args">
+                    (grow m)
+                </pre>
+                <p class="doc">
+                    <p>Grow a map <code>m</code>. Should usually be handled automatically.</p>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#init">
                     <h3 id="init">
                         init
@@ -495,7 +499,7 @@
                     template
                 </div>
                 <p class="sig">
-                    (Fn [Int, (Array (Bucket a b))] (Map a b))
+                    (Fn [Int, Int, (Array (Bucket a b))] (Map a b))
                 </p>
                 <span>
                     
@@ -546,6 +550,26 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#len">
+                    <h3 id="len">
+                        len
+                    </h3>
+                </a>
+                <div class="description">
+                    instantiate
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (Map a b) c)] (Ref Int c))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>gets the <code>len</code> property of a <code>Map</code>.</p>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#length">
                     <h3 id="length">
                         length
@@ -562,6 +586,46 @@
                 </pre>
                 <p class="doc">
                     <p>Get the length of the map m.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#max-load">
+                    <h3 id="max-load">
+                        max-load
+                    </h3>
+                </a>
+                <div class="description">
+                    def
+                </div>
+                <p class="sig">
+                    Int
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>The load a map needs to reach in order to grow.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#min-load">
+                    <h3 id="min-load">
+                        min-load
+                    </h3>
+                </a>
+                <div class="description">
+                    def
+                </div>
+                <p class="sig">
+                    Int
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>The load a map needs to reach in order to shrink.</p>
 
                 </p>
             </div>
@@ -621,7 +685,7 @@
                     (put m k v)
                 </pre>
                 <p class="doc">
-                    <p>Put a a value v into map m, using the key k.</p>
+                    <p>Put a value v into map m, using the key k.</p>
 
                 </p>
             </div>
@@ -641,7 +705,7 @@
                     (put! m k v)
                 </pre>
                 <p class="doc">
-                    <p>Put a a value v into map m, using the key k, in place.</p>
+                    <p>Put a value v into map m, using the key k, in place.</p>
 
                 </p>
             </div>
@@ -662,6 +726,26 @@
                 </pre>
                 <p class="doc">
                     <p>Remove the value under the key k from the map m.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#resize">
+                    <h3 id="resize">
+                        resize
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Map a b), Int] (Map a b))
+                </p>
+                <pre class="args">
+                    (resize m s)
+                </pre>
+                <p class="doc">
+                    <p>Resize a map <code>m</code> to size <code>s</code>.</p>
 
                 </p>
             </div>
@@ -726,6 +810,46 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#set-len">
+                    <h3 id="set-len">
+                        set-len
+                    </h3>
+                </a>
+                <div class="description">
+                    instantiate
+                </div>
+                <p class="sig">
+                    (Fn [(Map a b), Int] (Map a b))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>sets the <code>len</code> property of a <code>Map</code>.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#set-len!">
+                    <h3 id="set-len!">
+                        set-len!
+                    </h3>
+                </a>
+                <div class="description">
+                    instantiate
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (Map a b) c), Int] ())
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>sets the <code>len</code> property of a <code>Map</code> in place.</p>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#set-n-buckets">
                     <h3 id="set-n-buckets">
                         set-n-buckets
@@ -762,6 +886,26 @@
                 </span>
                 <p class="doc">
                     <p>sets the <code>n-buckets</code> property of a <code>Map</code> in place.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#shrink">
+                    <h3 id="shrink">
+                        shrink
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Map a b)] (Map a b))
+                </p>
+                <pre class="args">
+                    (shrink m)
+                </pre>
+                <p class="doc">
+                    <p>Shrink a map <code>m</code>. Should usually be handled automatically.</p>
 
                 </p>
             </div>
@@ -842,6 +986,26 @@
                 </span>
                 <p class="doc">
                     <p>updates the <code>buckets</code> property of a <code>Map</code> using a function <code>f</code>.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#update-len">
+                    <h3 id="update-len">
+                        update-len
+                    </h3>
+                </a>
+                <div class="description">
+                    instantiate
+                </div>
+                <p class="sig">
+                    (Fn [(Map a b), (Ref (Fn [Int] Int c) d)] (Map a b))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>updates the <code>len</code> property of a <code>Map</code> using a function <code>f</code>.</p>
 
                 </p>
             </div>
