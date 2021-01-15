@@ -186,49 +186,123 @@
                 </div>
             </div>
             <h1>
-                Bench
+                Derive
             </h1>
             <div class="module-description">
-                
+                <p>is a mechanism for deriving interfaces automatically.</p>
+<p>Please reference <a href="https://github.com/carp-lang/Carp/blob/master/docs/Derive.md">the documentation</a>
+for more information.</p>
+
             </div>
             <div class="binder">
-                <a class="anchor" href="#bench">
-                    <h3 id="bench">
-                        bench
+                <a class="anchor" href="#derivable?">
+                    <h3 id="derivable?">
+                        derivable?
                     </h3>
                 </a>
                 <div class="description">
-                    defn
+                    dynamic
                 </div>
                 <p class="sig">
-                    (Fn [(Fn [] a b)] ())
+                    Dynamic
                 </p>
                 <pre class="args">
-                    (bench f)
+                    (derivable? f)
                 </pre>
                 <p class="doc">
-                    <p>benchmarks the function <code>f</code> and prints the results to <code>stdout</code>.</p>
+                    <p>checks whether a quoted interface name <code>f</code> is currently
+derivable.</p>
 
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#set-min-runs!">
-                    <h3 id="set-min-runs!">
-                        set-min-runs!
+                <a class="anchor" href="#derivables">
+                    <h3 id="derivables">
+                        derivables
                     </h3>
                 </a>
                 <div class="description">
-                    defn
+                    dynamic
                 </div>
                 <p class="sig">
-                    (Fn [Int] ())
+                    Dynamic
                 </p>
                 <pre class="args">
-                    (set-min-runs! n)
+                    (derivables)
                 </pre>
                 <p class="doc">
-                    <p>sets the minimum number of runs to <code>n</code>.</p>
-<p>If your functions takes a large amount of time, experimenting with this might make sense. The default value is <code>50</code>, which means that your function runs at least <code>50</code> times before even hitting a timeout.</p>
+                    <p>returns the list of currently derivable interfaces.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#derive">
+                    <h3 id="derive">
+                        derive
+                    </h3>
+                </a>
+                <div class="description">
+                    macro
+                </div>
+                <p class="sig">
+                    Macro
+                </p>
+                <pre class="args">
+                    (derive t f :rest override)
+                </pre>
+                <p class="doc">
+                    <p>derives an interface function <code>f</code> for a type <code>t</code>.</p>
+<p>Optionally, it also takes an argument <code>overrride</code> that overrides the name of
+the generated function to avoid collisions.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#make-deriver">
+                    <h3 id="make-deriver">
+                        make-deriver
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (make-deriver f args body)
+                </pre>
+                <p class="doc">
+                    <p>is a mechanism for providing your own deriver by providing
+the interface name <code>f</code>, the arguments it takes <code>args</code>, and a function that can
+generate a body when given a type <code>body</code>.</p>
+<p>Example:</p>
+<pre><code>(make-deriver 'zero []
+  (fn [t]
+    (cons 'init
+      (map (fn [_] '(zero)) (members t)))))
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#make-update-deriver">
+                    <h3 id="make-update-deriver">
+                        make-update-deriver
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (make-update-deriver interface)
+                </pre>
+                <p class="doc">
+                    <p>is a convenience function for creating a deriver
+for functions that you could pass into <code>update-&lt;member&gt;</code> style functions.</p>
 
                 </p>
             </div>
