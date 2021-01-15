@@ -191,218 +191,94 @@
                 </div>
             </div>
             <h1>
-                Bool
+                Quasiquote
             </h1>
             <div class="module-description">
-                
+                <p>is a mechanism for quotation with code interspersed. See
+the documentation of <a href="#quasiquote"><code>quasiquote</code></a> or the <a href="https://github.com/carp-lang/Carp/blob/master/docs/Quasiquotation.md">high level
+overview</a>
+for details.</p>
+
             </div>
             <div class="binder">
-                <a class="anchor" href="#=">
-                    <h3 id="=">
-                        =
+                <a class="anchor" href="#quasiquote">
+                    <h3 id="quasiquote">
+                        quasiquote
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    macro
                 </div>
                 <p class="sig">
-                    (Fn [Bool, Bool] Bool)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#and">
-                    <h3 id="and">
-                        and
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [Bool, Bool] Bool)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#blit">
-                    <h3 id="blit">
-                        blit
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [Bool] Bool)
+                    Macro
                 </p>
                 <pre class="args">
-                    (blit x)
+                    (quasiquote arg)
                 </pre>
                 <p class="doc">
-                    
+                    <p>is a quotation that may have expressions inside it in the
+form of <a href="#unquote-splicing"><code>unquote](#unquote) and [</code>unquote-splicing`</a>.</p>
+<p>Example:</p>
+<pre><code>(defdynamic x 1)
+(defdynamic y '(2 3 4))
+
+(quasiquote (1 (unquote x) (unquote-splicing y))) ; =&gt; (1 1 2 3 4)
+</code></pre>
+
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#copy">
-                    <h3 id="copy">
-                        copy
+                <a class="anchor" href="#unquote">
+                    <h3 id="unquote">
+                        unquote
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    macro
                 </div>
                 <p class="sig">
-                    (Fn [(Ref Bool a)] Bool)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#format">
-                    <h3 id="format">
-                        format
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [(Ref String a), Bool] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#hash">
-                    <h3 id="hash">
-                        hash
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref Bool a)] Int)
+                    Macro
                 </p>
                 <pre class="args">
-                    (hash k)
+                    (unquote arg)
                 </pre>
                 <p class="doc">
-                    
+                    <p>unquotes (i.e. evaluates) an expression <code>arg</code> inside a
+quasiquote. It will generate an error message when used outside a
+<code>quasiquote</code> form.</p>
+<p>Example:</p>
+<pre><code>(defdynamic x 2)
+
+(quasiquote (+ (unquote x) 1)) ; =&gt; (+ 2 1)
+</code></pre>
+
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#not">
-                    <h3 id="not">
-                        not
+                <a class="anchor" href="#unquote-splicing">
+                    <h3 id="unquote-splicing">
+                        unquote-splicing
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    macro
                 </div>
                 <p class="sig">
-                    (Fn [Bool] Bool)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#or">
-                    <h3 id="or">
-                        or
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [Bool, Bool] Bool)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#prn">
-                    <h3 id="prn">
-                        prn
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [Bool] String)
+                    Macro
                 </p>
                 <pre class="args">
-                    (prn x)
+                    (unquote-splicing arg)
                 </pre>
                 <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#str">
-                    <h3 id="str">
-                        str
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [Bool] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#zero">
-                    <h3 id="zero">
-                        zero
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [] Bool)
-                </p>
-                <pre class="args">
-                    (zero)
-                </pre>
-                <p class="doc">
-                    
+                    <p>unquotes (i.e. evaluates) an expression <code>arg</code> inside a
+quasiquote and splices it in, i.e. flattens the expression. It will
+generate an error message when used outside a <code>quasiquote</code> form.</p>
+<p>Example:</p>
+<pre><code>(defdynamic x '(1 2)
+
+(quasiquote (+ (unquote-splicing x))) ; =&gt; (+ 1 2)
+</code></pre>
+
                 </p>
             </div>
         </div>
