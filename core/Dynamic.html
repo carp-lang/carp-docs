@@ -2555,6 +2555,60 @@ applications.</p>
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#postwalk">
+                    <h3 id="postwalk">
+                        postwalk
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (postwalk f form)
+                </pre>
+                <p class="doc">
+                    <p>Performs a depth-first, post-order traversal of <code>form</code> and
+calls <code>f</code> on each subform, collecting the result.</p>
+<p>Example:</p>
+<pre><code>; note: this could be achieved using `walk-replace` as well
+(postwalk (fn [x]
+            (cond
+              (= x '+) '*
+              (= x '-) '/
+              x))
+          '(+ 1 (- 2 3))) ; =&gt; (* 1 (/ 2 3))
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#prewalk">
+                    <h3 id="prewalk">
+                        prewalk
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (prewalk f form)
+                </pre>
+                <p class="doc">
+                    <p>behaves like <a href="#postwalk"><code>postwalk</code></a>, but does pre-order
+traversal.</p>
+<p>Example:</p>
+<pre><code>(prewalk (fn [x] (if (number? x) (* x 4) x)) '(+ 1 (- 2 3))) ; =&gt; (+ 4 (- 8 12))
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#project">
                     <h3 id="project">
                         project
@@ -3098,6 +3152,58 @@ Collects results in the structure given by <code>acc</code>.</p>
                     <p>uses a module, i.e. imports the symbols inside that module into the current module.</p>
 <p>Example Usage:</p>
 <pre><code>(use MyModule)
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#walk">
+                    <h3 id="walk">
+                        walk
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (walk inner outer form)
+                </pre>
+                <p class="doc">
+                    <p>traverses <code>form</code>, an arbitrary data structure, using the functions
+<code>inner</code> and <code>outer</code>. It will apply <code>inner</code> to each element of <code>form</code>, building
+up a data structure of the same type, then applies <code>outer</code> to the result. It
+recognizes arrays and lists. Other data structures will just be passed to
+<code>outer</code>.</p>
+<p>Example:</p>
+<pre><code>(walk car reverse [[1 2] [3 4] [5 6]]) ; =&gt; [5 3 1]
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#walk-replace">
+                    <h3 id="walk-replace">
+                        walk-replace
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (walk-replace pairs form)
+                </pre>
+                <p class="doc">
+                    <p>Performs a depth-first, pre-order traversal of <code>form</code> and
+finds a matching replacement for each subform in the replacement pairs <code>pairs</code>,
+if applicable, collecting the result.</p>
+<p>Example:</p>
+<pre><code>(walk-replace '((+ *) (- /)) '(+ 1 (- 2 3))) ; =&gt; (* 1 (/ 2 3))
 </code></pre>
 
                 </p>
