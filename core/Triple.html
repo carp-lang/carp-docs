@@ -225,10 +225,10 @@
                     defn
                 </div>
                 <p class="sig">
-                    (Fn [(Triple a b c), (Triple a b c)] Bool)
+                    (Fn [(Ref (Triple a b c) d), (Ref (Triple a b c) d)] Bool)
                 </p>
                 <pre class="args">
-                    (= t1 t2)
+                    (= o1 o2)
                 </pre>
                 <p class="doc">
                     
@@ -649,8 +649,7 @@
                     (zero)
                 </pre>
                 <p class="doc">
-                    <p>initializes a <code>Triple</code> by calling <code>zero</code> for all its members. <code>zero</code> must be defined for all member types.</p>
-
+                    
                 </p>
             </div>
         </div>
