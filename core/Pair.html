@@ -225,10 +225,10 @@
                     defn
                 </div>
                 <p class="sig">
-                    (Fn [(Ref (Pair a b) c), (Ref (Pair a b) c)] Bool)
+                    (Fn [(Pair a b), (Pair a b)] Bool)
                 </p>
                 <pre class="args">
-                    (= o1 o2)
+                    (= t1 t2)
                 </pre>
                 <p class="doc">
                     
@@ -588,7 +588,8 @@
                     (zero)
                 </pre>
                 <p class="doc">
-                    
+                    <p>initializes a <code>Pair</code> by calling <code>zero</code> for all its members. <code>zero</code> must be defined for all member types.</p>
+
                 </p>
             </div>
         </div>
