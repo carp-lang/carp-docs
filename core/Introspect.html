@@ -201,35 +201,17 @@
                 </div>
             </div>
             <h1>
-                Debug
+                Introspect
             </h1>
             <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-balanced">
-                    <h3 id="assert-balanced">
-                        assert-balanced
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
-                </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (assert-balanced form)
-                </pre>
-                <p class="doc">
-                    <p>raises an error if the memory balance (number of <code>alloc</code>s - number of <code>free</code>s) isn't <code>0</code>. Requires the flag <code>--log-memory</code> to be passed durng compilation.</p>
+                <p>Dynamic functions that return information about the s-expressions associated
+to a binding.</p>
 
-                </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#check-allocations">
-                    <h3 id="check-allocations">
-                        check-allocations
+                <a class="anchor" href="#arity">
+                    <h3 id="arity">
+                        arity
                     </h3>
                 </a>
                 <div class="description">
@@ -239,115 +221,25 @@
                     Dynamic
                 </p>
                 <pre class="args">
-                    (check-allocations)
+                    (arity binding)
                 </pre>
                 <p class="doc">
-                    <p>will check the allocations made by the program
-immediately, raising a <code>SIGABRT</code> if it fails.</p>
+                    <p>What's the arity of this binding?</p>
+<pre><code>- When `binding` is a function, returns the number of arguments.
+- When `binding` is a command, returns the number of arguments.
+- When `binding` is a primitive, returns the number of arguments.
+- When `binding` is an interface, returns the number of arguments.
+- When `binding` is a struct, returns the number of fields.
+- When `binding` is a sumtype, returns a list of the number of type
+  arguments of each constructor.
+</code></pre>
 
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#leak-array">
-                    <h3 id="leak-array">
-                        leak-array
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [a] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>leaks some memory. This function is useful for testing tools that detect leaks.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#log-memory-balance!">
-                    <h3 id="log-memory-balance!">
-                        log-memory-balance!
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [Bool] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-balance">
-                    <h3 id="memory-balance">
-                        memory-balance
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [] Long)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-logged">
-                    <h3 id="memory-logged">
-                        memory-logged
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
-                </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (memory-logged form)
-                </pre>
-                <p class="doc">
-                    <p>logs all calls to memory allocation within the form. Requires the flag <code>--log-memory</code> to be passed during compilation.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#reset-memory-balance!">
-                    <h3 id="reset-memory-balance!">
-                        reset-memory-balance!
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#sanitize-addresses">
-                    <h3 id="sanitize-addresses">
-                        sanitize-addresses
+                <a class="anchor" href="#command?">
+                    <h3 id="command?">
+                        command?
                     </h3>
                 </a>
                 <div class="description">
@@ -357,18 +249,77 @@ immediately, raising a <code>SIGABRT</code> if it fails.</p>
                     Dynamic
                 </p>
                 <pre class="args">
-                    (sanitize-addresses)
+                    (command? binding)
                 </pre>
                 <p class="doc">
-                    <p>instructs the compiler to sanitize addresses.</p>
-<p>This might not work on all compilers, but reasonably new versions of GCC and Clang are supported.</p>
+                    <p>Is this binding a command?</p>
 
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#trace">
-                    <h3 id="trace">
-                        trace
+                <a class="anchor" href="#dynamic?">
+                    <h3 id="dynamic?">
+                        dynamic?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (dynamic? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a dynamic binding?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#external?">
+                    <h3 id="external?">
+                        external?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (external? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding external?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#function?">
+                    <h3 id="function?">
+                        function?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (function? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a function?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#implements?">
+                    <h3 id="implements?">
+                        implements?
                     </h3>
                 </a>
                 <div class="description">
@@ -378,10 +329,212 @@ immediately, raising a <code>SIGABRT</code> if it fails.</p>
                     Macro
                 </p>
                 <pre class="args">
-                    (trace x)
+                    (implements? interface function)
                 </pre>
                 <p class="doc">
-                    <p>prints the value of an expression to <code>stdout</code>, then returns its value.</p>
+                    <p>Does <code>function</code> implement <code>interface</code>?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#interface?">
+                    <h3 id="interface?">
+                        interface?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (interface? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding an interface?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#macro?">
+                    <h3 id="macro?">
+                        macro?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (macro? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a macro?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#module?">
+                    <h3 id="module?">
+                        module?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (module? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a module?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#primitive?">
+                    <h3 id="primitive?">
+                        primitive?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (primitive? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a primitive?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#struct?">
+                    <h3 id="struct?">
+                        struct?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (struct? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a struct?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#sumtype?">
+                    <h3 id="sumtype?">
+                        sumtype?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (sumtype? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a sumtype?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#type?">
+                    <h3 id="type?">
+                        type?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (type? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a type?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#variable?">
+                    <h3 id="variable?">
+                        variable?
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (variable? binding)
+                </pre>
+                <p class="doc">
+                    <p>Is this binding a variable?</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#with-copy">
+                    <h3 id="with-copy">
+                        with-copy
+                    </h3>
+                </a>
+                <div class="description">
+                    macro
+                </div>
+                <p class="sig">
+                    Macro
+                </p>
+                <pre class="args">
+                    (with-copy function arg)
+                </pre>
+                <p class="doc">
+                    <p>Returns a reference to an anonymous 'proxied' variant of <code>function</code> in
+which the argument in position <code>arg</code> (indexed from 0) is <em>copied</em> from a
+reference before being passed to <code>function</code>:</p>
+<pre><code>;; Array.reduce expects a function that takes a *ref* in its second argument:
+;;   (Fn [a (Ref b c)] ...)
+;; so we can't use a function like `+` directly; enter proxy
+(reduce (with-copy + 2) 0 &amp;[1 2 3])
+=&gt; 6
+;; compare this with an inline anonymous function that achieves the same thing:
+(reduce &amp;(fn [x y] (+ x @y)) 0 &amp;[1 2 3]) === (reduce (with-copy + 2) 0 &amp;[1 2 3])
+</code></pre>
+<p>This is useful when using higher-order functions that operate over structures that
+return <em>references</em> to their inhabitants, such as arrays or structs. It allows
+you to use a function over values without writing a custom anonymous function
+to handle copying.</p>
+<p>Furthermore, one can define bespoke variants for working with particular
+higher-order functions. For instace, <code>reduce</code> always expacts a reference in the
+second positon:</p>
+<pre><code>(defmacro reducer [function]
+  (eval (list with-copy function 2)))
+(reduce (reducer +) 0 &amp;[1 2 3])
+=&gt; 6
+</code></pre>
 
                 </p>
             </div>

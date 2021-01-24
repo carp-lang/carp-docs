@@ -201,187 +201,87 @@
                 </div>
             </div>
             <h1>
-                Debug
+                Unit
             </h1>
             <div class="module-description">
                 
             </div>
             <div class="binder">
-                <a class="anchor" href="#assert-balanced">
-                    <h3 id="assert-balanced">
-                        assert-balanced
+                <a class="anchor" href="#=">
+                    <h3 id="=">
+                        =
                     </h3>
                 </a>
                 <div class="description">
-                    macro
+                    defn
                 </div>
                 <p class="sig">
-                    Macro
+                    (Fn [(), ()] Bool)
                 </p>
                 <pre class="args">
-                    (assert-balanced form)
+                    (= unit-a unit-b)
                 </pre>
                 <p class="doc">
-                    <p>raises an error if the memory balance (number of <code>alloc</code>s - number of <code>free</code>s) isn't <code>0</code>. Requires the flag <code>--log-memory</code> to be passed durng compilation.</p>
-
+                    
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#check-allocations">
-                    <h3 id="check-allocations">
-                        check-allocations
+                <a class="anchor" href="#copy">
+                    <h3 id="copy">
+                        copy
                     </h3>
                 </a>
                 <div class="description">
-                    dynamic
+                    defn
                 </div>
                 <p class="sig">
-                    Dynamic
+                    (Fn [(Ref () a)] ())
                 </p>
                 <pre class="args">
-                    (check-allocations)
+                    (copy unit-ref)
                 </pre>
                 <p class="doc">
-                    <p>will check the allocations made by the program
-immediately, raising a <code>SIGABRT</code> if it fails.</p>
+                    <p>'copies' a reference to a Unit value.
+This function just returns a fresh value of type Unit.</p>
 
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#leak-array">
-                    <h3 id="leak-array">
-                        leak-array
+                <a class="anchor" href="#prn">
+                    <h3 id="prn">
+                        prn
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    defn
                 </div>
                 <p class="sig">
-                    (Fn [a] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>leaks some memory. This function is useful for testing tools that detect leaks.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#log-memory-balance!">
-                    <h3 id="log-memory-balance!">
-                        log-memory-balance!
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [Bool] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-balance">
-                    <h3 id="memory-balance">
-                        memory-balance
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    (Fn [] Long)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-logged">
-                    <h3 id="memory-logged">
-                        memory-logged
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
-                </div>
-                <p class="sig">
-                    Macro
+                    (Fn [()] String)
                 </p>
                 <pre class="args">
-                    (memory-logged form)
+                    (prn unit)
                 </pre>
                 <p class="doc">
-                    <p>logs all calls to memory allocation within the form. Requires the flag <code>--log-memory</code> to be passed during compilation.</p>
-
+                    
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#reset-memory-balance!">
-                    <h3 id="reset-memory-balance!">
-                        reset-memory-balance!
+                <a class="anchor" href="#zero">
+                    <h3 id="zero">
+                        zero
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    defn
                 </div>
                 <p class="sig">
                     (Fn [] ())
                 </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#sanitize-addresses">
-                    <h3 id="sanitize-addresses">
-                        sanitize-addresses
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
-                </div>
-                <p class="sig">
-                    Dynamic
-                </p>
                 <pre class="args">
-                    (sanitize-addresses)
+                    (zero)
                 </pre>
                 <p class="doc">
-                    <p>instructs the compiler to sanitize addresses.</p>
-<p>This might not work on all compilers, but reasonably new versions of GCC and Clang are supported.</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#trace">
-                    <h3 id="trace">
-                        trace
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
-                </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (trace x)
-                </pre>
-                <p class="doc">
-                    <p>prints the value of an expression to <code>stdout</code>, then returns its value.</p>
+                    <p>Returns a fresh value of type Unit (this value performs no side-effects).</p>
 
                 </p>
             </div>

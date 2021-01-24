@@ -88,6 +88,16 @@
                             </a>
                         </li>
                         <li>
+                            <a href="Introspect.html">
+                                Introspect
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Unit.html">
+                                Unit
+                            </a>
+                        </li>
+                        <li>
                             <a href="IO.html">
                                 IO
                             </a>
@@ -225,10 +235,10 @@
                     defn
                 </div>
                 <p class="sig">
-                    (Fn [(Pair a b), (Pair a b)] Bool)
+                    (Fn [(Ref (Pair a b) c), (Ref (Pair a b) c)] Bool)
                 </p>
                 <pre class="args">
-                    (= t1 t2)
+                    (= o1 o2)
                 </pre>
                 <p class="doc">
                     
@@ -588,8 +598,7 @@
                     (zero)
                 </pre>
                 <p class="doc">
-                    <p>initializes a <code>Pair</code> by calling <code>zero</code> for all its members. <code>zero</code> must be defined for all member types.</p>
-
+                    
                 </p>
             </div>
         </div>
