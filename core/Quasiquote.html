@@ -223,16 +223,18 @@ for details.</p>
                     Macro
                 </p>
                 <pre class="args">
-                    (quasiquote arg)
+                    (quasiquote form)
                 </pre>
                 <p class="doc">
                     <p>is a quotation that may have expressions inside it in the
-form of <a href="#unquote-splicing"><code>unquote](#unquote) and [</code>unquote-splicing`</a>.</p>
+form of <a href="#unquote"><code>unquote</code></a> and <a href="#unquote-splicing"><code>unquote-splicing</code></a>.</p>
 <p>Example:</p>
 <pre><code>(defdynamic x 1)
 (defdynamic y '(2 3 4))
 
 (quasiquote (1 (unquote x) (unquote-splicing y))) ; =&gt; (1 1 2 3 4)
+; using the reader macros
+`(1 %x %@y)) ; =&gt; (1 1 2 3 4)
 </code></pre>
 
                 </p>
@@ -250,10 +252,10 @@ form of <a href="#unquote-splicing"><code>unquote](#unquote) and [</code>unquote
                     Macro
                 </p>
                 <pre class="args">
-                    (unquote arg)
+                    (unquote form)
                 </pre>
                 <p class="doc">
-                    <p>unquotes (i.e. evaluates) an expression <code>arg</code> inside a
+                    <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
 quasiquote. It will generate an error message when used outside a
 <code>quasiquote</code> form.</p>
 <p>Example:</p>
@@ -277,10 +279,10 @@ quasiquote. It will generate an error message when used outside a
                     Macro
                 </p>
                 <pre class="args">
-                    (unquote-splicing arg)
+                    (unquote-splicing form)
                 </pre>
                 <p class="doc">
-                    <p>unquotes (i.e. evaluates) an expression <code>arg</code> inside a
+                    <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
 quasiquote and splices it in, i.e. flattens the expression. It will
 generate an error message when used outside a <code>quasiquote</code> form.</p>
 <p>Example:</p>
