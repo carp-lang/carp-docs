@@ -388,6 +388,25 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#List">
+                    <h3 id="List">
+                        List
+                    </h3>
+                </a>
+                <div class="description">
+                    module
+                </div>
+                <p class="sig">
+                    Module
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#Path">
                     <h3 id="Path">
                         Path
@@ -612,20 +631,16 @@ in the list as an argument to the function.</p>
                     </h3>
                 </a>
                 <div class="description">
-                    command
+                    dynamic
                 </div>
                 <p class="sig">
                     Dynamic
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (array? s)
+                </pre>
                 <p class="doc">
-                    <p>checks whether the arguments is an array.</p>
-<p>Example Usage:</p>
-<pre><code>(array? []) ; =&gt; true
-</code></pre>
-
+                    
                 </p>
             </div>
             <div class="binder">
@@ -1721,6 +1736,29 @@ and then to the following argument.</p>
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#dynamic-type">
+                    <h3 id="dynamic-type">
+                        dynamic-type
+                    </h3>
+                </a>
+                <div class="description">
+                    command
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>Gets the dynamic type as a string.</p>
+<p>Example Usage:</p>
+<pre><code>(dynamic-type '()) ; =&gt; &quot;list&quot;
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#empty">
                     <h3 id="empty">
                         empty
@@ -2229,20 +2267,16 @@ predicate <code>p</code>.</p>
                     </h3>
                 </a>
                 <div class="description">
-                    command
+                    dynamic
                 </div>
                 <p class="sig">
                     Dynamic
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (list? s)
+                </pre>
                 <p class="doc">
-                    <p>checks whether the argument is a list.</p>
-<p>Example Usage:</p>
-<pre><code>(list? '()) ; =&gt; true
-</code></pre>
-
+                    
                 </p>
             </div>
             <div class="binder">
@@ -2563,20 +2597,16 @@ applications.</p>
                     </h3>
                 </a>
                 <div class="description">
-                    command
+                    dynamic
                 </div>
                 <p class="sig">
                     Dynamic
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (number? s)
+                </pre>
                 <p class="doc">
-                    <p>checks whether the argument is a number.</p>
-<p>Example Usage:</p>
-<pre><code>(number? 1) ; =&gt; true
-</code></pre>
-
+                    
                 </p>
             </div>
             <div class="binder">
@@ -3071,20 +3101,16 @@ value through successive applications of <code>f</code>.</p>
                     </h3>
                 </a>
                 <div class="description">
-                    command
+                    dynamic
                 </div>
                 <p class="sig">
                     Dynamic
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (string? s)
+                </pre>
                 <p class="doc">
-                    <p>checks whether the argument is a string.</p>
-<p>Example Usage:</p>
-<pre><code>(string? &quot;hi&quot;) ; =&gt; true
-</code></pre>
-
+                    
                 </p>
             </div>
             <div class="binder">
@@ -3094,20 +3120,16 @@ value through successive applications of <code>f</code>.</p>
                     </h3>
                 </a>
                 <div class="description">
-                    command
+                    dynamic
                 </div>
                 <p class="sig">
                     Dynamic
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (symbol? s)
+                </pre>
                 <p class="doc">
-                    <p>checks whether the argument is a symbol.</p>
-<p>Example Usage:</p>
-<pre><code>(symbol? 'x) ; =&gt; true
-</code></pre>
-
+                    
                 </p>
             </div>
             <div class="binder">
