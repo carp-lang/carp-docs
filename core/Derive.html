@@ -295,7 +295,7 @@ generate a body when given a type <code>body</code>.</p>
 <pre><code>(make-deriver 'zero []
   (fn [t]
     (cons 'init
-      (map (fn [_] '(zero)) (members t)))))
+      (map (fn [_] '(zero)) (eval `(members %t)))))
 </code></pre>
 
                 </p>
