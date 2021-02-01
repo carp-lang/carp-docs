@@ -209,6 +209,36 @@ to a binding.</p>
 
             </div>
             <div class="binder">
+                <a class="anchor" href="#arguments">
+                    <h3 id="arguments">
+                        arguments
+                    </h3>
+                </a>
+                <div class="description">
+                    dynamic
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <pre class="args">
+                    (arguments binding)
+                </pre>
+                <p class="doc">
+                    <p>What are the arguments to this binding?</p>
+<ul>
+<li>When <code>binding</code> is a function, returns the argument array.</li>
+<li>When <code>binding</code> is a command, returns the argument array.</li>
+<li>When <code>binding</code> is a primitive, returns the argument array.</li>
+<li>When <code>binding</code> is an interface, returns the argument array.</li>
+<li>When <code>binding</code> is a struct, returns the fields.</li>
+<li>When <code>binding</code> is a sumtype, returns a list of the type arguments of each
+constructor.</li>
+<li>Otherwise it returns an empty list.</li>
+</ul>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#arity">
                     <h3 id="arity">
                         arity
@@ -225,14 +255,16 @@ to a binding.</p>
                 </pre>
                 <p class="doc">
                     <p>What's the arity of this binding?</p>
-<pre><code>- When `binding` is a function, returns the number of arguments.
-- When `binding` is a command, returns the number of arguments.
-- When `binding` is a primitive, returns the number of arguments.
-- When `binding` is an interface, returns the number of arguments.
-- When `binding` is a struct, returns the number of fields.
-- When `binding` is a sumtype, returns a list of the number of type
-  arguments of each constructor.
-</code></pre>
+<ul>
+<li>When <code>binding</code> is a function, returns the number of arguments.</li>
+<li>When <code>binding</code> is a command, returns the number of arguments.</li>
+<li>When <code>binding</code> is a primitive, returns the number of arguments.</li>
+<li>When <code>binding</code> is an interface, returns the number of arguments.</li>
+<li>When <code>binding</code> is a struct, returns the number of fields.</li>
+<li>When <code>binding</code> is a sumtype, returns a list of the number of type
+arguments of each constructor.</li>
+<li>Otherwise it returns 0.</li>
+</ul>
 
                 </p>
             </div>
