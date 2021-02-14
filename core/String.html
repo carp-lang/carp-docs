@@ -435,7 +435,8 @@
                     (concat strings)
                 </pre>
                 <p class="doc">
-                    
+                    <p>Returns a new string which is the concatenation of the provided <code>strings</code>.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -456,6 +457,25 @@
                 <p class="doc">
                     <p>Checks whether the string <code>s</code> contains the character <code>c</code>.</p>
 
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#copy">
+                    <h3 id="copy">
+                        copy
+                    </h3>
+                </a>
+                <div class="description">
+                    external
+                </div>
+                <p class="sig">
+                    (Fn [(Ref String a)] String)
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
                 </p>
             </div>
             <div class="binder">
@@ -489,6 +509,25 @@
                 </div>
                 <p class="sig">
                     (Fn [(Ref String a)] (Ptr CChar))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#delete">
+                    <h3 id="delete">
+                        delete
+                    </h3>
+                </a>
+                <div class="description">
+                    external
+                </div>
+                <p class="sig">
+                    (Fn [String] ())
                 </p>
                 <span>
                     
@@ -648,7 +687,8 @@
                     (head s)
                 </pre>
                 <p class="doc">
-                    
+                    <p>Returns the character at start of string.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -904,7 +944,8 @@
                     (prefix s a)
                 </pre>
                 <p class="doc">
-                    
+                    <p>Return the first <code>a</code> characters of the string <code>s</code>.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -1001,7 +1042,8 @@
                     (slice s a b)
                 </pre>
                 <p class="doc">
-                    
+                    <p>Return part of a string, beginning at index <code>a</code> and ending at index <code>b</code>.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -1117,7 +1159,8 @@
                     (suffix s b)
                 </pre>
                 <p class="doc">
-                    
+                    <p>Returns the suffix string starting at the <code>b</code>th character.</p>
+
                 </p>
             </div>
             <div class="binder">

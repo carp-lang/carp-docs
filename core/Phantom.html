@@ -204,17 +204,7 @@
                 Phantom
             </h1>
             <div class="module-description">
-                <p>is a type without inhabitants and a free type variable, which is
-a fancy way of saying that it has no runtime representation.</p>
-<p>When trying to mark types programmatically using something like <code>the</code> but
-without the need for a special form, <code>Phantom</code> comes in handy.</p>
-<p>Example:</p>
-<pre><code>(defn test [a]
-  (Phantom.ensure a (the (Phantom Int) (Phantom.init))))
-
-(println* (test 123l)) ; this will not compile
-</code></pre>
-
+                
             </div>
             <div class="binder">
                 <a class="anchor" href="#copy">
