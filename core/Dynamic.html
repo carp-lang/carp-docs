@@ -1372,25 +1372,6 @@ in the list as an argument to the function.</p>
                 </p>
             </div>
             <div class="binder">
-                <a class="anchor" href="#collect-into-internal">
-                    <h3 id="collect-into-internal">
-                        collect-into-internal
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
-                </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (collect-into-internal xs acc f)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
                 <a class="anchor" href="#column">
                     <h3 id="column">
                         column
@@ -1566,7 +1547,14 @@ and then to the following argument.</p>
                     (cxr x pair)
                 </pre>
                 <p class="doc">
-                    
+                    <p>takes a specification of a traversal in <code>a</code> (head) and <code>d</code> (tail)
+symbols and a list <code>pair</code> to traverse.</p>
+<p>Example:</p>
+<pre><code>(cxr '(1 a 1 d) '(1 2 3)) ; =&gt; 2
+
+(cxr '(1 a 1 d 1 a 4 d) '(1 2 3 4 (5 6 7))) ; =&gt; 6
+</code></pre>
+
                 </p>
             </div>
             <div class="binder">
@@ -1585,7 +1573,8 @@ and then to the following argument.</p>
                     (dec x)
                 </pre>
                 <p class="doc">
-                    
+                    <p>decrements a number.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -2177,7 +2166,7 @@ predicate <code>p</code>.</p>
                     (imod x y)
                 </pre>
                 <p class="doc">
-                    <p>implements the modulo on integers, and is much faster than
+                    <p>implements modulo on integers, and is much faster than
 <a href="#mod">`mod</a>.</p>
 
                 </p>
@@ -2221,7 +2210,8 @@ predicate <code>p</code>.</p>
                     (inc x)
                 </pre>
                 <p class="doc">
-                    
+                    <p>increments a number.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -2609,7 +2599,9 @@ applications.</p>
                     (mod x y)
                 </pre>
                 <p class="doc">
-                    
+                    <p>implements modulo, is slower than modulo specialized on
+integers <a href="#imod"><code>imod</code></a>.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -2648,7 +2640,8 @@ applications.</p>
                     (neg x)
                 </pre>
                 <p class="doc">
-                    
+                    <p>negates a number.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -2730,7 +2723,8 @@ applications.</p>
                     (nthcar n pair)
                 </pre>
                 <p class="doc">
-                    
+                    <p>takes the <code>n</code>th head or <code>car</code> of the list <code>pair</code>.</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -2749,7 +2743,8 @@ applications.</p>
                     (nthcdr n pair)
                 </pre>
                 <p class="doc">
-                    
+                    <p>takes the <code>n</code>th tail or <code>cdr</code> of the list <code>pair</code>.</p>
+
                 </p>
             </div>
             <div class="binder">
