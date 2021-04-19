@@ -759,6 +759,35 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#map-reduce">
+                    <h3 id="map-reduce">
+                        map-reduce
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (Fn [(Ref a b), (Ref c d)] (Pair a e) f) g), a, (Ref (Array c) d)] (Pair a (Array e)))
+                </p>
+                <pre class="args">
+                    (map-reduce f acc a)
+                </pre>
+                <p class="doc">
+                    <p>reduces an array <code>a</code> by invoking the function <code>f</code> on each
+element, while keeping an accumulator and a list.</p>
+<p>Returns a <code>Pair</code> where the first element is the mapped array and the second one
+is the final accumulator.</p>
+<p>The function <code>f</code> receives two arguments: the first one is the element, and the
+second one is the accumulator. <code>f</code> must return <code>(Pair result accumulator)</code>.</p>
+<p>Example:</p>
+<pre><code>(map-reduce &amp;(fn [acc x] (Pair.init (+ @x @acc) (* @x 2))) 0 &amp;[1 2 3])
+; =&gt; (Pair 6 [2 4 6])
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#maximum">
                     <h3 id="maximum">
                         maximum
