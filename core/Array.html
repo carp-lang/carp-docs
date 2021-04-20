@@ -778,8 +778,8 @@
 element, while keeping an accumulator and a list.</p>
 <p>Returns a <code>Pair</code> where the first element is the mapped array and the second one
 is the final accumulator.</p>
-<p>The function <code>f</code> receives two arguments: the first one is the element, and the
-second one is the accumulator. <code>f</code> must return <code>(Pair result accumulator)</code>.</p>
+<p>The function <code>f</code> receives two arguments: the first one is the accumulator, and
+the second one is the element. <code>f</code> must return <code>(Pair accumulator result)</code>.</p>
 <p>Example:</p>
 <pre><code>(map-reduce &amp;(fn [acc x] (Pair.init (+ @x @acc) (* @x 2))) 0 &amp;[1 2 3])
 ; =&gt; (Pair 6 [2 4 6])
