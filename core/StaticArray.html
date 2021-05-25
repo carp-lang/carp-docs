@@ -292,6 +292,26 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#aset-uninitialized!">
+                    <h3 id="aset-uninitialized!">
+                        aset-uninitialized!
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (StaticArray a) b), Int, a] ())
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>sets an uninitialized static array member. The old member will not be deleted.</p>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#aupdate!">
                     <h3 id="aupdate!">
                         aupdate!
@@ -301,7 +321,7 @@
                     defn
                 </div>
                 <p class="sig">
-                    (Fn [(Ref (StaticArray a) b), Int, (Ref (Fn [(Ref a b)] a c) d)] ())
+                    (Fn [(Ref (StaticArray a) b), Int, (Ref (Fn [a] a c) d)] ())
                 </p>
                 <pre class="args">
                     (aupdate! a i f)
@@ -815,6 +835,26 @@
                 </span>
                 <p class="doc">
                     <p>gets a reference to the <code>n</code>th element from a static array <code>a</code>.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#unsafe-nth-value">
+                    <h3 id="unsafe-nth-value">
+                        unsafe-nth-value
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (StaticArray a) b), Int] a)
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>returns the value at index <code>i</code> of a static array <code>a</code> (just like <a href="#unsafe-nth">unsafe-nth</a>) but does not take its reference, and does <em>not</em> copy the value. Should only be used for optimizations and when you know what you're doing, circumvents the borrow checker!</p>
 
                 </p>
             </div>
