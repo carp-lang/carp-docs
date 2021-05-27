@@ -2036,6 +2036,29 @@ predicate <code>p</code>.</p>
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#get-env">
+                    <h3 id="get-env">
+                        get-env
+                    </h3>
+                </a>
+                <div class="description">
+                    command
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>gets an environment variable. The result will be <code>()</code> if it isn’t set.</p>
+<p>Example Usage:</p>
+<pre><code>(read-file &quot;CARP_DIR&quot;)
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#hash">
                     <h3 id="hash">
                         hash
@@ -3244,6 +3267,29 @@ value through successive applications of <code>f</code>.</p>
                     <p>is the internal companion command to <code>save-docs</code>. <code>save-docs</code> should be called instead.</p>
 <p>Example Usage:</p>
 <pre><code>(save-docs-internal 'Module)
+</code></pre>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#set-env">
+                    <h3 id="set-env">
+                        set-env
+                    </h3>
+                </a>
+                <div class="description">
+                    command
+                </div>
+                <p class="sig">
+                    Dynamic
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>sets an environment variable.</p>
+<p>Example Usage:</p>
+<pre><code>(set-env &quot;CARP_WAS_HERE&quot; &quot;true&quot;)
 </code></pre>
 
                 </p>
