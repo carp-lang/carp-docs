@@ -232,6 +232,45 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#address">
+                    <h3 id="address">
+                        address
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ref a b)] (Ptr a))
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>returns the memory address of a reference. Equivalent to the <code>&amp;</code> operator when placed before a variable in C.</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#blit">
+                    <h3 id="blit">
+                        blit
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Ptr a)] (Ptr a))
+                </p>
+                <pre class="args">
+                    (blit x)
+                </pre>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#copy">
                     <h3 id="copy">
                         copy
@@ -286,7 +325,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>checks two pointers for equality.</p>
+                    <p>checks two pointer references for equality.</p>
 
                 </p>
             </div>
@@ -371,6 +410,25 @@ Users need to manually verify that this operation is safe.</p>
                 <pre class="args">
                     (prn a)
                 </pre>
+                <p class="doc">
+                    
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#ref-eq">
+                    <h3 id="ref-eq">
+                        ref-eq
+                    </h3>
+                </a>
+                <div class="description">
+                    template
+                </div>
+                <p class="sig">
+                    (Fn [(Ref (Ptr a) b), (Ref (Ptr a) c)] Bool)
+                </p>
+                <span>
+                    
+                </span>
                 <p class="doc">
                     
                 </p>
