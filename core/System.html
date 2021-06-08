@@ -613,6 +613,26 @@
                 </p>
             </div>
             <div class="binder">
+                <a class="anchor" href="#error-text">
+                    <h3 id="error-text">
+                        error-text
+                    </h3>
+                </a>
+                <div class="description">
+                    external
+                </div>
+                <p class="sig">
+                    (Fn [] String)
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>returns a description for the last function from the C standard library to set System.errno. Please note that System.errno may change if strerror() does not know it (and thus sets it to EINVAL), so consider copying it before, if you should need it. Calling error-text after a successful call will return 'SUCCESS' and leave System.errno unchanged.</p>
+
+                </p>
+            </div>
+            <div class="binder">
                 <a class="anchor" href="#exit">
                     <h3 id="exit">
                         exit

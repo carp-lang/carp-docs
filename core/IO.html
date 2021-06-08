@@ -227,7 +227,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>the End-Of-File character as a literal.</p>
+                    <p>the End-Of-File character as a literal (thin wrapper for the C standard library)</p>
 
                 </p>
             </div>
@@ -247,7 +247,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -266,7 +267,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -285,7 +287,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -384,7 +387,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>exit the current program with a return code.</p>
+                    <p>exit the current program with a return code (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -404,7 +407,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>closes a file pointer.</p>
+                    <p>closes a file pointer (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -424,7 +427,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>flushes a file pointer (i.e. commits every write).</p>
+                    <p>flushes a file pointer, i.e. commits every write (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -444,7 +447,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>gets a character from a file pointer.</p>
+                    <p>gets a character from a file pointer (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -464,7 +467,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>opens a file by name using a mode (one or multiple of [r]ead, [w]rite, and [a]ppend), returns a file pointer. Consider using the function open-file instead.</p>
+                    <p>opens a file for input/output/appending (thin wrapper for fopen(pathname, mode) from C standard library). Consider using the function <a href="#open-file"><code>open-file</code></a> instead.</p>
 
                 </p>
             </div>
@@ -484,7 +487,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>reads from a file pointer into a pointer.</p>
+                    <p>reads from a file into C-String (thin wrapper for fread(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#read-file"><code>read-file</code></a> or <a href="#unsafe-read-file"><code>unsafe-read-file</code></a> instead.</p>
 
                 </p>
             </div>
@@ -504,7 +507,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>sets the position indicator of a file.</p>
+                    <p>sets the position indicator of a file  (thin wrapper for fseek(file, offset, whence) from C standard library).</p>
 
                 </p>
             </div>
@@ -524,7 +527,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>gets the position indicator of a file.</p>
+                    <p>gets the position indicator of a file (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -538,13 +541,13 @@
                     external
                 </div>
                 <p class="sig">
-                    (Fn [a, Int, Int, (Ptr FILE)] ())
+                    (Fn [(Ptr CChar), Int, Int, (Ptr FILE)] Int)
                 </p>
                 <span>
                     
                 </span>
                 <p class="doc">
-                    <p>writes to a file pointer.</p>
+                    <p>writes a C-string to a file and returns the number of written items (thin wrapper for fwrite(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#write-file"><code>write-file</code></a> instead.</p>
 
                 </p>
             </div>
@@ -564,7 +567,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>gets a character from stdin.</p>
+                    <p>gets a character from stdin (thin wrapper for getchar() from C standard library).</p>
 
                 </p>
             </div>
@@ -604,7 +607,8 @@
                     (getenv s)
                 </pre>
                 <p class="doc">
-                    
+                    <p>gets the value of an environment variable (Carp-style wrapper for the C standard library)</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -623,7 +627,7 @@
                     (open-file filename mode)
                 </pre>
                 <p class="doc">
-                    <p>opens a file by name using a mode (one or multiple of [r]ead, [w]rite, and [a]ppend), returns a Result type that contains an error string or a file pointer.</p>
+                    <p>opens a file by name using a mode (e.g. [r]ead, [w]rite, [a]ppend),  [rb] read binary...). See fopen() in the C standard library for a detailed description of valid parameters.</p>
 
                 </p>
             </div>
@@ -694,16 +698,17 @@
                     </h3>
                 </a>
                 <div class="description">
-                    external
+                    defn
                 </div>
                 <p class="sig">
-                    (Fn [(Ref String a)] String)
+                    (Fn [(Ref String a)] (Result String String))
                 </p>
-                <span>
-                    
-                </span>
+                <pre class="args">
+                    (read-file filename)
+                </pre>
                 <p class="doc">
-                    <p>returns the contents of a file passed as argument as a string.</p>
+                    <p>Reads the content of a file into a (Result String String).
+It is intended for text files, since the way to determine the length of a String is to use strlen() which probably will be inaccurate for binaries.</p>
 
                 </p>
             </div>
@@ -723,7 +728,7 @@
                     
                 </span>
                 <p class="doc">
-                    <p>rewinds a file pointer (i.e. puts input and output stream to beginning).</p>
+                    <p>rewinds a file pointer, i.e. puts input and output stream to beginning (thin wrapper for the C standard library).</p>
 
                 </p>
             </div>
@@ -743,7 +748,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>the standard error file (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -762,7 +768,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>the standard input file (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -781,7 +788,8 @@
                     
                 </span>
                 <p class="doc">
-                    
+                    <p>the standard output file (thin wrapper for the C standard library).</p>
+
                 </p>
             </div>
             <div class="binder">
@@ -800,7 +808,47 @@
                     
                 </span>
                 <p class="doc">
-                    <p>unlinks a file (i.e. deletes it).</p>
+                    <p>unlinks a file, i.e. deletes it (thin wrapper for POSIX api in &lt;unistd.h&gt;).</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#unsafe-read-file">
+                    <h3 id="unsafe-read-file">
+                        unsafe-read-file
+                    </h3>
+                </a>
+                <div class="description">
+                    external
+                </div>
+                <p class="sig">
+                    (Fn [(Ref String a)] String)
+                </p>
+                <span>
+                    
+                </span>
+                <p class="doc">
+                    <p>returns the contents of a file passed as argument as a string. Note: there is no way to distinguish the output for an empty file and a missing file!</p>
+
+                </p>
+            </div>
+            <div class="binder">
+                <a class="anchor" href="#write-file">
+                    <h3 id="write-file">
+                        write-file
+                    </h3>
+                </a>
+                <div class="description">
+                    defn
+                </div>
+                <p class="sig">
+                    (Fn [(Ref String a), (Ref String b)] (Result Bool String))
+                </p>
+                <pre class="args">
+                    (write-file content file-name)
+                </pre>
+                <p class="doc">
+                    <p>Writes a string into a (text) file, overwriting it if it already exists.</p>
 
                 </p>
             </div>
