@@ -18,9 +18,61 @@
                 <div class="index">
                     <ul>
                         <li>
-                            <a href="SDL.html">
-                                SDL
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="SDL.html">
+                                        SDL
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="SDL.Event.html">
+                                            Event
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SDL.Hint.html">
+                                            Hint
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SDL.Keycode.html">
+                                            Keycode
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SDL.Mouse.html">
+                                            Mouse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="SDL.MouseState.html">
+                                            MouseState
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary>
+                                                <a href="SDL.WindowEvent.html">
+                                                    WindowEvent
+                                                </a>
+                                            </summary>
+                                            <ul>
+                                                <li>
+                                                    <a href="SDL.WindowEvent.WindowEventID.html">
+                                                        WindowEventID
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <a href="SDL.WindowFlags.html">
+                                            WindowFlags
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="SDLApp.html">
@@ -50,220 +102,222 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                TTF
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#close-font">
-                    <h3 id="close-font">
-                        close-font
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+            <div class="module">
+                <h1>
+                    TTF
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr TTF_Font)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get-error">
-                    <h3 id="get-error">
-                        get-error
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#close-font">
+                        <h3 id="close-font">
+                            close-font
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr TTF_Font)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] (Ptr CChar))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#init">
-                    <h3 id="init">
-                        init
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#get-error">
+                        <h3 id="get-error">
+                            get-error
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] (Ptr CChar))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] Int)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#ok?">
-                    <h3 id="ok?">
-                        ok?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#init">
+                        <h3 id="init">
+                            init
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int] Bool)
-                </p>
-                <pre class="args">
-                    (ok? error-code)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#open-font">
-                    <h3 id="open-font">
-                        open-font
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#ok?">
+                        <h3 id="ok?">
+                            ok?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] Bool)
+                    </p>
+                    <pre class="args">
+                        (ok? error-code)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr CChar), Int] (Ptr TTF_Font))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#quit">
-                    <h3 id="quit">
-                        quit
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#open-font">
+                        <h3 id="open-font">
+                            open-font
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr CChar), Int] (Ptr TTF_Font))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#render-text-blended">
-                    <h3 id="render-text-blended">
-                        render-text-blended
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#quit">
+                        <h3 id="quit">
+                            quit
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color] (Ptr SDL_Surface))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#render-text-blended-wrapped">
-                    <h3 id="render-text-blended-wrapped">
-                        render-text-blended-wrapped
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#render-text-blended">
+                        <h3 id="render-text-blended">
+                            render-text-blended
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color] (Ptr SDL_Surface))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color, Int] (Ptr SDL_Surface))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#render-text-shaded">
-                    <h3 id="render-text-shaded">
-                        render-text-shaded
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#render-text-blended-wrapped">
+                        <h3 id="render-text-blended-wrapped">
+                            render-text-blended-wrapped
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color, Int] (Ptr SDL_Surface))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color, SDL_Color] (Ptr SDL_Surface))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#render-text-solid">
-                    <h3 id="render-text-solid">
-                        render-text-solid
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#render-text-shaded">
+                        <h3 id="render-text-shaded">
+                            render-text-shaded
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color, SDL_Color] (Ptr SDL_Surface))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color] (Ptr SDL_Surface))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#render-text-to-texture">
-                    <h3 id="render-text-to-texture">
-                        render-text-to-texture
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#render-text-solid">
+                        <h3 id="render-text-solid">
+                            render-text-solid
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr TTF_Font), (Ptr CChar), SDL_Color] (Ptr SDL_Surface))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr SDL_Renderer), (Ptr TTF_Font), (Ref String a), SDL_Color] (Ptr SDL_Texture))
-                </p>
-                <pre class="args">
-                    (render-text-to-texture rend font str color)
-                </pre>
-                <p class="doc">
-                    
-                </p>
+                <div class="binder">
+                    <a class="anchor" href="#render-text-to-texture">
+                        <h3 id="render-text-to-texture">
+                            render-text-to-texture
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr SDL_Renderer), (Ptr TTF_Font), (Ref String a), SDL_Color] (Ptr SDL_Texture))
+                    </p>
+                    <pre class="args">
+                        (render-text-to-texture rend font str color)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
             </div>
         </div>
     </body>

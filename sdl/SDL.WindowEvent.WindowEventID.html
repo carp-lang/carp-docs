@@ -104,10 +104,29 @@
             </div>
             <div class="module">
                 <h1>
-                    SDLApp
+                    SDL.WindowEvent.WindowEventID
                 </h1>
                 <div class="module-description">
                     
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#=">
+                        <h3 id="=">
+                            =
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [SDL_WindowEventID, SDL_WindowEventID] Bool)
+                    </p>
+                    <pre class="args">
+                        (= a b)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
                 <div class="binder">
                     <a class="anchor" href="#copy">
@@ -116,437 +135,320 @@
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a)] SDLApp)
+                        (Fn [(Ref SDL_WindowEventID a)] SDL_WindowEventID)
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>copies a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#create">
-                        <h3 id="create">
-                            create
+                    <a class="anchor" href="#window-close">
+                        <h3 id="window-close">
+                            window-close
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref String a), Int, Int] SDLApp)
-                    </p>
-                    <pre class="args">
-                        (create title width height)
-                    </pre>
-                    <p class="doc">
-                        <p>creates an SDLApp instance that can then be used by <code>run-with-callbacks</code>.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#default-draw">
-                        <h3 id="default-draw">
-                            default-draw
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [a, (Ptr SDL_Renderer), b] ())
-                    </p>
-                    <pre class="args">
-                        (default-draw app rend state-ref)
-                    </pre>
-                    <p class="doc">
-                        <p>is a default rendering function that can be passed to <code>run-with-callbacks</code>.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#delete">
-                        <h3 id="delete">
-                            delete
-                        </h3>
-                    </a>
-                    <div class="description">
-                        instantiate
-                    </div>
-                    <p class="sig">
-                        (Fn [SDLApp] ())
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>deletes a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fps">
-                        <h3 id="fps">
-                            fps
+                    <a class="anchor" href="#window-enter">
+                        <h3 id="window-enter">
+                            window-enter
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a)] (Ref Int a))
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>gets the <code>fps</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#init">
-                        <h3 id="init">
-                            init
+                    <a class="anchor" href="#window-exposed">
+                        <h3 id="window-exposed">
+                            window-exposed
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ptr SDL_Window), (Ptr SDL_Renderer), Int] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>creates a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#prn">
-                        <h3 id="prn">
-                            prn
+                    <a class="anchor" href="#window-focus-gained">
+                        <h3 id="window-focus-gained">
+                            window-focus-gained
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a)] String)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>converts a <code>SDLApp</code> to a string.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#quit-on-esc">
-                        <h3 id="quit-on-esc">
-                            quit-on-esc
+                    <a class="anchor" href="#window-focus-lost">
+                        <h3 id="window-focus-lost">
+                            window-focus-lost
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a), b, (Ref SDL_Event c)] b)
-                    </p>
-                    <pre class="args">
-                        (quit-on-esc app state event)
-                    </pre>
-                    <p class="doc">
-                        <p>is a default event handling function that can be passed to <code>run-with-callbacks</code>. Allows the application to quit if the player presses the escape key.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#renderer">
-                        <h3 id="renderer">
-                            renderer
-                        </h3>
-                    </a>
-                    <div class="description">
-                        instantiate
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref SDLApp a)] (Ref (Ptr SDL_Renderer) a))
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>gets the <code>renderer</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#run-with-callbacks">
-                        <h3 id="run-with-callbacks">
-                            run-with-callbacks
+                    <a class="anchor" href="#window-hidden">
+                        <h3 id="window-hidden">
+                            window-hidden
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a), (Fn [(Ref SDLApp a), b, (Ref SDL_Event c)] b d), (Fn [b] b e), (Fn [(Ref SDLApp a), (Ptr SDL_Renderer), (Ref b f)] () e), b] ())
-                    </p>
-                    <pre class="args">
-                        (run-with-callbacks app event-fn update-fn draw-fn initial-state)
-                    </pre>
-                    <p class="doc">
-                        <p>starts the SDLApp and uses three callbacks to handle events, update state and render graphics.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#set-fps">
-                        <h3 id="set-fps">
-                            set-fps
-                        </h3>
-                    </a>
-                    <div class="description">
-                        instantiate
-                    </div>
-                    <p class="sig">
-                        (Fn [SDLApp, Int] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>fps</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#set-fps!">
-                        <h3 id="set-fps!">
-                            set-fps!
+                    <a class="anchor" href="#window-hit-test">
+                        <h3 id="window-hit-test">
+                            window-hit-test
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a), Int] ())
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>fps</code> property of a <code>SDLApp</code> in place.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#set-renderer">
-                        <h3 id="set-renderer">
-                            set-renderer
+                    <a class="anchor" href="#window-leave">
+                        <h3 id="window-leave">
+                            window-leave
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [SDLApp, (Ptr SDL_Renderer)] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>renderer</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#set-renderer!">
-                        <h3 id="set-renderer!">
-                            set-renderer!
+                    <a class="anchor" href="#window-minimized">
+                        <h3 id="window-minimized">
+                            window-minimized
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a), (Ptr SDL_Renderer)] ())
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>renderer</code> property of a <code>SDLApp</code> in place.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#set-window">
-                        <h3 id="set-window">
-                            set-window
+                    <a class="anchor" href="#window-moved">
+                        <h3 id="window-moved">
+                            window-moved
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [SDLApp, (Ptr SDL_Window)] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>window</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#set-window!">
-                        <h3 id="set-window!">
-                            set-window!
+                    <a class="anchor" href="#window-mximized">
+                        <h3 id="window-mximized">
+                            window-mximized
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a), (Ptr SDL_Window)] ())
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets the <code>window</code> property of a <code>SDLApp</code> in place.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#stop">
-                        <h3 id="stop">
-                            stop
+                    <a class="anchor" href="#window-resized">
+                        <h3 id="window-resized">
+                            window-resized
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a)] b)
-                    </p>
-                    <pre class="args">
-                        (stop app)
-                    </pre>
-                    <p class="doc">
-                        <p>stops the app. This function return 'a' to enable it to be called from anywhere.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#str">
-                        <h3 id="str">
-                            str
-                        </h3>
-                    </a>
-                    <div class="description">
-                        instantiate
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref SDLApp a)] String)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>converts a <code>SDLApp</code> to a string.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#update-fps">
-                        <h3 id="update-fps">
-                            update-fps
+                    <a class="anchor" href="#window-restored">
+                        <h3 id="window-restored">
+                            window-restored
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [SDLApp, (Ref (Fn [Int] Int a) b)] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>updates the <code>fps</code> property of a <code>SDLApp</code> using a function <code>f</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#update-renderer">
-                        <h3 id="update-renderer">
-                            update-renderer
+                    <a class="anchor" href="#window-shown">
+                        <h3 id="window-shown">
+                            window-shown
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [SDLApp, (Ref (Fn [(Ptr SDL_Renderer)] (Ptr SDL_Renderer) a) b)] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>updates the <code>renderer</code> property of a <code>SDLApp</code> using a function <code>f</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#update-window">
-                        <h3 id="update-window">
-                            update-window
+                    <a class="anchor" href="#window-size-changed">
+                        <h3 id="window-size-changed">
+                            window-size-changed
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [SDLApp, (Ref (Fn [(Ptr SDL_Window)] (Ptr SDL_Window) a) b)] SDLApp)
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>updates the <code>window</code> property of a <code>SDLApp</code> using a function <code>f</code>.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#window">
-                        <h3 id="window">
-                            window
+                    <a class="anchor" href="#window-take-focus">
+                        <h3 id="window-take-focus">
+                            window-take-focus
                         </h3>
                     </a>
                     <div class="description">
-                        instantiate
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref SDLApp a)] (Ref (Ptr SDL_Window) a))
+                        SDL_WindowEventID
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>gets the <code>window</code> property of a <code>SDLApp</code>.</p>
-
+                        
                     </p>
                 </div>
             </div>

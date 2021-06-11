@@ -253,54 +253,55 @@
             </div>
             <div class="module">
                 <h1>
-                    Function
+                    Dynamic.Path
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-env-ptr">
-                        <h3 id="unsafe-env-ptr">
-                            unsafe-env-ptr
+                    <a class="anchor" href="#absolute">
+                        <h3 id="absolute">
+                            absolute
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns  void pointer to the environment captured by a lambda.</p>
-<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>converts a filepath to absolute.</p>
+<p>Example Usage:</p>
+<pre><code>(Path.absolute &quot;dir/file&quot;) ; =&gt; &quot;/home/foo/dir/file&quot;
+</code></pre>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-ptr">
-                        <h3 id="unsafe-ptr">
-                            unsafe-ptr
+                    <a class="anchor" href="#directory">
+                        <h3 id="directory">
+                            directory
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns a void pointer to the function passed in.</p>
-<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>takes the basename of a string taken to be a filepath.</p>
+<p>Historical note: this is a command because it used to power one of the <code>include</code> macros.</p>
+<p>Example Usage:</p>
+<pre><code>(Path.directory &quot;dir/file&quot;) ; =&gt; &quot;dir&quot;
+</code></pre>
 
                     </p>
                 </div>

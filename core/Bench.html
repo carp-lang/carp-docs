@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,52 +251,54 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Bench
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#bench">
-                    <h3 id="bench">
-                        bench
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+            <div class="module">
+                <h1>
+                    Bench
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    (Fn [(Fn [] a b)] ())
-                </p>
-                <pre class="args">
-                    (bench f)
-                </pre>
-                <p class="doc">
-                    <p>benchmarks the function <code>f</code> and prints the results to <code>stdout</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#bench">
+                        <h3 id="bench">
+                            bench
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Fn [] a b)] ())
+                    </p>
+                    <pre class="args">
+                        (bench f)
+                    </pre>
+                    <p class="doc">
+                        <p>benchmarks the function <code>f</code> and prints the results to <code>stdout</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-min-runs!">
-                    <h3 id="set-min-runs!">
-                        set-min-runs!
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int] ())
-                </p>
-                <pre class="args">
-                    (set-min-runs! n)
-                </pre>
-                <p class="doc">
-                    <p>sets the minimum number of runs to <code>n</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-min-runs!">
+                        <h3 id="set-min-runs!">
+                            set-min-runs!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] ())
+                    </p>
+                    <pre class="args">
+                        (set-min-runs! n)
+                    </pre>
+                    <p class="doc">
+                        <p>sets the minimum number of runs to <code>n</code>.</p>
 <p>If your functions takes a large amount of time, experimenting with this might make sense. The default value is <code>50</code>, which means that your function runs at least <code>50</code> times before even hitting a timeout.</p>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

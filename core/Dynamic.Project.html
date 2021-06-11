@@ -253,54 +253,74 @@
             </div>
             <div class="module">
                 <h1>
-                    Function
+                    Dynamic.Project
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-env-ptr">
-                        <h3 id="unsafe-env-ptr">
-                            unsafe-env-ptr
+                    <a class="anchor" href="#config">
+                        <h3 id="config">
+                            config
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns  void pointer to the environment captured by a lambda.</p>
-<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>sets a project config key.</p>
+<p>Example Usage:</p>
+<pre><code>(Project.config &quot;paren-balance-hints&quot; false)
+</code></pre>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-ptr">
-                        <h3 id="unsafe-ptr">
-                            unsafe-ptr
+                    <a class="anchor" href="#get-config">
+                        <h3 id="get-config">
+                            get-config
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns a void pointer to the function passed in.</p>
-<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>gets a project config value under a key.</p>
+<p>Example Usage:</p>
+<pre><code>(Project.get-config &quot;paren-balance-hints&quot;)
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#no-echo">
+                        <h3 id="no-echo">
+                            no-echo
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (no-echo)
+                    </pre>
+                    <p class="doc">
+                        <p>Turn off debug printing in the compiler.</p>
 
                     </p>
                 </div>

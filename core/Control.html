@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,69 +251,70 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Control
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#iterate">
-                    <h3 id="iterate">
-                        iterate
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+            <div class="module">
+                <h1>
+                    Control
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    (Fn [Int, (Ref (Fn [a] a) b), a] a)
-                </p>
-                <pre class="args">
-                    (iterate n f start)
-                </pre>
-                <p class="doc">
-                    <p>Apply function <code>f</code> <code>n</code> times, first to <code>start</code> and then to the result of <code>f</code>. TODO: Mention fix points.</p>
+                <div class="binder">
+                    <a class="anchor" href="#iterate">
+                        <h3 id="iterate">
+                            iterate
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int, (Ref (Fn [a] a) b), a] a)
+                    </p>
+                    <pre class="args">
+                        (iterate n f start)
+                    </pre>
+                    <p class="doc">
+                        <p>Apply function <code>f</code> <code>n</code> times, first to <code>start</code> and then to the result of <code>f</code>. TODO: Mention fix points.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#iterate-until">
-                    <h3 id="iterate-until">
-                        iterate-until
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [a] a) b), (Ref (Fn [a] Bool) c), a] a)
-                </p>
-                <pre class="args">
-                    (iterate-until f pred start)
-                </pre>
-                <p class="doc">
-                    <p>Like <code>iterate</code>, but f is applied repeatedly until the predicate <code>pred</code> is true.</p>
+                <div class="binder">
+                    <a class="anchor" href="#iterate-until">
+                        <h3 id="iterate-until">
+                            iterate-until
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [a] a) b), (Ref (Fn [a] Bool) c), a] a)
+                    </p>
+                    <pre class="args">
+                        (iterate-until f pred start)
+                    </pre>
+                    <p class="doc">
+                        <p>Like <code>iterate</code>, but f is applied repeatedly until the predicate <code>pred</code> is true.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#when-error">
-                    <h3 id="when-error">
-                        when-error
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [] ()) a), (Result b c)] ())
-                </p>
-                <pre class="args">
-                    (when-error f result)
-                </pre>
-                <p class="doc">
-                    <p>Executes a side effect, <code>f</code>, when <code>result</code> is <code>Error</code>oneus.</p>
+                <div class="binder">
+                    <a class="anchor" href="#when-error">
+                        <h3 id="when-error">
+                            when-error
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [] ()) a), (Result b c)] ())
+                    </p>
+                    <pre class="args">
+                        (when-error f result)
+                    </pre>
+                    <p class="doc">
+                        <p>Executes a side effect, <code>f</code>, when <code>result</code> is <code>Error</code>oneus.</p>
 <pre><code>(def suc (the (Result Int Int) (Result.Success 0)))
 (def err (the (Result Int Int) (Result.Error 0)))
 
@@ -277,25 +324,25 @@
 =&gt; 
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#when-just">
-                    <h3 id="when-just">
-                        when-just
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [] ()) a), (Maybe b)] ())
-                </p>
-                <pre class="args">
-                    (when-just f maybe)
-                </pre>
-                <p class="doc">
-                    <p>Executes a side-effect, <code>f</code>, when <code>maybe</code> is <code>Just</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#when-just">
+                        <h3 id="when-just">
+                            when-just
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [] ()) a), (Maybe b)] ())
+                    </p>
+                    <pre class="args">
+                        (when-just f maybe)
+                    </pre>
+                    <p class="doc">
+                        <p>Executes a side-effect, <code>f</code>, when <code>maybe</code> is <code>Just</code>.</p>
 <pre><code>(def just (Maybe.Just 2))
 (def nothing (the (Maybe Int) (Maybe.Nothing)))
 
@@ -305,25 +352,25 @@
 =&gt; 
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#when-nothing">
-                    <h3 id="when-nothing">
-                        when-nothing
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [] ()) a), (Maybe b)] ())
-                </p>
-                <pre class="args">
-                    (when-nothing f maybe)
-                </pre>
-                <p class="doc">
-                    <p>Executes a side-effect, <code>f</code>, when <code>maybe</code> is <code>Nothing</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#when-nothing">
+                        <h3 id="when-nothing">
+                            when-nothing
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [] ()) a), (Maybe b)] ())
+                    </p>
+                    <pre class="args">
+                        (when-nothing f maybe)
+                    </pre>
+                    <p class="doc">
+                        <p>Executes a side-effect, <code>f</code>, when <code>maybe</code> is <code>Nothing</code>.</p>
 <pre><code>(def just (Maybe.Just 2))
 (def nothing (the (Maybe Int) (Maybe.Nothing)))
 
@@ -333,25 +380,25 @@
 =&gt; 
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#when-success">
-                    <h3 id="when-success">
-                        when-success
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [] ()) a), (Result b c)] ())
-                </p>
-                <pre class="args">
-                    (when-success f result)
-                </pre>
-                <p class="doc">
-                    <p>Executes a side effect, <code>f</code>, when <code>result</code> is <code>Success</code>ful.</p>
+                <div class="binder">
+                    <a class="anchor" href="#when-success">
+                        <h3 id="when-success">
+                            when-success
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [] ()) a), (Result b c)] ())
+                    </p>
+                    <pre class="args">
+                        (when-success f result)
+                    </pre>
+                    <p class="doc">
+                        <p>Executes a side effect, <code>f</code>, when <code>result</code> is <code>Success</code>ful.</p>
 <pre><code>(def suc (the (Result Int Int) (Result.Success 0)))
 (def err (the (Result Int Int) (Result.Error 0)))
 
@@ -361,7 +408,8 @@
 =&gt; 
 </code></pre>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

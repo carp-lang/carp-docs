@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,190 +251,192 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Debug
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#assert-balanced">
-                    <h3 id="assert-balanced">
-                        assert-balanced
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+            <div class="module">
+                <h1>
+                    Debug
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (assert-balanced form)
-                </pre>
-                <p class="doc">
-                    <p>raises an error if the memory balance (number of <code>alloc</code>s - number of <code>free</code>s) isn't <code>0</code>. Requires the flag <code>--log-memory</code> to be passed durng compilation.</p>
+                <div class="binder">
+                    <a class="anchor" href="#assert-balanced">
+                        <h3 id="assert-balanced">
+                            assert-balanced
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (assert-balanced form)
+                    </pre>
+                    <p class="doc">
+                        <p>raises an error if the memory balance (number of <code>alloc</code>s - number of <code>free</code>s) isn't <code>0</code>. Requires the flag <code>--log-memory</code> to be passed durng compilation.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#check-allocations">
-                    <h3 id="check-allocations">
-                        check-allocations
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+                    </p>
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (check-allocations)
-                </pre>
-                <p class="doc">
-                    <p>will check the allocations made by the program
+                <div class="binder">
+                    <a class="anchor" href="#check-allocations">
+                        <h3 id="check-allocations">
+                            check-allocations
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (check-allocations)
+                    </pre>
+                    <p class="doc">
+                        <p>will check the allocations made by the program
 immediately, raising a <code>SIGABRT</code> if it fails.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#leak-array">
-                    <h3 id="leak-array">
-                        leak-array
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [a] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>leaks some memory. This function is useful for testing tools that detect leaks.</p>
+                <div class="binder">
+                    <a class="anchor" href="#leak-array">
+                        <h3 id="leak-array">
+                            leak-array
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [a] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>leaks some memory. This function is useful for testing tools that detect leaks.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#log-memory-balance!">
-                    <h3 id="log-memory-balance!">
-                        log-memory-balance!
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Bool] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-balance">
-                    <h3 id="memory-balance">
-                        memory-balance
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                <div class="binder">
+                    <a class="anchor" href="#log-memory-balance!">
+                        <h3 id="log-memory-balance!">
+                            log-memory-balance!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [Bool] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] Long)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#memory-logged">
-                    <h3 id="memory-logged">
-                        memory-logged
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+                <div class="binder">
+                    <a class="anchor" href="#memory-balance">
+                        <h3 id="memory-balance">
+                            memory-balance
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] Long)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (memory-logged form)
-                </pre>
-                <p class="doc">
-                    <p>logs all calls to memory allocation within the form. Requires the flag <code>--log-memory</code> to be passed during compilation.</p>
+                <div class="binder">
+                    <a class="anchor" href="#memory-logged">
+                        <h3 id="memory-logged">
+                            memory-logged
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (memory-logged form)
+                    </pre>
+                    <p class="doc">
+                        <p>logs all calls to memory allocation within the form. Requires the flag <code>--log-memory</code> to be passed during compilation.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#reset-memory-balance!">
-                    <h3 id="reset-memory-balance!">
-                        reset-memory-balance!
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#sanitize-addresses">
-                    <h3 id="sanitize-addresses">
-                        sanitize-addresses
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+                <div class="binder">
+                    <a class="anchor" href="#reset-memory-balance!">
+                        <h3 id="reset-memory-balance!">
+                            reset-memory-balance!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (sanitize-addresses)
-                </pre>
-                <p class="doc">
-                    <p>instructs the compiler to sanitize addresses.</p>
+                <div class="binder">
+                    <a class="anchor" href="#sanitize-addresses">
+                        <h3 id="sanitize-addresses">
+                            sanitize-addresses
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (sanitize-addresses)
+                    </pre>
+                    <p class="doc">
+                        <p>instructs the compiler to sanitize addresses.</p>
 <p>This might not work on all compilers, but reasonably new versions of GCC and Clang are supported.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#trace">
-                    <h3 id="trace">
-                        trace
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+                    </p>
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (trace x)
-                </pre>
-                <p class="doc">
-                    <p>prints the value of an expression to <code>stdout</code>, then returns its value.</p>
+                <div class="binder">
+                    <a class="anchor" href="#trace">
+                        <h3 id="trace">
+                            trace
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (trace x)
+                    </pre>
+                    <p class="doc">
+                        <p>prints the value of an expression to <code>stdout</code>, then returns its value.</p>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

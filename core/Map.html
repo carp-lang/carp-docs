@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,910 +251,912 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Map
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#=">
-                    <h3 id="=">
-                        =
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref (Map a b) c)] Bool)
-                </p>
-                <pre class="args">
-                    (= m1 m2)
-                </pre>
-                <p class="doc">
+            <div class="module">
+                <h1>
+                    Map
+                </h1>
+                <div class="module-description">
                     
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#all?">
-                    <h3 id="all?">
-                        all?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [(Ref a b), (Ref c b)] Bool d) e), (Ref (Map a c) b)] Bool)
-                </p>
-                <pre class="args">
-                    (all? pred m)
-                </pre>
-                <p class="doc">
-                    <p>Do all key-value pairs pass the given predicate (of two arguments)?</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#buckets">
-                    <h3 id="buckets">
-                        buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                <div class="binder">
+                    <a class="anchor" href="#=">
+                        <h3 id="=">
+                            =
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref (Map a b) c)] Bool)
+                    </p>
+                    <pre class="args">
+                        (= m1 m2)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Ref (Array (Bucket a b)) c))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the <code>buckets</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#all?">
+                        <h3 id="all?">
+                            all?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [(Ref a b), (Ref c b)] Bool d) e), (Ref (Map a c) b)] Bool)
+                    </p>
+                    <pre class="args">
+                        (all? pred m)
+                    </pre>
+                    <p class="doc">
+                        <p>Do all key-value pairs pass the given predicate (of two arguments)?</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#contains?">
-                    <h3 id="contains?">
-                        contains?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref a c)] Bool)
-                </p>
-                <pre class="args">
-                    (contains? m k)
-                </pre>
-                <p class="doc">
-                    <p>Check whether the map m contains the key k.</p>
+                <div class="binder">
+                    <a class="anchor" href="#buckets">
+                        <h3 id="buckets">
+                            buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Ref (Array (Bucket a b)) c))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the <code>buckets</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#copy">
-                    <h3 id="copy">
-                        copy
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>copies the <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#contains?">
+                        <h3 id="contains?">
+                            contains?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c)] Bool)
+                    </p>
+                    <pre class="args">
+                        (contains? m k)
+                    </pre>
+                    <p class="doc">
+                        <p>Check whether the map m contains the key k.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#create">
-                    <h3 id="create">
-                        create
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] (Map a b))
-                </p>
-                <pre class="args">
-                    (create)
-                </pre>
-                <p class="doc">
-                    <p>Create an empty map.</p>
+                <div class="binder">
+                    <a class="anchor" href="#copy">
+                        <h3 id="copy">
+                            copy
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>copies the <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#delete">
-                    <h3 id="delete">
-                        delete
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>deletes a <code>(Map a b)</code>. Should usually not be called manually.</p>
+                <div class="binder">
+                    <a class="anchor" href="#create">
+                        <h3 id="create">
+                            create
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (create)
+                    </pre>
+                    <p class="doc">
+                        <p>Create an empty map.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#empty?">
-                    <h3 id="empty?">
-                        empty?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] Bool)
-                </p>
-                <pre class="args">
-                    (empty? m)
-                </pre>
-                <p class="doc">
-                    <p>Check whether the map m is empty.</p>
+                <div class="binder">
+                    <a class="anchor" href="#delete">
+                        <h3 id="delete">
+                            delete
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>deletes a <code>(Map a b)</code>. Should usually not be called manually.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#endo-map">
-                    <h3 id="endo-map">
-                        endo-map
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [(Ref a b), (Ref c b)] c d) e), (Map a c)] (Map a c))
-                </p>
-                <pre class="args">
-                    (endo-map f m)
-                </pre>
-                <p class="doc">
-                    <p>Transform values of the given map in place. f gets two arguments, key and value, and should return new value</p>
+                <div class="binder">
+                    <a class="anchor" href="#empty?">
+                        <h3 id="empty?">
+                            empty?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] Bool)
+                    </p>
+                    <pre class="args">
+                        (empty? m)
+                    </pre>
+                    <p class="doc">
+                        <p>Check whether the map m is empty.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#for-each">
-                    <h3 id="for-each">
-                        for-each
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref (Fn [(Ref a c), (Ref b c)] () d) e)] ())
-                </p>
-                <pre class="args">
-                    (for-each m f)
-                </pre>
-                <p class="doc">
-                    <p>Execute the binary function f for all keys and values in the map m.</p>
+                <div class="binder">
+                    <a class="anchor" href="#endo-map">
+                        <h3 id="endo-map">
+                            endo-map
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [(Ref a b), (Ref c b)] c d) e), (Map a c)] (Map a c))
+                    </p>
+                    <pre class="args">
+                        (endo-map f m)
+                    </pre>
+                    <p class="doc">
+                        <p>Transform values of the given map in place. f gets two arguments, key and value, and should return new value</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#from-array">
-                    <h3 id="from-array">
-                        from-array
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Array (Pair a b))] (Map a b))
-                </p>
-                <pre class="args">
-                    (from-array a)
-                </pre>
-                <p class="doc">
-                    <p>Create a map from the array a containing key-value pairs.</p>
+                <div class="binder">
+                    <a class="anchor" href="#for-each">
+                        <h3 id="for-each">
+                            for-each
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref (Fn [(Ref a c), (Ref b c)] () d) e)] ())
+                    </p>
+                    <pre class="args">
+                        (for-each m f)
+                    </pre>
+                    <p class="doc">
+                        <p>Execute the binary function f for all keys and values in the map m.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get">
-                    <h3 id="get">
-                        get
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref a c)] b)
-                </p>
-                <pre class="args">
-                    (get m k)
-                </pre>
-                <p class="doc">
-                    <p>Get the value for the key k from map m. If it isn’t found, a zero element for the value type is returned.</p>
+                <div class="binder">
+                    <a class="anchor" href="#from-array">
+                        <h3 id="from-array">
+                            from-array
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Array (Pair a b))] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (from-array a)
+                    </pre>
+                    <p class="doc">
+                        <p>Create a map from the array a containing key-value pairs.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get-maybe">
-                    <h3 id="get-maybe">
-                        get-maybe
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref a c)] (Maybe b))
-                </p>
-                <pre class="args">
-                    (get-maybe m k)
-                </pre>
-                <p class="doc">
-                    <p>Get the value for the key k from map m. It returns a Maybe type, meaning that if nothing is found, Nothing is returned.</p>
+                <div class="binder">
+                    <a class="anchor" href="#get">
+                        <h3 id="get">
+                            get
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c)] b)
+                    </p>
+                    <pre class="args">
+                        (get m k)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the value for the key k from map m. If it isn’t found, a zero element for the value type is returned.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get-with-default">
-                    <h3 id="get-with-default">
-                        get-with-default
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref a c), (Ref b d)] b)
-                </p>
-                <pre class="args">
-                    (get-with-default m k default-value)
-                </pre>
-                <p class="doc">
-                    <p>Get the value for the key k from map m. If it isn’t found, the default is returned.</p>
+                <div class="binder">
+                    <a class="anchor" href="#get-maybe">
+                        <h3 id="get-maybe">
+                            get-maybe
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c)] (Maybe b))
+                    </p>
+                    <pre class="args">
+                        (get-maybe m k)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the value for the key k from map m. It returns a Maybe type, meaning that if nothing is found, Nothing is returned.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#grow">
-                    <h3 id="grow">
-                        grow
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b)] (Map a b))
-                </p>
-                <pre class="args">
-                    (grow m)
-                </pre>
-                <p class="doc">
-                    <p>Grow a map <code>m</code>. Should usually be handled automatically.</p>
+                <div class="binder">
+                    <a class="anchor" href="#get-with-default">
+                        <h3 id="get-with-default">
+                            get-with-default
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c), (Ref b d)] b)
+                    </p>
+                    <pre class="args">
+                        (get-with-default m k default-value)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the value for the key k from map m. If it isn’t found, the default is returned.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#init">
-                    <h3 id="init">
-                        init
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int, Int, (Array (Bucket a b))] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>creates a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#grow">
+                        <h3 id="grow">
+                            grow
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (grow m)
+                    </pre>
+                    <p class="doc">
+                        <p>Grow a map <code>m</code>. Should usually be handled automatically.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#keys">
-                    <h3 id="keys">
-                        keys
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Array a))
-                </p>
-                <pre class="args">
-                    (keys m)
-                </pre>
-                <p class="doc">
-                    <p>Return an array of the keys of the map. Order corresponds to order of (vals m)</p>
+                <div class="binder">
+                    <a class="anchor" href="#init">
+                        <h3 id="init">
+                            init
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [Int, Int, (Array (Bucket a b))] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>creates a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#kv-reduce">
-                    <h3 id="kv-reduce">
-                        kv-reduce
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Fn [a, (Ref b c), (Ref d c)] a e) f), a, (Ref (Map b d) c)] a)
-                </p>
-                <pre class="args">
-                    (kv-reduce f init m)
-                </pre>
-                <p class="doc">
-                    <p>Reduce a map with a function of three arguments: state, key and value. Reduction order is not guaranteed.</p>
+                <div class="binder">
+                    <a class="anchor" href="#keys">
+                        <h3 id="keys">
+                            keys
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Array a))
+                    </p>
+                    <pre class="args">
+                        (keys m)
+                    </pre>
+                    <p class="doc">
+                        <p>Return an array of the keys of the map. Order corresponds to order of (vals m)</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#len">
-                    <h3 id="len">
-                        len
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Ref Int c))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the <code>len</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#kv-reduce">
+                        <h3 id="kv-reduce">
+                            kv-reduce
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [a, (Ref b c), (Ref d c)] a e) f), a, (Ref (Map b d) c)] a)
+                    </p>
+                    <pre class="args">
+                        (kv-reduce f init m)
+                    </pre>
+                    <p class="doc">
+                        <p>Reduce a map with a function of three arguments: state, key and value. Reduction order is not guaranteed.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#length">
-                    <h3 id="length">
-                        length
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] Int)
-                </p>
-                <pre class="args">
-                    (length m)
-                </pre>
-                <p class="doc">
-                    <p>Get the length of the map m.</p>
+                <div class="binder">
+                    <a class="anchor" href="#len">
+                        <h3 id="len">
+                            len
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Ref Int c))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the <code>len</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#max-load">
-                    <h3 id="max-load">
-                        max-load
-                    </h3>
-                </a>
-                <div class="description">
-                    def
+                    </p>
                 </div>
-                <p class="sig">
-                    Int
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>The load a map needs to reach in order to grow.</p>
+                <div class="binder">
+                    <a class="anchor" href="#length">
+                        <h3 id="length">
+                            length
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] Int)
+                    </p>
+                    <pre class="args">
+                        (length m)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the length of the map m.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#merge">
-                    <h3 id="merge">
-                        merge
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref (Map a b) c)] (Map a b))
-                </p>
-                <pre class="args">
-                    (merge m1 m2)
-                </pre>
-                <p class="doc">
-                    <p>Merge two maps <code>m1</code> and <code>m2</code>. On collision the value from <code>m2</code> is preferred.</p>
+                <div class="binder">
+                    <a class="anchor" href="#max-load">
+                        <h3 id="max-load">
+                            max-load
+                        </h3>
+                    </a>
+                    <div class="description">
+                        def
+                    </div>
+                    <p class="sig">
+                        Int
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>The load a map needs to reach in order to grow.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#min-load">
-                    <h3 id="min-load">
-                        min-load
-                    </h3>
-                </a>
-                <div class="description">
-                    def
+                    </p>
                 </div>
-                <p class="sig">
-                    Int
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>The load a map needs to reach in order to shrink.</p>
+                <div class="binder">
+                    <a class="anchor" href="#merge">
+                        <h3 id="merge">
+                            merge
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref (Map a b) c)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (merge m1 m2)
+                    </pre>
+                    <p class="doc">
+                        <p>Merge two maps <code>m1</code> and <code>m2</code>. On collision the value from <code>m2</code> is preferred.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#n-buckets">
-                    <h3 id="n-buckets">
-                        n-buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Ref Int c))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the <code>n-buckets</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#min-load">
+                        <h3 id="min-load">
+                            min-load
+                        </h3>
+                    </a>
+                    <div class="description">
+                        def
+                    </div>
+                    <p class="sig">
+                        Int
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>The load a map needs to reach in order to shrink.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#prn">
-                    <h3 id="prn">
-                        prn
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>converts a <code>(Map a b)</code> to a string.</p>
+                <div class="binder">
+                    <a class="anchor" href="#n-buckets">
+                        <h3 id="n-buckets">
+                            n-buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Ref Int c))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the <code>n-buckets</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#put">
-                    <h3 id="put">
-                        put
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref a c), (Ref b c)] (Map a b))
-                </p>
-                <pre class="args">
-                    (put m k v)
-                </pre>
-                <p class="doc">
-                    <p>Put a value v into map m, using the key k.</p>
+                <div class="binder">
+                    <a class="anchor" href="#prn">
+                        <h3 id="prn">
+                            prn
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] String)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>converts a <code>(Map a b)</code> to a string.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#put!">
-                    <h3 id="put!">
-                        put!
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Ref a c), (Ref b d)] ())
-                </p>
-                <pre class="args">
-                    (put! m k v)
-                </pre>
-                <p class="doc">
-                    <p>Put a value v into map m, using the key k, in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#put">
+                        <h3 id="put">
+                            put
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref a c), (Ref b c)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (put m k v)
+                    </pre>
+                    <p class="doc">
+                        <p>Put a value v into map m, using the key k.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#remove">
-                    <h3 id="remove">
-                        remove
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref a c)] (Map a b))
-                </p>
-                <pre class="args">
-                    (remove m k)
-                </pre>
-                <p class="doc">
-                    <p>Remove the value under the key k from the map m.</p>
+                <div class="binder">
+                    <a class="anchor" href="#put!">
+                        <h3 id="put!">
+                            put!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c), (Ref b d)] ())
+                    </p>
+                    <pre class="args">
+                        (put! m k v)
+                    </pre>
+                    <p class="doc">
+                        <p>Put a value v into map m, using the key k, in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#resize">
-                    <h3 id="resize">
-                        resize
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), Int] (Map a b))
-                </p>
-                <pre class="args">
-                    (resize m s)
-                </pre>
-                <p class="doc">
-                    <p>Resize a map <code>m</code> to size <code>s</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#remove">
+                        <h3 id="remove">
+                            remove
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref a c)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (remove m k)
+                    </pre>
+                    <p class="doc">
+                        <p>Remove the value under the key k from the map m.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#reverse">
-                    <h3 id="reverse">
-                        reverse
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Map b a))
-                </p>
-                <pre class="args">
-                    (reverse m)
-                </pre>
-                <p class="doc">
-                    <p>reverses they keys and values in a given map <code>m</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#resize">
+                        <h3 id="resize">
+                            resize
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), Int] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (resize m s)
+                    </pre>
+                    <p class="doc">
+                        <p>Resize a map <code>m</code> to size <code>s</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-buckets">
-                    <h3 id="set-buckets">
-                        set-buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Array (Bucket a b))] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>buckets</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#reverse">
+                        <h3 id="reverse">
+                            reverse
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Map b a))
+                    </p>
+                    <pre class="args">
+                        (reverse m)
+                    </pre>
+                    <p class="doc">
+                        <p>reverses they keys and values in a given map <code>m</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-buckets!">
-                    <h3 id="set-buckets!">
-                        set-buckets!
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), (Array (Bucket a b))] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>buckets</code> property of a <code>(Map a b)</code> in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-buckets">
+                        <h3 id="set-buckets">
+                            set-buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Array (Bucket a b))] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>buckets</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-len">
-                    <h3 id="set-len">
-                        set-len
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), Int] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>len</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-buckets!">
+                        <h3 id="set-buckets!">
+                            set-buckets!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Array (Bucket a b))] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>buckets</code> property of a <code>(Map a b)</code> in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-len!">
-                    <h3 id="set-len!">
-                        set-len!
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), Int] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>len</code> property of a <code>(Map a b)</code> in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-len">
+                        <h3 id="set-len">
+                            set-len
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), Int] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>len</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-n-buckets">
-                    <h3 id="set-n-buckets">
-                        set-n-buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), Int] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>n-buckets</code> property of a <code>(Map a b)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-len!">
+                        <h3 id="set-len!">
+                            set-len!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>len</code> property of a <code>(Map a b)</code> in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-n-buckets!">
-                    <h3 id="set-n-buckets!">
-                        set-n-buckets!
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c), Int] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>n-buckets</code> property of a <code>(Map a b)</code> in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-n-buckets">
+                        <h3 id="set-n-buckets">
+                            set-n-buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), Int] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>n-buckets</code> property of a <code>(Map a b)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#shrink">
-                    <h3 id="shrink">
-                        shrink
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b)] (Map a b))
-                </p>
-                <pre class="args">
-                    (shrink m)
-                </pre>
-                <p class="doc">
-                    <p>Shrink a map <code>m</code>. Should usually be handled automatically.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-n-buckets!">
+                        <h3 id="set-n-buckets!">
+                            set-n-buckets!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>n-buckets</code> property of a <code>(Map a b)</code> in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#str">
-                    <h3 id="str">
-                        str
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] String)
-                </p>
-                <pre class="args">
-                    (str m)
-                </pre>
-                <p class="doc">
-                    <p>converts a <code>(Map a b)</code> to a string.</p>
+                <div class="binder">
+                    <a class="anchor" href="#shrink">
+                        <h3 id="shrink">
+                            shrink
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (shrink m)
+                    </pre>
+                    <p class="doc">
+                        <p>Shrink a map <code>m</code>. Should usually be handled automatically.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#to-array">
-                    <h3 id="to-array">
-                        to-array
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Array (Pair a b)))
-                </p>
-                <pre class="args">
-                    (to-array m)
-                </pre>
-                <p class="doc">
-                    <p>Convert Map to Array of Pairs</p>
+                <div class="binder">
+                    <a class="anchor" href="#str">
+                        <h3 id="str">
+                            str
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] String)
+                    </p>
+                    <pre class="args">
+                        (str m)
+                    </pre>
+                    <p class="doc">
+                        <p>converts a <code>(Map a b)</code> to a string.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update">
-                    <h3 id="update">
-                        update
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref a c), (Ref (Fn [b] b d) c)] (Map a b))
-                </p>
-                <pre class="args">
-                    (update m k f)
-                </pre>
-                <p class="doc">
-                    <p>Update value at key k in map with function f, if it exists.</p>
+                <div class="binder">
+                    <a class="anchor" href="#to-array">
+                        <h3 id="to-array">
+                            to-array
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Array (Pair a b)))
+                    </p>
+                    <pre class="args">
+                        (to-array m)
+                    </pre>
+                    <p class="doc">
+                        <p>Convert Map to Array of Pairs</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-buckets">
-                    <h3 id="update-buckets">
-                        update-buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref (Fn [(Array (Bucket a b))] (Array (Bucket a b)) c) d)] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>updates the <code>buckets</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#update">
+                        <h3 id="update">
+                            update
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref a c), (Ref (Fn [b] b d) c)] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (update m k f)
+                    </pre>
+                    <p class="doc">
+                        <p>Update value at key k in map with function f, if it exists.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-len">
-                    <h3 id="update-len">
-                        update-len
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref (Fn [Int] Int c) d)] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>updates the <code>len</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-buckets">
+                        <h3 id="update-buckets">
+                            update-buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref (Fn [(Array (Bucket a b))] (Array (Bucket a b)) c) d)] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>updates the <code>buckets</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-n-buckets">
-                    <h3 id="update-n-buckets">
-                        update-n-buckets
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref (Fn [Int] Int c) d)] (Map a b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>updates the <code>n-buckets</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-len">
+                        <h3 id="update-len">
+                            update-len
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref (Fn [Int] Int c) d)] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>updates the <code>len</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-with-default">
-                    <h3 id="update-with-default">
-                        update-with-default
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Map a b), (Ref a c), (Ref (Fn [b] b d) c), b] (Map a b))
-                </p>
-                <pre class="args">
-                    (update-with-default m k f v)
-                </pre>
-                <p class="doc">
-                    <p>Update value at key k in map with function f. If k doesn't exist in map, set k to (f v).</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-n-buckets">
+                        <h3 id="update-n-buckets">
+                            update-n-buckets
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref (Fn [Int] Int c) d)] (Map a b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>updates the <code>n-buckets</code> property of a <code>(Map a b)</code> using a function <code>f</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#vals">
-                    <h3 id="vals">
-                        vals
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Map a b) c)] (Array b))
-                </p>
-                <pre class="args">
-                    (vals m)
-                </pre>
-                <p class="doc">
-                    <p>Return an array of the values of the map. Order corresponds to order of (keys m)</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-with-default">
+                        <h3 id="update-with-default">
+                            update-with-default
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Map a b), (Ref a c), (Ref (Fn [b] b d) c), b] (Map a b))
+                    </p>
+                    <pre class="args">
+                        (update-with-default m k f v)
+                    </pre>
+                    <p class="doc">
+                        <p>Update value at key k in map with function f. If k doesn't exist in map, set k to (f v).</p>
 
-                </p>
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#vals">
+                        <h3 id="vals">
+                            vals
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c)] (Array b))
+                    </p>
+                    <pre class="args">
+                        (vals m)
+                    </pre>
+                    <p class="doc">
+                        <p>Return an array of the values of the map. Order corresponds to order of (keys m)</p>
+
+                    </p>
+                </div>
             </div>
         </div>
     </body>

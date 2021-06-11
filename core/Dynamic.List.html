@@ -253,54 +253,128 @@
             </div>
             <div class="module">
                 <h1>
-                    Function
+                    Dynamic.List
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-env-ptr">
-                        <h3 id="unsafe-env-ptr">
-                            unsafe-env-ptr
+                    <a class="anchor" href="#find">
+                        <h3 id="find">
+                            find
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        dynamic
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
-                    <span>
-                        
-                    </span>
+                    <pre class="args">
+                        (find l pred)
+                    </pre>
                     <p class="doc">
-                        <p>returns  void pointer to the environment captured by a lambda.</p>
-<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>finds the first element in the list <code>l</code> that matches <code>pred</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-ptr">
-                        <h3 id="unsafe-ptr">
-                            unsafe-ptr
+                    <a class="anchor" href="#in?">
+                        <h3 id="in?">
+                            in?
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        dynamic
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
-                    <span>
-                        
-                    </span>
+                    <pre class="args">
+                        (in? elem l)
+                    </pre>
                     <p class="doc">
-                        <p>returns a void pointer to the function passed in.</p>
-<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#nth">
+                        <h3 id="nth">
+                            nth
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (nth l n)
+                    </pre>
+                    <p class="doc">
+                        <p>gets the nth element of the list <code>l</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#pairs">
+                        <h3 id="pairs">
+                            pairs
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (pairs l)
+                    </pre>
+                    <p class="doc">
+                        <p>makes a list of pairs out of a list <code>l</code>. If the number of
+elements is uneven, the trailing element will be discarded.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#set-nth">
+                        <h3 id="set-nth">
+                            set-nth
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (set-nth l n elem)
+                    </pre>
+                    <p class="doc">
+                        <p>sets the nth element of the list <code>l</code> to the value <code>v</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#update-nth">
+                        <h3 id="update-nth">
+                            update-nth
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (update-nth l n f)
+                    </pre>
+                    <p class="doc">
+                        <p>updates the nth element of the list <code>l</code> using the function <code>f</code>.</p>
 
                     </p>
                 </div>

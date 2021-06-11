@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,29 +251,30 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Quasiquote
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#quasiquote">
-                    <h3 id="quasiquote">
-                        quasiquote
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+            <div class="module">
+                <h1>
+                    Quasiquote
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (quasiquote form)
-                </pre>
-                <p class="doc">
-                    <p>is a quotation that may have expressions inside it in the
+                <div class="binder">
+                    <a class="anchor" href="#quasiquote">
+                        <h3 id="quasiquote">
+                            quasiquote
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (quasiquote form)
+                    </pre>
+                    <p class="doc">
+                        <p>is a quotation that may have expressions inside it in the
 form of <a href="#unquote"><code>unquote</code></a> and <a href="#unquote-splicing"><code>unquote-splicing</code></a>.</p>
 <p>Example:</p>
 <pre><code>(defdynamic x 1)
@@ -238,25 +285,25 @@ form of <a href="#unquote"><code>unquote</code></a> and <a href="#unquote-splici
 `(1 %x %@y)) ; =&gt; (1 1 2 3 4)
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#unquote">
-                    <h3 id="unquote">
-                        unquote
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+                    </p>
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (unquote form)
-                </pre>
-                <p class="doc">
-                    <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
+                <div class="binder">
+                    <a class="anchor" href="#unquote">
+                        <h3 id="unquote">
+                            unquote
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (unquote form)
+                    </pre>
+                    <p class="doc">
+                        <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
 quasiquote. It will generate an error message when used outside a
 <code>quasiquote</code> form.</p>
 <p>Example:</p>
@@ -265,25 +312,25 @@ quasiquote. It will generate an error message when used outside a
 (quasiquote (+ (unquote x) 1)) ; =&gt; (+ 2 1)
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#unquote-splicing">
-                    <h3 id="unquote-splicing">
-                        unquote-splicing
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+                    </p>
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (unquote-splicing form)
-                </pre>
-                <p class="doc">
-                    <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
+                <div class="binder">
+                    <a class="anchor" href="#unquote-splicing">
+                        <h3 id="unquote-splicing">
+                            unquote-splicing
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (unquote-splicing form)
+                    </pre>
+                    <p class="doc">
+                        <p>unquotes (i.e. evaluates) an expression <code>form</code> inside a
 quasiquote and splices it in, i.e. flattens the expression. It will
 generate an error message when used outside a <code>quasiquote</code> form.</p>
 <p>Example:</p>
@@ -292,7 +339,8 @@ generate an error message when used outside a <code>quasiquote</code> form.</p>
 (quasiquote (+ (unquote-splicing x))) ; =&gt; (+ 1 2)
 </code></pre>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

@@ -253,55 +253,265 @@
             </div>
             <div class="module">
                 <h1>
-                    Function
+                    Dynamic.String
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-env-ptr">
-                        <h3 id="unsafe-env-ptr">
-                            unsafe-env-ptr
+                    <a class="anchor" href="#char-at">
+                        <h3 id="char-at">
+                            char-at
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns  void pointer to the environment captured by a lambda.</p>
-<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>gets the nth character of a string.</p>
+<p>Example Usage:</p>
+<pre><code>(String.char-at &quot;hi&quot; 1) ; =&gt; \i
+</code></pre>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-ptr">
-                        <h3 id="unsafe-ptr">
-                            unsafe-ptr
+                    <a class="anchor" href="#concat">
+                        <h3 id="concat">
+                            concat
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns a void pointer to the function passed in.</p>
-<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>concatenates a list of strings together.</p>
+<p>Example Usage:</p>
+<pre><code>(String.concat [&quot;hi &quot; &quot;there&quot;]) ; =&gt; &quot;hi there&quot;
+</code></pre>
 
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#empty?">
+                        <h3 id="empty?">
+                            empty?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (empty? s)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#head">
+                        <h3 id="head">
+                            head
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (head s)
+                    </pre>
+                    <p class="doc">
+                        <p>takes the head of the string <code>s</code> as a one-character string.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#index-of">
+                        <h3 id="index-of">
+                            index-of
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the index of a character in a string (or returns <code>-1</code> if the character is not found).</p>
+<p>Example Usage:</p>
+<pre><code>(index-of &quot;hi&quot; \i) ; =&gt; 1
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#length">
+                        <h3 id="length">
+                            length
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the length of a string.</p>
+<p>Example Usage:</p>
+<pre><code>(String.length &quot;hi&quot;) ; =&gt; 2
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#prefix">
+                        <h3 id="prefix">
+                            prefix
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (prefix s to)
+                    </pre>
+                    <p class="doc">
+                        <p>takes the prefix of the string <code>s</code> up to the index <code>to</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#slice">
+                        <h3 id="slice">
+                            slice
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>creates a substring from a beginning index to an end index.</p>
+<p>Example Usage:</p>
+<pre><code>(String.slice &quot;hello&quot; 1 3) ; =&gt; &quot;ell&quot;
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#split-on">
+                        <h3 id="split-on">
+                            split-on
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>split a string at separator.</p>
+<p>Example Usage:</p>
+<pre><code>(String.split-on &quot;-&quot; &quot;hi-there&quot;) ; =&gt; [&quot;hi &quot; &quot;there&quot;]
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#suffix">
+                        <h3 id="suffix">
+                            suffix
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (suffix s from)
+                    </pre>
+                    <p class="doc">
+                        <p>takes the suffix of the string <code>s</code> from the index <code>from</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#tail">
+                        <h3 id="tail">
+                            tail
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (tail s)
+                    </pre>
+                    <p class="doc">
+                        <p>takes the tail of the string <code>s</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#to-list">
+                        <h3 id="to-list">
+                            to-list
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (to-list s)
+                    </pre>
+                    <p class="doc">
+                        
                     </p>
                 </div>
             </div>

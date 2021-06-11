@@ -253,15 +253,15 @@
             </div>
             <div class="module">
                 <h1>
-                    Introspect
+                    Dynamic.Map
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#arguments">
-                        <h3 id="arguments">
-                            arguments
+                    <a class="anchor" href="#=">
+                        <h3 id="=">
+                            =
                         </h3>
                     </a>
                     <div class="description">
@@ -271,27 +271,17 @@
                         Dynamic
                     </p>
                     <pre class="args">
-                        (arguments binding)
+                        (= m1 m2)
                     </pre>
                     <p class="doc">
-                        <p>What are the arguments to this binding?</p>
-<ul>
-<li>When <code>binding</code> is a function, returns the argument array.</li>
-<li>When <code>binding</code> is a command, returns the argument array.</li>
-<li>When <code>binding</code> is a primitive, returns the argument array.</li>
-<li>When <code>binding</code> is an interface, returns the argument array.</li>
-<li>When <code>binding</code> is a struct, returns the fields.</li>
-<li>When <code>binding</code> is a sumtype, returns a list of the type arguments of each
-constructor.</li>
-<li>Otherwise it returns an empty list.</li>
-</ul>
+                        <p>checks whether two maps <code>m1</code> and <code>m2</code> are equal.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#arity">
-                        <h3 id="arity">
-                            arity
+                    <a class="anchor" href="#all?">
+                        <h3 id="all?">
+                            all?
                         </h3>
                     </a>
                     <div class="description">
@@ -301,27 +291,18 @@ constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (arity binding)
+                        (all? pred m)
                     </pre>
                     <p class="doc">
-                        <p>What's the arity of this binding?</p>
-<ul>
-<li>When <code>binding</code> is a function, returns the number of arguments.</li>
-<li>When <code>binding</code> is a command, returns the number of arguments.</li>
-<li>When <code>binding</code> is a primitive, returns the number of arguments.</li>
-<li>When <code>binding</code> is an interface, returns the number of arguments.</li>
-<li>When <code>binding</code> is a struct, returns the number of fields.</li>
-<li>When <code>binding</code> is a sumtype, returns a list of the number of type
-arguments of each constructor.</li>
-<li>Otherwise it returns 0.</li>
-</ul>
+                        <p>checks whether all key value pairs in <code>m</code> satisfy the predicate
+<code>pred</code>. <code>pred</code> takes the pair <code>(k v)</code> as its sole argument.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#command?">
-                        <h3 id="command?">
-                            command?
+                    <a class="anchor" href="#contains?">
+                        <h3 id="contains?">
+                            contains?
                         </h3>
                     </a>
                     <div class="description">
@@ -331,17 +312,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (command? binding)
+                        (contains? m k)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a command?</p>
+                        <p>checks whether the dynamic map <code>m</code> contains the key <code>k</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#dynamic?">
-                        <h3 id="dynamic?">
-                            dynamic?
+                    <a class="anchor" href="#create">
+                        <h3 id="create">
+                            create
                         </h3>
                     </a>
                     <div class="description">
@@ -351,17 +332,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (dynamic? binding)
+                        (create)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a dynamic binding?</p>
+                        <p>makes a dynamic map.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#external?">
-                        <h3 id="external?">
-                            external?
+                    <a class="anchor" href="#empty?">
+                        <h3 id="empty?">
+                            empty?
                         </h3>
                     </a>
                     <div class="description">
@@ -371,17 +352,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (external? binding)
+                        (empty? m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding external?</p>
+                        <p>checks whether the map <code>m</code> is empty.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#function?">
-                        <h3 id="function?">
-                            function?
+                    <a class="anchor" href="#from-array">
+                        <h3 id="from-array">
+                            from-array
                         </h3>
                     </a>
                     <div class="description">
@@ -391,37 +372,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (function? binding)
+                        (from-array a)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a function?</p>
+                        <p>creates a map from an array of key-value pairs <code>a</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#implements?">
-                        <h3 id="implements?">
-                            implements?
-                        </h3>
-                    </a>
-                    <div class="description">
-                        macro
-                    </div>
-                    <p class="sig">
-                        Macro
-                    </p>
-                    <pre class="args">
-                        (implements? interface function)
-                    </pre>
-                    <p class="doc">
-                        <p>Does <code>function</code> implement <code>interface</code>?</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#interface?">
-                        <h3 id="interface?">
-                            interface?
+                    <a class="anchor" href="#get">
+                        <h3 id="get">
+                            get
                         </h3>
                     </a>
                     <div class="description">
@@ -431,17 +392,18 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (interface? binding)
+                        (get m k)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding an interface?</p>
+                        <p>gets the value under the key <code>k</code>. If <code>k</code> doesn’t exist in the
+map, <code>nil</code> is returned.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#macro?">
-                        <h3 id="macro?">
-                            macro?
+                    <a class="anchor" href="#get-with-default">
+                        <h3 id="get-with-default">
+                            get-with-default
                         </h3>
                     </a>
                     <div class="description">
@@ -451,17 +413,18 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (macro? binding)
+                        (get-with-default m k default-value)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a macro?</p>
+                        <p>gets the value under the key <code>k</code>. If <code>k</code> doesn’t
+exist in the map, the default value is returned.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#module?">
-                        <h3 id="module?">
-                            module?
+                    <a class="anchor" href="#grow">
+                        <h3 id="grow">
+                            grow
                         </h3>
                     </a>
                     <div class="description">
@@ -471,17 +434,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (module? binding)
+                        (grow m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a module?</p>
+                        <p>grows a dynamic map.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#primitive?">
-                        <h3 id="primitive?">
-                            primitive?
+                    <a class="anchor" href="#keys">
+                        <h3 id="keys">
+                            keys
                         </h3>
                     </a>
                     <div class="description">
@@ -491,17 +454,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (primitive? binding)
+                        (keys m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a primitive?</p>
+                        <p>returns the key in the map <code>m</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#struct?">
-                        <h3 id="struct?">
-                            struct?
+                    <a class="anchor" href="#kv-reduce">
+                        <h3 id="kv-reduce">
+                            kv-reduce
                         </h3>
                     </a>
                     <div class="description">
@@ -511,17 +474,19 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (struct? binding)
+                        (kv-reduce f init m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a struct?</p>
+                        <p>reduces the map <code>m</code> using the function <code>f</code> and the initial
+value <code>init</code>. <code>f</code> takes the accumulator and the pair <code>(k v)</code> as its arguments
+and is expected to return a new accumulator.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#sumtype?">
-                        <h3 id="sumtype?">
-                            sumtype?
+                    <a class="anchor" href="#len">
+                        <h3 id="len">
+                            len
                         </h3>
                     </a>
                     <div class="description">
@@ -531,17 +496,17 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (sumtype? binding)
+                        (len m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a sumtype?</p>
+                        <p>returns the length of the map <code>m</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#type?">
-                        <h3 id="type?">
-                            type?
+                    <a class="anchor" href="#map">
+                        <h3 id="map">
+                            map
                         </h3>
                     </a>
                     <div class="description">
@@ -551,17 +516,19 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (type? binding)
+                        (map f m)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a type?</p>
+                        <p>maps the function <code>f</code> over all pairs in the map <code>m</code>. <code>f</code> takes
+the pair <code>(k v)</code> as its sole argument and is expected to return a new value
+under <code>v</code>.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#variable?">
-                        <h3 id="variable?">
-                            variable?
+                    <a class="anchor" href="#merge">
+                        <h3 id="merge">
+                            merge
                         </h3>
                     </a>
                     <div class="description">
@@ -571,52 +538,214 @@ arguments of each constructor.</li>
                         Dynamic
                     </p>
                     <pre class="args">
-                        (variable? binding)
+                        (merge m1 m2)
                     </pre>
                     <p class="doc">
-                        <p>Is this binding a variable?</p>
+                        <p>merges to maps <code>m1</code> and <code>m2</code>. Values in <code>m1</code> are preferred on
+collision.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#with-copy">
-                        <h3 id="with-copy">
-                            with-copy
+                    <a class="anchor" href="#put">
+                        <h3 id="put">
+                            put
                         </h3>
                     </a>
                     <div class="description">
-                        macro
+                        dynamic
                     </div>
                     <p class="sig">
-                        Macro
+                        Dynamic
                     </p>
                     <pre class="args">
-                        (with-copy function arg)
+                        (put m k v)
                     </pre>
                     <p class="doc">
-                        <p>Returns a reference to an anonymous 'proxied' variant of <code>function</code> in
-which the argument in position <code>arg</code> (indexed from 0) is <em>copied</em> from a
-reference before being passed to <code>function</code>:</p>
-<pre><code>;; Array.reduce expects a function that takes a *ref* in its second argument:
-;;   (Fn [a (Ref b c)] ...)
-;; so we can't use a function like `+` directly; enter proxy
-(reduce (with-copy + 2) 0 &amp;[1 2 3])
-=&gt; 6
-;; compare this with an inline anonymous function that achieves the same thing:
-(reduce &amp;(fn [x y] (+ x @y)) 0 &amp;[1 2 3]) === (reduce (with-copy + 2) 0 &amp;[1 2 3])
-</code></pre>
-<p>This is useful when using higher-order functions that operate over structures that
-return <em>references</em> to their inhabitants, such as arrays or structs. It allows
-you to use a function over values without writing a custom anonymous function
-to handle copying.</p>
-<p>Furthermore, one can define bespoke variants for working with particular
-higher-order functions. For instace, <code>reduce</code> always expacts a reference in the
-second positon:</p>
-<pre><code>(defmacro reducer [function]
-  (eval (list with-copy function 2)))
-(reduce (reducer +) 0 &amp;[1 2 3])
-=&gt; 6
-</code></pre>
+                        <p>adds a value <code>v</code> under the key <code>k</code> into the map. If <code>k</code> already
+exists in the map, it is updated.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#remove">
+                        <h3 id="remove">
+                            remove
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (remove m k)
+                    </pre>
+                    <p class="doc">
+                        <p>removes the pair under the key <code>k</code> from the map <code>m</code>. If it
+doesn’t exist, the map is returned unchanged.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#resize">
+                        <h3 id="resize">
+                            resize
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (resize m s)
+                    </pre>
+                    <p class="doc">
+                        <p>resizes a dynamic map to size <code>s</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#reverse">
+                        <h3 id="reverse">
+                            reverse
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (reverse m)
+                    </pre>
+                    <p class="doc">
+                        <p>reverses the key-value pairs in the map <code>m</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#shrink">
+                        <h3 id="shrink">
+                            shrink
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (shrink m)
+                    </pre>
+                    <p class="doc">
+                        <p>shrinks dynamic map.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#str">
+                        <h3 id="str">
+                            str
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (str m)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#to-array">
+                        <h3 id="to-array">
+                            to-array
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (to-array m)
+                    </pre>
+                    <p class="doc">
+                        <p>creates an array of key-value pairs from the map <code>m</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#update">
+                        <h3 id="update">
+                            update
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (update m k f)
+                    </pre>
+                    <p class="doc">
+                        <p>updates the value under the key <code>k</code> using the function <code>f</code>. If
+<code>k</code> doesn’t exist in the map, it is returned unchanged.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#update-with-default">
+                        <h3 id="update-with-default">
+                            update-with-default
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (update-with-default m k f v)
+                    </pre>
+                    <p class="doc">
+                        <p>updates the value under the key <code>k</code> using the
+function <code>f</code>. If <code>k</code> doesn’t exist in the map, it is set to <code>(f v)</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#vals">
+                        <h3 id="vals">
+                            vals
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (vals m)
+                    </pre>
+                    <p class="doc">
+                        <p>returns the values in the map <code>m</code>.</p>
 
                     </p>
                 </div>

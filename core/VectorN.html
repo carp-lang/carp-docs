@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,642 +251,644 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                VectorN
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#=">
-                    <h3 id="=">
-                        =
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
-                </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] Bool)
-                </p>
-                <pre class="args">
-                    (= o1 o2)
-                </pre>
-                <p class="doc">
+            <div class="module">
+                <h1>
+                    VectorN
+                </h1>
+                <div class="module-description">
                     
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#add">
-                    <h3 id="add">
-                        add
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe (VectorN a)))
-                </p>
-                <pre class="args">
-                    (add a b)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#angle-between">
-                    <h3 id="angle-between">
-                        angle-between
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#=">
+                        <h3 id="=">
+                            =
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] Bool)
+                    </p>
+                    <pre class="args">
+                        (= o1 o2)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe a))
-                </p>
-                <pre class="args">
-                    (angle-between a b)
-                </pre>
-                <p class="doc">
-                    <p>Get the angle between two vectors a and b.</p>
+                <div class="binder">
+                    <a class="anchor" href="#add">
+                        <h3 id="add">
+                            add
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe (VectorN a)))
+                    </p>
+                    <pre class="args">
+                        (add a b)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#angle-between">
+                        <h3 id="angle-between">
+                            angle-between
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe a))
+                    </p>
+                    <pre class="args">
+                        (angle-between a b)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the angle between two vectors a and b.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#anti-parallel?">
-                    <h3 id="anti-parallel?">
-                        anti-parallel?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
-                </p>
-                <pre class="args">
-                    (anti-parallel? a b)
-                </pre>
-                <p class="doc">
-                    <p>Check whether the two vectors a and b are anti-parallel.</p>
+                <div class="binder">
+                    <a class="anchor" href="#anti-parallel?">
+                        <h3 id="anti-parallel?">
+                            anti-parallel?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
+                    </p>
+                    <pre class="args">
+                        (anti-parallel? a b)
+                    </pre>
+                    <p class="doc">
+                        <p>Check whether the two vectors a and b are anti-parallel.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#copy">
-                    <h3 id="copy">
-                        copy
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>copies the <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#copy">
+                        <h3 id="copy">
+                            copy
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>copies the <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#delete">
-                    <h3 id="delete">
-                        delete
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(VectorN a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>deletes a <code>(VectorN f)</code>. Should usually not be called manually.</p>
+                <div class="binder">
+                    <a class="anchor" href="#delete">
+                        <h3 id="delete">
+                            delete
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(VectorN a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>deletes a <code>(VectorN f)</code>. Should usually not be called manually.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#dist">
-                    <h3 id="dist">
-                        dist
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe a))
-                </p>
-                <pre class="args">
-                    (dist a b)
-                </pre>
-                <p class="doc">
-                    <p>Get the distance between the vectors a and b.</p>
+                <div class="binder">
+                    <a class="anchor" href="#dist">
+                        <h3 id="dist">
+                            dist
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe a))
+                    </p>
+                    <pre class="args">
+                        (dist a b)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the distance between the vectors a and b.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#div">
-                    <h3 id="div">
-                        div
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), a] (VectorN a))
-                </p>
-                <pre class="args">
-                    (div a n)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#dot">
-                    <h3 id="dot">
-                        dot
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#div">
+                        <h3 id="div">
+                            div
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), a] (VectorN a))
+                    </p>
+                    <pre class="args">
+                        (div a n)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe a))
-                </p>
-                <pre class="args">
-                    (dot x y)
-                </pre>
-                <p class="doc">
-                    <p>Get the dot product of the two vectors x and y.</p>
+                <div class="binder">
+                    <a class="anchor" href="#dot">
+                        <h3 id="dot">
+                            dot
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe a))
+                    </p>
+                    <pre class="args">
+                        (dot x y)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the dot product of the two vectors x and y.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#init">
-                    <h3 id="init">
-                        init
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int, (Array a)] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>creates a <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#init">
+                        <h3 id="init">
+                            init
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [Int, (Array a)] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>creates a <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#mag">
-                    <h3 id="mag">
-                        mag
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] a)
-                </p>
-                <pre class="args">
-                    (mag o)
-                </pre>
-                <p class="doc">
-                    <p>Get the magnitude of a vector.</p>
+                <div class="binder">
+                    <a class="anchor" href="#mag">
+                        <h3 id="mag">
+                            mag
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] a)
+                    </p>
+                    <pre class="args">
+                        (mag o)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the magnitude of a vector.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#mag-sq">
-                    <h3 id="mag-sq">
-                        mag-sq
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] a)
-                </p>
-                <pre class="args">
-                    (mag-sq o)
-                </pre>
-                <p class="doc">
-                    <p>Get the squared magnitude of a vector.</p>
+                <div class="binder">
+                    <a class="anchor" href="#mag-sq">
+                        <h3 id="mag-sq">
+                            mag-sq
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] a)
+                    </p>
+                    <pre class="args">
+                        (mag-sq o)
+                    </pre>
+                    <p class="doc">
+                        <p>Get the squared magnitude of a vector.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#mul">
-                    <h3 id="mul">
-                        mul
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), a] (VectorN a))
-                </p>
-                <pre class="args">
-                    (mul a n)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#n">
-                    <h3 id="n">
-                        n
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                <div class="binder">
+                    <a class="anchor" href="#mul">
+                        <h3 id="mul">
+                            mul
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), a] (VectorN a))
+                    </p>
+                    <pre class="args">
+                        (mul a n)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] (Ref Int b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the <code>n</code> property of a <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#n">
+                        <h3 id="n">
+                            n
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] (Ref Int b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the <code>n</code> property of a <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#normalize">
-                    <h3 id="normalize">
-                        normalize
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] (VectorN a))
-                </p>
-                <pre class="args">
-                    (normalize o)
-                </pre>
-                <p class="doc">
-                    <p>Normalize a vector.</p>
+                <div class="binder">
+                    <a class="anchor" href="#normalize">
+                        <h3 id="normalize">
+                            normalize
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] (VectorN a))
+                    </p>
+                    <pre class="args">
+                        (normalize o)
+                    </pre>
+                    <p class="doc">
+                        <p>Normalize a vector.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#parallel?">
-                    <h3 id="parallel?">
-                        parallel?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
-                </p>
-                <pre class="args">
-                    (parallel? a b)
-                </pre>
-                <p class="doc">
-                    <p>Check whether the two vectors a and b are parallel.</p>
+                <div class="binder">
+                    <a class="anchor" href="#parallel?">
+                        <h3 id="parallel?">
+                            parallel?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
+                    </p>
+                    <pre class="args">
+                        (parallel? a b)
+                    </pre>
+                    <p class="doc">
+                        <p>Check whether the two vectors a and b are parallel.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#perpendicular?">
-                    <h3 id="perpendicular?">
-                        perpendicular?
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
-                </p>
-                <pre class="args">
-                    (perpendicular? a b)
-                </pre>
-                <p class="doc">
-                    <p>Check whether the two vectors a and b are perpendicular.</p>
+                <div class="binder">
+                    <a class="anchor" href="#perpendicular?">
+                        <h3 id="perpendicular?">
+                            perpendicular?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) b)] (Maybe Bool))
+                    </p>
+                    <pre class="args">
+                        (perpendicular? a b)
+                    </pre>
+                    <p class="doc">
+                        <p>Check whether the two vectors a and b are perpendicular.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#prn">
-                    <h3 id="prn">
-                        prn
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>converts a <code>(VectorN f)</code> to a string.</p>
+                <div class="binder">
+                    <a class="anchor" href="#prn">
+                        <h3 id="prn">
+                            prn
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] String)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>converts a <code>(VectorN f)</code> to a string.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#random-sized">
-                    <h3 id="random-sized">
-                        random-sized
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int] (VectorN a))
-                </p>
-                <pre class="args">
-                    (random-sized n)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-n">
-                    <h3 id="set-n">
-                        set-n
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                <div class="binder">
+                    <a class="anchor" href="#random-sized">
+                        <h3 id="random-sized">
+                            random-sized
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] (VectorN a))
+                    </p>
+                    <pre class="args">
+                        (random-sized n)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(VectorN a), Int] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>n</code> property of a <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-n">
+                        <h3 id="set-n">
+                            set-n
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(VectorN a), Int] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>n</code> property of a <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-n!">
-                    <h3 id="set-n!">
-                        set-n!
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), Int] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>n</code> property of a <code>(VectorN f)</code> in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-n!">
+                        <h3 id="set-n!">
+                            set-n!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>n</code> property of a <code>(VectorN f)</code> in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-v">
-                    <h3 id="set-v">
-                        set-v
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(VectorN a), (Array a)] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>v</code> property of a <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-v">
+                        <h3 id="set-v">
+                            set-v
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(VectorN a), (Array a)] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>v</code> property of a <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#set-v!">
-                    <h3 id="set-v!">
-                        set-v!
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Array a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the <code>v</code> property of a <code>(VectorN f)</code> in place.</p>
+                <div class="binder">
+                    <a class="anchor" href="#set-v!">
+                        <h3 id="set-v!">
+                            set-v!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Array a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the <code>v</code> property of a <code>(VectorN f)</code> in place.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#str">
-                    <h3 id="str">
-                        str
-                    </h3>
-                </a>
-                <div class="description">
-                    template
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>converts a <code>(VectorN f)</code> to a string.</p>
+                <div class="binder">
+                    <a class="anchor" href="#str">
+                        <h3 id="str">
+                            str
+                        </h3>
+                    </a>
+                    <div class="description">
+                        template
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] String)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>converts a <code>(VectorN f)</code> to a string.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#sub">
-                    <h3 id="sub">
-                        sub
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe (VectorN a)))
-                </p>
-                <pre class="args">
-                    (sub a b)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-n">
-                    <h3 id="update-n">
-                        update-n
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                <div class="binder">
+                    <a class="anchor" href="#sub">
+                        <h3 id="sub">
+                            sub
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c)] (Maybe (VectorN a)))
+                    </p>
+                    <pre class="args">
+                        (sub a b)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(VectorN a), (Ref (Fn [Int] Int b) c)] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>updates the <code>n</code> property of a <code>(VectorN f)</code> using a function <code>f</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-n">
+                        <h3 id="update-n">
+                            update-n
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(VectorN a), (Ref (Fn [Int] Int b) c)] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>updates the <code>n</code> property of a <code>(VectorN f)</code> using a function <code>f</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#update-v">
-                    <h3 id="update-v">
-                        update-v
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(VectorN a), (Ref (Fn [(Array a)] (Array a) b) c)] (VectorN a))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>updates the <code>v</code> property of a <code>(VectorN f)</code> using a function <code>f</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#update-v">
+                        <h3 id="update-v">
+                            update-v
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(VectorN a), (Ref (Fn [(Array a)] (Array a) b) c)] (VectorN a))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>updates the <code>v</code> property of a <code>(VectorN f)</code> using a function <code>f</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#v">
-                    <h3 id="v">
-                        v
-                    </h3>
-                </a>
-                <div class="description">
-                    instantiate
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b)] (Ref (Array a) b))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the <code>v</code> property of a <code>(VectorN f)</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#v">
+                        <h3 id="v">
+                            v
+                        </h3>
+                    </a>
+                    <div class="description">
+                        instantiate
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b)] (Ref (Array a) b))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the <code>v</code> property of a <code>(VectorN f)</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#vlerp">
-                    <h3 id="vlerp">
-                        vlerp
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c), a] (Maybe (VectorN a)))
-                </p>
-                <pre class="args">
-                    (vlerp a b amnt)
-                </pre>
-                <p class="doc">
-                    <p>Linearly interpolate between the two vectors a and b by amnt (between 0 and 1).</p>
+                <div class="binder">
+                    <a class="anchor" href="#vlerp">
+                        <h3 id="vlerp">
+                            vlerp
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (VectorN a) b), (Ref (VectorN a) c), a] (Maybe (VectorN a)))
+                    </p>
+                    <pre class="args">
+                        (vlerp a b amnt)
+                    </pre>
+                    <p class="doc">
+                        <p>Linearly interpolate between the two vectors a and b by amnt (between 0 and 1).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#zero-sized">
-                    <h3 id="zero-sized">
-                        zero-sized
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int] (VectorN a))
-                </p>
-                <pre class="args">
-                    (zero-sized n)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#zip">
-                    <h3 id="zip">
-                        zip
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#zero-sized">
+                        <h3 id="zero-sized">
+                            zero-sized
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] (VectorN a))
+                    </p>
+                    <pre class="args">
+                        (zero-sized n)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Fn [a, b] c d), (Ref (VectorN a) e), (Ref (VectorN b) f)] (Maybe (VectorN c)))
-                </p>
-                <pre class="args">
-                    (zip f a b)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#zip-">
-                    <h3 id="zip-">
-                        zip-
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#zip">
+                        <h3 id="zip">
+                            zip
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Fn [a, b] c d), (Ref (VectorN a) e), (Ref (VectorN b) f)] (Maybe (VectorN c)))
+                    </p>
+                    <pre class="args">
+                        (zip f a b)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Fn [a, b] c d), (Ref (Array a) e), (Ref (Array b) f)] (VectorN c))
-                </p>
-                <pre class="args">
-                    (zip- f a b)
-                </pre>
-                <p class="doc">
-                    
-                </p>
+                <div class="binder">
+                    <a class="anchor" href="#zip-">
+                        <h3 id="zip-">
+                            zip-
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Fn [a, b] c d), (Ref (Array a) e), (Ref (Array b) f)] (VectorN c))
+                    </p>
+                    <pre class="args">
+                        (zip- f a b)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
             </div>
         </div>
     </body>

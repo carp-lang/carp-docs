@@ -253,54 +253,100 @@
             </div>
             <div class="module">
                 <h1>
-                    Function
+                    Dynamic.Symbol
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-env-ptr">
-                        <h3 id="unsafe-env-ptr">
-                            unsafe-env-ptr
+                    <a class="anchor" href="#concat">
+                        <h3 id="concat">
+                            concat
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns  void pointer to the environment captured by a lambda.</p>
-<p>This is unsafe as unsafe-env-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>concatenates a list of symbols together.</p>
+<p>Example Usage:</p>
+<pre><code>(Symbol.concat ['x 'y 'z]) ; =&gt; 'xyz
+</code></pre>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-ptr">
-                        <h3 id="unsafe-ptr">
-                            unsafe-ptr
+                    <a class="anchor" href="#from">
+                        <h3 id="from">
+                            from
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        command
                     </div>
                     <p class="sig">
-                        (Fn [(Ref a b)] (Ptr ()))
+                        Dynamic
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns a void pointer to the function passed in.</p>
-<p>This is unsafe as unsafe-ptr can't check the value passed in is a function.</p>
-<p>It is the responsibility of the caller to ensure that the lifetime of the pointer
-does not exceed the lifetime of the function it's used on.</p>
+                        <p>converts a variety of types to a symbol.</p>
+<p>Example Usage:</p>
+<pre><code>(Symbol.from true) ; =&gt; True
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#prefix">
+                        <h3 id="prefix">
+                            prefix
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>prefixes a symbol with a module.</p>
+<p>Example Usage:</p>
+<pre><code>(Symbol.prefix 'Module 'fun) ; =&gt; Module.fun
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#str">
+                        <h3 id="str">
+                            str
+                        </h3>
+                    </a>
+                    <div class="description">
+                        command
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>converts a symbol to a string.</p>
+<p>Example Usage:</p>
+<pre><code>(Symbol.str 'x) ; =&gt; &quot;x&quot;
+</code></pre>
 
                     </p>
                 </div>

@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,652 +251,654 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                IO
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#EOF">
-                    <h3 id="EOF">
-                        EOF
-                    </h3>
-                </a>
-                <div class="description">
-                    external
-                </div>
-                <p class="sig">
-                    Char
-                </p>
-                <span>
+            <div class="module">
+                <h1>
+                    IO
+                </h1>
+                <div class="module-description">
                     
-                </span>
-                <p class="doc">
-                    <p>the End-Of-File character as a literal (thin wrapper for the C standard library)</p>
-
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#SEEK-CUR">
-                    <h3 id="SEEK-CUR">
-                        SEEK-CUR
-                    </h3>
-                </a>
-                <div class="description">
-                    external
                 </div>
-                <p class="sig">
-                    Int
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#EOF">
+                        <h3 id="EOF">
+                            EOF
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        Char
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the End-Of-File character as a literal (thin wrapper for the C standard library)</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#SEEK-END">
-                    <h3 id="SEEK-END">
-                        SEEK-END
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    Int
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#SEEK-CUR">
+                        <h3 id="SEEK-CUR">
+                            SEEK-CUR
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        Int
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#SEEK-SET">
-                    <h3 id="SEEK-SET">
-                        SEEK-SET
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    Int
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>to be used with fseek (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#SEEK-END">
+                        <h3 id="SEEK-END">
+                            SEEK-END
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        Int
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#color">
-                    <h3 id="color">
-                        color
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Color.Id] ())
-                </p>
-                <pre class="args">
-                    (color cid)
-                </pre>
-                <p class="doc">
-                    <p>sets the output color using ANSI coloration based on a color id <code>cid</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#SEEK-SET">
+                        <h3 id="SEEK-SET">
+                            SEEK-SET
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        Int
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#colorize">
-                    <h3 id="colorize">
-                        colorize
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Color.Id, (Ref String a)] ())
-                </p>
-                <pre class="args">
-                    (colorize cid s)
-                </pre>
-                <p class="doc">
-                    <p>wraps a string in ANSI coloration based on a color id <code>cid</code> and prints it.</p>
+                <div class="binder">
+                    <a class="anchor" href="#color">
+                        <h3 id="color">
+                            color
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Color.Id] ())
+                    </p>
+                    <pre class="args">
+                        (color cid)
+                    </pre>
+                    <p class="doc">
+                        <p>sets the output color using ANSI coloration based on a color id <code>cid</code>.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#error">
-                    <h3 id="error">
-                        error
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>prints a string ref to stderr, does not append a newline.</p>
+                <div class="binder">
+                    <a class="anchor" href="#colorize">
+                        <h3 id="colorize">
+                            colorize
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Color.Id, (Ref String a)] ())
+                    </p>
+                    <pre class="args">
+                        (colorize cid s)
+                    </pre>
+                    <p class="doc">
+                        <p>wraps a string in ANSI coloration based on a color id <code>cid</code> and prints it.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#errorln">
-                    <h3 id="errorln">
-                        errorln
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>prints a string ref to stderr, appends a newline.</p>
+                <div class="binder">
+                    <a class="anchor" href="#error">
+                        <h3 id="error">
+                            error
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>prints a string ref to stderr, does not append a newline.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#exit">
-                    <h3 id="exit">
-                        exit
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [Int] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>exit the current program with a return code (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#errorln">
+                        <h3 id="errorln">
+                            errorln
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>prints a string ref to stderr, appends a newline.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fclose">
-                    <h3 id="fclose">
-                        fclose
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>closes a file pointer (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#exit">
+                        <h3 id="exit">
+                            exit
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>exit the current program with a return code (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fflush">
-                    <h3 id="fflush">
-                        fflush
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>flushes a file pointer, i.e. commits every write (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#fclose">
+                        <h3 id="fclose">
+                            fclose
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>closes a file pointer (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fgetc">
-                    <h3 id="fgetc">
-                        fgetc
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE)] Char)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets a character from a file pointer (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#fflush">
+                        <h3 id="fflush">
+                            fflush
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>flushes a file pointer, i.e. commits every write (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fopen">
-                    <h3 id="fopen">
-                        fopen
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a), (Ref String b)] (Ptr FILE))
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>opens a file for input/output/appending (thin wrapper for fopen(pathname, mode) from C standard library). Consider using the function <a href="#open-file"><code>open-file</code></a> instead.</p>
+                <div class="binder">
+                    <a class="anchor" href="#fgetc">
+                        <h3 id="fgetc">
+                            fgetc
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] Char)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets a character from a file pointer (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fread">
-                    <h3 id="fread">
-                        fread
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [a, Int, Int, (Ptr FILE)] Int)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>reads from a file into C-String (thin wrapper for fread(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#read-file"><code>read-file</code></a> or <a href="#unsafe-read-file"><code>unsafe-read-file</code></a> instead.</p>
+                <div class="binder">
+                    <a class="anchor" href="#fopen">
+                        <h3 id="fopen">
+                            fopen
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), (Ref String b)] (Ptr FILE))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>opens a file for input/output/appending (thin wrapper for fopen(pathname, mode) from C standard library). Consider using the function <a href="#open-file"><code>open-file</code></a> instead.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fseek">
-                    <h3 id="fseek">
-                        fseek
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE), Int, Int] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>sets the position indicator of a file  (thin wrapper for fseek(file, offset, whence) from C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#fread">
+                        <h3 id="fread">
+                            fread
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [a, Int, Int, (Ptr FILE)] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>reads from a file into C-String (thin wrapper for fread(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#read-file"><code>read-file</code></a> or <a href="#unsafe-read-file"><code>unsafe-read-file</code></a> instead.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#ftell">
-                    <h3 id="ftell">
-                        ftell
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE)] Int)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets the position indicator of a file (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#fseek">
+                        <h3 id="fseek">
+                            fseek
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE), Int, Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>sets the position indicator of a file  (thin wrapper for fseek(file, offset, whence) from C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#fwrite">
-                    <h3 id="fwrite">
-                        fwrite
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr CChar), Int, Int, (Ptr FILE)] Int)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>writes a C-string to a file and returns the number of written items (thin wrapper for fwrite(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#write-file"><code>write-file</code></a> instead.</p>
+                <div class="binder">
+                    <a class="anchor" href="#ftell">
+                        <h3 id="ftell">
+                            ftell
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the position indicator of a file (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get-char">
-                    <h3 id="get-char">
-                        get-char
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] Char)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets a character from stdin (thin wrapper for getchar() from C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#fwrite">
+                        <h3 id="fwrite">
+                            fwrite
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr CChar), Int, Int, (Ptr FILE)] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>writes a C-string to a file and returns the number of written items (thin wrapper for fwrite(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#write-file"><code>write-file</code></a> instead.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#get-line">
-                    <h3 id="get-line">
-                        get-line
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>gets a line from stdin.</p>
+                <div class="binder">
+                    <a class="anchor" href="#get-char">
+                        <h3 id="get-char">
+                            get-char
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] Char)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets a character from stdin (thin wrapper for getchar() from C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#getenv">
-                    <h3 id="getenv">
-                        getenv
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [String] (Maybe String))
-                </p>
-                <pre class="args">
-                    (getenv s)
-                </pre>
-                <p class="doc">
-                    <p>gets the value of an environment variable (Carp-style wrapper for the C standard library)</p>
+                <div class="binder">
+                    <a class="anchor" href="#get-line">
+                        <h3 id="get-line">
+                            get-line
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] String)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets a line from stdin.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#open-file">
-                    <h3 id="open-file">
-                        open-file
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a), (Ref String b)] (Result (Ptr FILE) Int))
-                </p>
-                <pre class="args">
-                    (open-file filename mode)
-                </pre>
-                <p class="doc">
-                    <p>opens a file by name using a mode (e.g. [r]ead, [w]rite, [a]ppend),  [rb] read binary...). See fopen() in the C standard library for a detailed description of valid parameters.</p>
+                <div class="binder">
+                    <a class="anchor" href="#getenv">
+                        <h3 id="getenv">
+                            getenv
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [String] (Maybe String))
+                    </p>
+                    <pre class="args">
+                        (getenv s)
+                    </pre>
+                    <p class="doc">
+                        <p>gets the value of an environment variable (Carp-style wrapper for the C standard library)</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#print">
-                    <h3 id="print">
-                        print
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>prints a string ref to stdout, does not append a newline.</p>
+                <div class="binder">
+                    <a class="anchor" href="#open-file">
+                        <h3 id="open-file">
+                            open-file
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), (Ref String b)] (Result (Ptr FILE) Int))
+                    </p>
+                    <pre class="args">
+                        (open-file filename mode)
+                    </pre>
+                    <p class="doc">
+                        <p>opens a file by name using a mode (e.g. [r]ead, [w]rite, [a]ppend),  [rb] read binary...). See fopen() in the C standard library for a detailed description of valid parameters.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#println">
-                    <h3 id="println">
-                        println
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>prints a string ref to stdout, appends a newline.</p>
+                <div class="binder">
+                    <a class="anchor" href="#print">
+                        <h3 id="print">
+                            print
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>prints a string ref to stdout, does not append a newline.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#read-&gt;EOF">
-                    <h3 id="read-&gt;EOF">
-                        read-&gt;EOF
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] (Result String Int))
-                </p>
-                <pre class="args">
-                    (read-&gt;EOF filename)
-                </pre>
-                <p class="doc">
-                    <p>reads a file given by name until the End-Of-File character is reached.</p>
+                <div class="binder">
+                    <a class="anchor" href="#println">
+                        <h3 id="println">
+                            println
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>prints a string ref to stdout, appends a newline.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#read-file">
-                    <h3 id="read-file">
-                        read-file
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] (Result String String))
-                </p>
-                <pre class="args">
-                    (read-file filename)
-                </pre>
-                <p class="doc">
-                    <p>Reads the content of a file into a (Result String String).
+                <div class="binder">
+                    <a class="anchor" href="#read-&gt;EOF">
+                        <h3 id="read-&gt;EOF">
+                            read-&gt;EOF
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] (Result String Int))
+                    </p>
+                    <pre class="args">
+                        (read-&gt;EOF filename)
+                    </pre>
+                    <p class="doc">
+                        <p>reads a file given by name until the End-Of-File character is reached.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#read-file">
+                        <h3 id="read-file">
+                            read-file
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] (Result String String))
+                    </p>
+                    <pre class="args">
+                        (read-file filename)
+                    </pre>
+                    <p class="doc">
+                        <p>Reads the content of a file into a (Result String String).
 It is intended for text files, since the way to determine the length of a String is to use strlen() which probably will be inaccurate for binaries.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#rewind">
-                    <h3 id="rewind">
-                        rewind
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ptr FILE)] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>rewinds a file pointer, i.e. puts input and output stream to beginning (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#rewind">
+                        <h3 id="rewind">
+                            rewind
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>rewinds a file pointer, i.e. puts input and output stream to beginning (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#stderr">
-                    <h3 id="stderr">
-                        stderr
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Ptr FILE)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>the standard error file (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#stderr">
+                        <h3 id="stderr">
+                            stderr
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard error file (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#stdin">
-                    <h3 id="stdin">
-                        stdin
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Ptr FILE)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>the standard input file (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#stdin">
+                        <h3 id="stdin">
+                            stdin
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard input file (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#stdout">
-                    <h3 id="stdout">
-                        stdout
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Ptr FILE)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>the standard output file (thin wrapper for the C standard library).</p>
+                <div class="binder">
+                    <a class="anchor" href="#stdout">
+                        <h3 id="stdout">
+                            stdout
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard output file (thin wrapper for the C standard library).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#unlink">
-                    <h3 id="unlink">
-                        unlink
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [String] ())
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>unlinks a file, i.e. deletes it (thin wrapper for POSIX api in &lt;unistd.h&gt;).</p>
+                <div class="binder">
+                    <a class="anchor" href="#unlink">
+                        <h3 id="unlink">
+                            unlink
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [String] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>unlinks a file, i.e. deletes it (thin wrapper for POSIX api in &lt;unistd.h&gt;).</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#unsafe-read-file">
-                    <h3 id="unsafe-read-file">
-                        unsafe-read-file
-                    </h3>
-                </a>
-                <div class="description">
-                    external
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a)] String)
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>returns the contents of a file passed as argument as a string. Note: there is no way to distinguish the output for an empty file and a missing file!</p>
+                <div class="binder">
+                    <a class="anchor" href="#unsafe-read-file">
+                        <h3 id="unsafe-read-file">
+                            unsafe-read-file
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] String)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>returns the contents of a file passed as argument as a string. Note: there is no way to distinguish the output for an empty file and a missing file!</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#write-file">
-                    <h3 id="write-file">
-                        write-file
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref String a), (Ref String b)] (Result Bool String))
-                </p>
-                <pre class="args">
-                    (write-file content file-name)
-                </pre>
-                <p class="doc">
-                    <p>Writes a string into a (text) file, overwriting it if it already exists.</p>
+                <div class="binder">
+                    <a class="anchor" href="#write-file">
+                        <h3 id="write-file">
+                            write-file
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), (Ref String b)] (Result Bool String))
+                    </p>
+                    <pre class="args">
+                        (write-file content file-name)
+                    </pre>
+                    <p class="doc">
+                        <p>Writes a string into a (text) file, overwriting it if it already exists.</p>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

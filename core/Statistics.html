@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,309 +251,292 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Statistics
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#Summary">
-                    <h3 id="Summary">
-                        Summary
-                    </h3>
-                </a>
-                <div class="description">
-                    module
-                </div>
-                <p class="sig">
-                    Module
-                </p>
-                <span>
+            <div class="module">
+                <h1>
+                    Statistics
+                </h1>
+                <div class="module-description">
                     
-                </span>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#grouped-median">
-                    <h3 id="grouped-median">
-                        grouped-median
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a), Int] Double)
-                </p>
-                <pre class="args">
-                    (grouped-median data interval)
-                </pre>
-                <p class="doc">
-                    <p>Compute the grouped median of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#grouped-median">
+                        <h3 id="grouped-median">
+                            grouped-median
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a), Int] Double)
+                    </p>
+                    <pre class="args">
+                        (grouped-median data interval)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the grouped median of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#high-median">
-                    <h3 id="high-median">
-                        high-median
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (high-median data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the high median of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#high-median">
+                        <h3 id="high-median">
+                            high-median
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (high-median data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the high median of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#iqr">
-                    <h3 id="iqr">
-                        iqr
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (iqr data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the interquartile range.</p>
+                <div class="binder">
+                    <a class="anchor" href="#iqr">
+                        <h3 id="iqr">
+                            iqr
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (iqr data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the interquartile range.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#low-median">
-                    <h3 id="low-median">
-                        low-median
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (low-median data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the low median of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#low-median">
+                        <h3 id="low-median">
+                            low-median
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (low-median data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the low median of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#mean">
-                    <h3 id="mean">
-                        mean
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array a) b)] a)
-                </p>
-                <pre class="args">
-                    (mean data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the mean of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#mean">
+                        <h3 id="mean">
+                            mean
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array a) b)] a)
+                    </p>
+                    <pre class="args">
+                        (mean data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the mean of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#median">
-                    <h3 id="median">
-                        median
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (median data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the median of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#median">
+                        <h3 id="median">
+                            median
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (median data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the median of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#pstdev">
-                    <h3 id="pstdev">
-                        pstdev
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (pstdev data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the population standard deviation of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#pstdev">
+                        <h3 id="pstdev">
+                            pstdev
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (pstdev data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the population standard deviation of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#pstdev-pct">
-                    <h3 id="pstdev-pct">
-                        pstdev-pct
-                    </h3>
-                </a>
-                <div class="description">
-                    meta-stub
+                    </p>
                 </div>
-                <p class="sig">
-                    a
-                </p>
-                <span>
-                    
-                </span>
-                <p class="doc">
-                    <p>Compute the standard deviation of the samples data as a percentile.</p>
+                <div class="binder">
+                    <a class="anchor" href="#pstdev-pct">
+                        <h3 id="pstdev-pct">
+                            pstdev-pct
+                        </h3>
+                    </a>
+                    <div class="description">
+                        meta-stub
+                    </div>
+                    <p class="sig">
+                        a
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>Compute the standard deviation of the samples data as a percentile.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#pvariance">
-                    <h3 id="pvariance">
-                        pvariance
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (pvariance data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the population variance of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#pvariance">
+                        <h3 id="pvariance">
+                            pvariance
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (pvariance data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the population variance of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#quartiles">
-                    <h3 id="quartiles">
-                        quartiles
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] (Array Double))
-                </p>
-                <pre class="args">
-                    (quartiles data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the quartiles of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#quartiles">
+                        <h3 id="quartiles">
+                            quartiles
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] (Array Double))
+                    </p>
+                    <pre class="args">
+                        (quartiles data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the quartiles of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#stdev">
-                    <h3 id="stdev">
-                        stdev
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (stdev data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the standard deviation of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#stdev">
+                        <h3 id="stdev">
+                            stdev
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (stdev data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the standard deviation of the samples data.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#stdev-pct">
-                    <h3 id="stdev-pct">
-                        stdev-pct
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (stdev-pct data)
-                </pre>
-                <p class="doc">
-                    
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#summary">
-                    <h3 id="summary">
-                        summary
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                <div class="binder">
+                    <a class="anchor" href="#stdev-pct">
+                        <h3 id="stdev-pct">
+                            stdev-pct
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (stdev-pct data)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Statistics.Summary)
-                </p>
-                <pre class="args">
-                    (summary samples)
-                </pre>
-                <p class="doc">
-                    <p>Compute a variety of statistical values from a list of samples.</p>
+                <div class="binder">
+                    <a class="anchor" href="#summary">
+                        <h3 id="summary">
+                            summary
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Statistics.Summary)
+                    </p>
+                    <pre class="args">
+                        (summary samples)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute a variety of statistical values from a list of samples.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#variance">
-                    <h3 id="variance">
-                        variance
-                    </h3>
-                </a>
-                <div class="description">
-                    defn
+                    </p>
                 </div>
-                <p class="sig">
-                    (Fn [(Ref (Array Double) a)] Double)
-                </p>
-                <pre class="args">
-                    (variance data)
-                </pre>
-                <p class="doc">
-                    <p>Compute the variance of the samples data.</p>
+                <div class="binder">
+                    <a class="anchor" href="#variance">
+                        <h3 id="variance">
+                            variance
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Array Double) a)] Double)
+                    </p>
+                    <pre class="args">
+                        (variance data)
+                    </pre>
+                    <p class="doc">
+                        <p>Compute the variance of the samples data.</p>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>

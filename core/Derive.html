@@ -63,9 +63,55 @@
                             </a>
                         </li>
                         <li>
-                            <a href="Dynamic.html">
-                                Dynamic
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="Dynamic.html">
+                                        Dynamic
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="Dynamic.List.html">
+                                            List
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Map.html">
+                                            Map
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Pair.html">
+                                            Pair
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Path.html">
+                                            Path
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Random.html">
+                                            Random
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.String.html">
+                                            String
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Dynamic.Symbol.html">
+                                            Symbol
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Float.html">
@@ -205,92 +251,93 @@
                     </ul>
                 </div>
             </div>
-            <h1>
-                Derive
-            </h1>
-            <div class="module-description">
-                
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#derivable?">
-                    <h3 id="derivable?">
-                        derivable?
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+            <div class="module">
+                <h1>
+                    Derive
+                </h1>
+                <div class="module-description">
+                    
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (derivable? f)
-                </pre>
-                <p class="doc">
-                    <p>checks whether a quoted interface name <code>f</code> is currently
+                <div class="binder">
+                    <a class="anchor" href="#derivable?">
+                        <h3 id="derivable?">
+                            derivable?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (derivable? f)
+                    </pre>
+                    <p class="doc">
+                        <p>checks whether a quoted interface name <code>f</code> is currently
 derivable.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#derivables">
-                    <h3 id="derivables">
-                        derivables
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+                    </p>
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (derivables)
-                </pre>
-                <p class="doc">
-                    <p>returns the list of currently derivable interfaces.</p>
+                <div class="binder">
+                    <a class="anchor" href="#derivables">
+                        <h3 id="derivables">
+                            derivables
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (derivables)
+                    </pre>
+                    <p class="doc">
+                        <p>returns the list of currently derivable interfaces.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#derive">
-                    <h3 id="derive">
-                        derive
-                    </h3>
-                </a>
-                <div class="description">
-                    macro
+                    </p>
                 </div>
-                <p class="sig">
-                    Macro
-                </p>
-                <pre class="args">
-                    (derive t f :rest override)
-                </pre>
-                <p class="doc">
-                    <p>derives an interface function <code>f</code> for a type <code>t</code>.</p>
+                <div class="binder">
+                    <a class="anchor" href="#derive">
+                        <h3 id="derive">
+                            derive
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (derive t f :rest override)
+                    </pre>
+                    <p class="doc">
+                        <p>derives an interface function <code>f</code> for a type <code>t</code>.</p>
 <p>Optionally, it also takes an argument <code>overrride</code> that overrides the name of
 the generated function to avoid collisions.</p>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#make-deriver">
-                    <h3 id="make-deriver">
-                        make-deriver
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+                    </p>
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (make-deriver f args body)
-                </pre>
-                <p class="doc">
-                    <p>is a mechanism for providing your own deriver by providing
+                <div class="binder">
+                    <a class="anchor" href="#make-deriver">
+                        <h3 id="make-deriver">
+                            make-deriver
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (make-deriver f args body)
+                    </pre>
+                    <p class="doc">
+                        <p>is a mechanism for providing your own deriver by providing
 the interface name <code>f</code>, the arguments it takes <code>args</code>, and a function that can
 generate a body when given a type <code>body</code>.</p>
 <p>Example:</p>
@@ -300,28 +347,29 @@ generate a body when given a type <code>body</code>.</p>
       (map (fn [_] '(zero)) (eval `(members %t)))))
 </code></pre>
 
-                </p>
-            </div>
-            <div class="binder">
-                <a class="anchor" href="#make-update-deriver">
-                    <h3 id="make-update-deriver">
-                        make-update-deriver
-                    </h3>
-                </a>
-                <div class="description">
-                    dynamic
+                    </p>
                 </div>
-                <p class="sig">
-                    Dynamic
-                </p>
-                <pre class="args">
-                    (make-update-deriver interface)
-                </pre>
-                <p class="doc">
-                    <p>is a convenience function for creating a deriver
+                <div class="binder">
+                    <a class="anchor" href="#make-update-deriver">
+                        <h3 id="make-update-deriver">
+                            make-update-deriver
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (make-update-deriver interface)
+                    </pre>
+                    <p class="doc">
+                        <p>is a convenience function for creating a deriver
 for functions that you could pass into <code>update-&lt;member&gt;</code> style functions.</p>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </body>
