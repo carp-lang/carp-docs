@@ -2567,8 +2567,10 @@ predicate <code>p</code>.</p>
                         
                     </span>
                     <p class="doc">
-                        <p>Example Usage:</p>
-<pre><code>
+                        <p>checks whether a type is managed by Carp by checking whether <code>delete</code> was implemented for it. For an explanation of memory management, you can reference <a href="https://carp-lang.github.io/carp-docs/Memory.html">this document</a>.</p>
+<p>Example Usage:</p>
+<pre><code>(register-type Unmanaged &quot;void*&quot;)
+(managed? Unmanaged) ; =&gt; false
 </code></pre>
 
                     </p>
