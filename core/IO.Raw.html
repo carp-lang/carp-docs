@@ -264,675 +264,469 @@
             </div>
             <div class="module">
                 <h1>
-                    StaticArray
+                    IO.Raw
                 </h1>
                 <div class="module-description">
-                    
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#=">
-                        <h3 id="=">
-                            =
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref (StaticArray a) b)] Bool)
-                    </p>
-                    <pre class="args">
-                        (= a b)
-                    </pre>
-                    <p class="doc">
-                        <p>compares two static arrays.</p>
+                    <p>wrappers for functions from the C standard library. Consider using a more carpesque function from IO when it exists. For detailed documentation please consult the documentation of your system (e.g. under Linux try man fprint).</p>
 
-                    </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#all?">
-                        <h3 id="all?">
-                            all?
+                    <a class="anchor" href="#EOF">
+                        <h3 id="EOF">
+                            EOF
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (Fn [(Ref a b)] Bool c) d), (Ref (StaticArray a) b)] Bool)
-                    </p>
-                    <pre class="args">
-                        (all? f a)
-                    </pre>
-                    <p class="doc">
-                        <p>checks whether all of the elements in <code>a</code> match the function <code>f</code>.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#any?">
-                        <h3 id="any?">
-                            any?
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Fn [(Ref a b)] Bool c) d), (Ref (StaticArray a) b)] Bool)
-                    </p>
-                    <pre class="args">
-                        (any? f a)
-                    </pre>
-                    <p class="doc">
-                        <p>checks whether any of the elements in <code>a</code> match the function <code>f</code>.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#aset!">
-                        <h3 id="aset!">
-                            aset!
-                        </h3>
-                    </a>
-                    <div class="description">
-                        template
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int, a] ())
+                        Int
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets a static array element at the index <code>n</code> to a new value in place.</p>
+                        <p>the End-Of-File character as a literal (thin wrapper for the C standard library)</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#aset-uninitialized!">
-                        <h3 id="aset-uninitialized!">
-                            aset-uninitialized!
+                    <a class="anchor" href="#SEEK-CUR">
+                        <h3 id="SEEK-CUR">
+                            SEEK-CUR
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int, a] ())
+                        Int
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>sets an uninitialized static array member. The old member will not be deleted.</p>
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#aupdate!">
-                        <h3 id="aupdate!">
-                            aupdate!
+                    <a class="anchor" href="#SEEK-END">
+                        <h3 id="SEEK-END">
+                            SEEK-END
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int, (Ref (Fn [a] a c) d)] ())
-                    </p>
-                    <pre class="args">
-                        (aupdate! a i f)
-                    </pre>
-                    <p class="doc">
-                        <p>transmutes (i.e. updates) the element at index <code>i</code> of an array <code>a</code> using the function <code>f</code> in place.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#contains?">
-                        <h3 id="contains?">
-                            contains?
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref a b)] Bool)
-                    </p>
-                    <pre class="args">
-                        (contains? arr el)
-                    </pre>
-                    <p class="doc">
-                        <p>checks wether an element exists in the array.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#delete">
-                        <h3 id="delete">
-                            delete
-                        </h3>
-                    </a>
-                    <div class="description">
-                        template
-                    </div>
-                    <p class="sig">
-                        (Fn [(StaticArray a)] ())
+                        Int
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>deletes a static array. This function should not be called manually (there shouldn't be a way to create value types of type StaticArray).</p>
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#element-count">
-                        <h3 id="element-count">
-                            element-count
+                    <a class="anchor" href="#SEEK-SET">
+                        <h3 id="SEEK-SET">
+                            SEEK-SET
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref a b)] Int)
-                    </p>
-                    <pre class="args">
-                        (element-count a e)
-                    </pre>
-                    <p class="doc">
-                        <p>counts the occurrences of element <code>e</code> in an array.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#empty?">
-                        <h3 id="empty?">
-                            empty?
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] Bool)
-                    </p>
-                    <pre class="args">
-                        (empty? a)
-                    </pre>
-                    <p class="doc">
-                        <p>checks whether the array <code>a</code> is empty.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#find">
-                        <h3 id="find">
-                            find
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Fn [(Ref a b)] Bool c) d), (Ref (StaticArray a) b)] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (find f a)
-                    </pre>
-                    <p class="doc">
-                        <p>finds an element in <code>a</code> that matches the function <code>f</code> and wraps it in a <code>Just</code>.</p>
-<p>If it doesn’t find an element, <code>Nothing</code> will be returned.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#find-index">
-                        <h3 id="find-index">
-                            find-index
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Fn [(Ref a b)] Bool c) d), (Ref (StaticArray a) b)] (Maybe Int))
-                    </p>
-                    <pre class="args">
-                        (find-index f a)
-                    </pre>
-                    <p class="doc">
-                        <p>finds the index of the first element in <code>a</code> that matches the function <code>f</code> and wraps it in a <code>Just</code>.</p>
-<p>If it doesn’t find an index, <code>Nothing</code> will be returned.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#first">
-                        <h3 id="first">
-                            first
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (first a)
-                    </pre>
-                    <p class="doc">
-                        <p>takes the first element of an array and returns a <code>Just</code>.</p>
-<p>Returns <code>Nothing</code> if the array is empty.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#foreach">
-                        <h3 id="foreach">
-                            foreach
-                        </h3>
-                    </a>
-                    <div class="description">
-                        macro
-                    </div>
-                    <p class="sig">
-                        Macro
-                    </p>
-                    <pre class="args">
-                        (foreach binding expr)
-                    </pre>
-                    <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#foreach-internal">
-                        <h3 id="foreach-internal">
-                            foreach-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (foreach-internal var xs expr)
-                    </pre>
-                    <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#index-of">
-                        <h3 id="index-of">
-                            index-of
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref a b)] (Maybe Int))
-                    </p>
-                    <pre class="args">
-                        (index-of a e)
-                    </pre>
-                    <p class="doc">
-                        <p>gets the index of element <code>e</code> in an array and wraps it on a <code>Just</code>.</p>
-<p>If the element is not found, returns <code>Nothing</code></p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#last">
-                        <h3 id="last">
-                            last
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (last a)
-                    </pre>
-                    <p class="doc">
-                        <p>takes the last element of an array and returns a <code>Just</code>.</p>
-<p>Returns <code>Nothing</code> if the array is empty.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#length">
-                        <h3 id="length">
-                            length
-                        </h3>
-                    </a>
-                    <div class="description">
-                        template
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] Int)
+                        Int
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>gets the length of the static array.</p>
+                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#map!">
-                        <h3 id="map!">
-                            map!
+                    <a class="anchor" href="#fclose">
+                        <h3 id="fclose">
+                            fclose
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref (Fn [(Ref a b)] a c) d)] ())
-                    </p>
-                    <pre class="args">
-                        (map! xs f)
-                    </pre>
-                    <p class="doc">
-                        <p>Maps a function over the static array <code>xs</code>, mutating it in place. The difference to Array.endo-map (which does the same thing internally) is that this function takes a ref (since you can never have static arrays as values) and that it returns ().</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#maximum">
-                        <h3 id="maximum">
-                            maximum
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (maximum xs)
-                    </pre>
-                    <p class="doc">
-                        <p>gets the maximum in an array (elements must support <code>&lt;</code>) and wraps it in a <code>Just</code>.</p>
-<p>If the array is empty, it returns <code>Nothing</code>.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#minimum">
-                        <h3 id="minimum">
-                            minimum
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (minimum xs)
-                    </pre>
-                    <p class="doc">
-                        <p>gets the minimum in an array (elements must support <code>&gt;</code>) and wraps it in a <code>Just</code>.</p>
-<p>If the array is empty, returns <code>Nothing</code></p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#nth">
-                        <h3 id="nth">
-                            nth
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int] (Maybe a))
-                    </p>
-                    <pre class="args">
-                        (nth xs index)
-                    </pre>
-                    <p class="doc">
-                        <p>gets a reference to the <code>n</code>th element from an array <code>arr</code> wrapped on a <code>Maybe</code>.</p>
-<p>If the <code>index</code> is out of bounds, return <code>Maybe.Nothing</code></p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#predicate-count">
-                        <h3 id="predicate-count">
-                            predicate-count
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), (Ref (Fn [(Ref a b)] Bool c) d)] Int)
-                    </p>
-                    <pre class="args">
-                        (predicate-count a pred)
-                    </pre>
-                    <p class="doc">
-                        <p>counts the number of elements satisfying the predicate function <code>pred</code> in an array.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#reduce">
-                        <h3 id="reduce">
-                            reduce
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Fn [a, (Ref b c)] a d) e), a, (Ref (StaticArray b) c)] a)
-                    </p>
-                    <pre class="args">
-                        (reduce f x xs)
-                    </pre>
-                    <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#reverse!">
-                        <h3 id="reverse!">
-                            reverse!
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] ())
-                    </p>
-                    <pre class="args">
-                        (reverse! a)
-                    </pre>
-                    <p class="doc">
-                        <p>Reverse array in place.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#str">
-                        <h3 id="str">
-                            str
-                        </h3>
-                    </a>
-                    <div class="description">
-                        template
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] String)
+                        (Fn [(Ptr FILE)] Int)
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>converts a static array to a string.</p>
+                        <p>closes a file pointer (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#sum">
-                        <h3 id="sum">
-                            sum
+                    <a class="anchor" href="#fclose!">
+                        <h3 id="fclose!">
+                            fclose!
                         </h3>
                     </a>
                     <div class="description">
                         defn
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] a)
+                        (Fn [(Ptr FILE)] ())
                     </p>
                     <pre class="args">
-                        (sum xs)
+                        (fclose! file)
                     </pre>
                     <p class="doc">
-                        <p>sums an array (elements must support <code>+</code> and <code>zero</code>).</p>
+                        <p>same as (fclose) but to be used as a side effect.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#swap!">
-                        <h3 id="swap!">
-                            swap!
+                    <a class="anchor" href="#fflush">
+                        <h3 id="fflush">
+                            fflush
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        external
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int, Int] ())
-                    </p>
-                    <pre class="args">
-                        (swap! a i j)
-                    </pre>
-                    <p class="doc">
-                        <p>swaps the indices <code>i</code> and <code>j</code> of an array <code>a</code> in place.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#unsafe-first">
-                        <h3 id="unsafe-first">
-                            unsafe-first
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] a)
-                    </p>
-                    <pre class="args">
-                        (unsafe-first a)
-                    </pre>
-                    <p class="doc">
-                        <p>takes the first element of an array.</p>
-<p>Generates a runtime error if the array is empty.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#unsafe-last">
-                        <h3 id="unsafe-last">
-                            unsafe-last
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] a)
-                    </p>
-                    <pre class="args">
-                        (unsafe-last a)
-                    </pre>
-                    <p class="doc">
-                        <p>takes the last element of an array.</p>
-<p>Generates a runtime error if the array is empty.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#unsafe-nth">
-                        <h3 id="unsafe-nth">
-                            unsafe-nth
-                        </h3>
-                    </a>
-                    <div class="description">
-                        template
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int] (Ref a b))
+                        (Fn [(Ptr FILE)] Int)
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>gets a reference to the <code>n</code>th element from a static array <code>a</code>.</p>
+                        <p>flushes a file pointer, i.e. commits every write (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-nth-value">
-                        <h3 id="unsafe-nth-value">
-                            unsafe-nth-value
+                    <a class="anchor" href="#fflush!">
+                        <h3 id="fflush!">
+                            fflush!
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        defn
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b), Int] a)
+                        (Fn [(Ptr FILE)] ())
+                    </p>
+                    <pre class="args">
+                        (fflush! file)
+                    </pre>
+                    <p class="doc">
+                        <p>same as (fflush) but to be used as a side effect.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fgetc">
+                        <h3 id="fgetc">
+                            fgetc
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] Int)
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns the value at index <code>i</code> of a static array <code>a</code> (just like <a href="#unsafe-nth">unsafe-nth</a>) but does not take its reference, and does <em>not</em> copy the value. Should only be used for optimizations and when you know what you're doing, circumvents the borrow checker!</p>
+                        <p>gets a character from file (thin wrapper for the from C standard library).</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unsafe-raw">
-                        <h3 id="unsafe-raw">
-                            unsafe-raw
+                    <a class="anchor" href="#fopen">
+                        <h3 id="fopen">
+                            fopen
                         </h3>
                     </a>
                     <div class="description">
-                        template
+                        defn
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (StaticArray a) b)] (Ptr a))
+                        (Fn [(Ref String a), (Ref String b)] (Ptr FILE))
+                    </p>
+                    <pre class="args">
+                        (fopen pathname mode)
+                    </pre>
+                    <p class="doc">
+                        <p>opens a file for input/output/appending (thin wrapper for the C standard library). Consider using the function IO.open-file instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fread">
+                        <h3 id="fread">
+                            fread
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] Int)
+                    </p>
+                    <pre class="args">
+                        (fread file-name item-size items-count file)
+                    </pre>
+                    <p class="doc">
+                        <p>reads from a file into C-String (thin wrapper for fread(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#read-file"><code>read-file</code></a> or <a href="#unsafe-read-file"><code>unsafe-read-file</code></a> instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fseek">
+                        <h3 id="fseek">
+                            fseek
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE), Int, Int] Int)
                     </p>
                     <span>
                         
                     </span>
                     <p class="doc">
-                        <p>returns an array a as a raw pointer—useful for interacting with C.</p>
+                        <p>sets the position indicator of a file  (thin wrapper for fseek(file, offset, whence) from C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fseek!">
+                        <h3 id="fseek!">
+                            fseek!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE), Int, Int] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>same as (fseek) but to be used as a side effect.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#ftell">
+                        <h3 id="ftell">
+                            ftell
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets the position indicator of a file (thin wrapper for the C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fwrite">
+                        <h3 id="fwrite">
+                            fwrite
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] Int)
+                    </p>
+                    <pre class="args">
+                        (fwrite data item-size items-count file)
+                    </pre>
+                    <p class="doc">
+                        <p>writes a C-string to a file and returns the number of written items (thin wrapper for the C standard library). Consider using <a href="#write-file"><code>write-file</code></a> instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fwrite!">
+                        <h3 id="fwrite!">
+                            fwrite!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] ())
+                    </p>
+                    <pre class="args">
+                        (fwrite! data item-size items-count file)
+                    </pre>
+                    <p class="doc">
+                        <p>like fwrite but returns no indicator whether writing to file succeeded. Consider using fwrite instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#get-char">
+                        <h3 id="get-char">
+                            get-char
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>gets a character from stdin (thin wrapper for getchar() from C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#rewind">
+                        <h3 id="rewind">
+                            rewind
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ptr FILE)] ())
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>rewinds a file pointer, i.e. puts input and output stream to beginning (thin wrapper for the C standard library). If you want to verify, that this succeeded, use (fseek stream 0, SEEK_SET) instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#stderr">
+                        <h3 id="stderr">
+                            stderr
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard error file (thin wrapper for the C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#stdin">
+                        <h3 id="stdin">
+                            stdin
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard input file (thin wrapper for the C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#stdout">
+                        <h3 id="stdout">
+                            stdout
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Ptr FILE)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>the standard output file (thin wrapper for the C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#unlink">
+                        <h3 id="unlink">
+                            unlink
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] Int)
+                    </p>
+                    <pre class="args">
+                        (unlink file-name)
+                    </pre>
+                    <p class="doc">
+                        <p>unlinks a file, i.e. deletes it (thin wrapper for POSIX api in &lt;unistd.h&gt;).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#unlink!">
+                        <h3 id="unlink!">
+                            unlink!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref String a)] ())
+                    </p>
+                    <pre class="args">
+                        (unlink! file-name)
+                    </pre>
+                    <p class="doc">
+                        <p>same as (unlink) but to be used as a side effect.</p>
 
                     </p>
                 </div>

@@ -149,9 +149,20 @@
                             </a>
                         </li>
                         <li>
-                            <a href="IO.html">
-                                IO
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="IO.html">
+                                        IO
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="IO.Raw.html">
+                                            Raw
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Long.html">
@@ -350,7 +361,8 @@
                         (allocated? s)
                     </pre>
                     <p class="doc">
-                        
+                        <p>checks if a String returned by String.allocate is not NULL. This is a safeguard against out-of-memory conditions.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -976,26 +988,6 @@
                     </pre>
                     <p class="doc">
                         <p>checks whether a string is all lowercase.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#not-allocated?">
-                        <h3 id="not-allocated?">
-                            not-allocated?
-                        </h3>
-                    </a>
-                    <div class="description">
-                        meta-stub
-                    </div>
-                    <p class="sig">
-                        a
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>checks if a String returned by String.allocate (e.g. when created under out-of-memory conditions) is NULL.</p>
 
                     </p>
                 </div>

@@ -149,9 +149,20 @@
                             </a>
                         </li>
                         <li>
-                            <a href="IO.html">
-                                IO
-                            </a>
+                            <details>
+                                <summary>
+                                    <a href="IO.html">
+                                        IO
+                                    </a>
+                                </summary>
+                                <ul>
+                                    <li>
+                                        <a href="IO.Raw.html">
+                                            Raw
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
                         </li>
                         <li>
                             <a href="Long.html">
@@ -666,14 +677,14 @@
                         </h3>
                     </a>
                     <div class="description">
-                        external
+                        defn
                     </div>
                     <p class="sig">
                         (Fn [] String)
                     </p>
-                    <span>
-                        
-                    </span>
+                    <pre class="args">
+                        (error-text)
+                    </pre>
                     <p class="doc">
                         <p>returns a description for the last function from the C standard library to set System.errno. Please note that System.errno may change if strerror() does not know it (and thus sets it to EINVAL), so consider copying it before, if you should need it. Calling error-text after a successful call will return 'SUCCESS' and leave System.errno unchanged.</p>
 
@@ -695,7 +706,7 @@
                         
                     </span>
                     <p class="doc">
-                        <p>exits the program.</p>
+                        <p>exits the program with the supplied exit code (thin wrapper for the C standard library).</p>
 
                     </p>
                 </div>
@@ -927,6 +938,45 @@
                     <p class="doc">
                         <p>Sleeps for a specified number of microseconds.</p>
 
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#strerror">
+                        <h3 id="strerror">
+                            strerror
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] String)
+                    </p>
+                    <pre class="args">
+                        (strerror error-no)
+                    </pre>
+                    <p class="doc">
+                        <p>get error description for error code in standard C library (thin wrapper for the C standard library).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#strerror-">
+                        <h3 id="strerror-">
+                            strerror-
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [Int] (Ptr CChar))
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        
                     </p>
                 </div>
                 <div class="binder">
