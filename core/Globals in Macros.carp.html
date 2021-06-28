@@ -285,470 +285,675 @@
             </div>
             <div class="module">
                 <h1>
-                    IO.Raw
+                    Globals in Macros.carp
                 </h1>
                 <div class="module-description">
-                    <p>wrappers for functions from the C standard library. Consider using a more carpesque function from IO when it exists. For detailed documentation please consult the documentation of your system (e.g. under Linux try man fprint).</p>
-
+                    
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#EOF">
-                        <h3 id="EOF">
-                            EOF
+                    <a class="anchor" href="#and">
+                        <h3 id="and">
+                            and
                         </h3>
                     </a>
                     <div class="description">
-                        external
+                        macro
                     </div>
                     <p class="sig">
-                        Int
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>the End-Of-File character as a literal (thin wrapper for the C standard library)</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#SEEK-CUR">
-                        <h3 id="SEEK-CUR">
-                            SEEK-CUR
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        Int
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#SEEK-END">
-                        <h3 id="SEEK-END">
-                            SEEK-END
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        Int
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#SEEK-SET">
-                        <h3 id="SEEK-SET">
-                            SEEK-SET
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        Int
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>to be used with fseek (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fclose">
-                        <h3 id="fclose">
-                            fclose
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE)] Int)
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>closes a file pointer (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fclose!">
-                        <h3 id="fclose!">
-                            fclose!
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE)] ())
+                        Macro
                     </p>
                     <pre class="args">
-                        (fclose! file)
+                        (and :rest xs)
                     </pre>
                     <p class="doc">
-                        <p>same as (fclose) but to be used as a side effect.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fflush">
-                        <h3 id="fflush">
-                            fflush
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE)] Int)
-                    </p>
-                    <span>
                         
-                    </span>
-                    <p class="doc">
-                        <p>flushes a file pointer, i.e. commits every write (thin wrapper for the C standard library).</p>
-
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fflush!">
-                        <h3 id="fflush!">
-                            fflush!
+                    <a class="anchor" href="#annotate">
+                        <h3 id="annotate">
+                            annotate
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ptr FILE)] ())
+                        Macro
                     </p>
                     <pre class="args">
-                        (fflush! file)
+                        (annotate name annotation)
                     </pre>
                     <p class="doc">
-                        <p>same as (fflush) but to be used as a side effect.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fgetc">
-                        <h3 id="fgetc">
-                            fgetc
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE)] Int)
-                    </p>
-                    <span>
                         
-                    </span>
-                    <p class="doc">
-                        <p>gets a character from file (thin wrapper for the from C standard library).</p>
-
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fopen">
-                        <h3 id="fopen">
-                            fopen
+                    <a class="anchor" href="#annotate-helper">
+                        <h3 id="annotate-helper">
+                            annotate-helper
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        dynamic
                     </div>
                     <p class="sig">
-                        (Fn [(Ref String a), (Ref String b)] (Ptr FILE))
+                        Dynamic
                     </p>
                     <pre class="args">
-                        (fopen pathname mode)
+                        (annotate-helper name annotation)
                     </pre>
                     <p class="doc">
-                        <p>opens a file for input/output/appending (thin wrapper for the C standard library). Consider using the function IO.open-file instead.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fread">
-                        <h3 id="fread">
-                            fread
+                    <a class="anchor" href="#build-vararg">
+                        <h3 id="build-vararg">
+                            build-vararg
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        dynamic
                     </div>
                     <p class="sig">
-                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] Int)
+                        Dynamic
                     </p>
                     <pre class="args">
-                        (fread file-name item-size items-count file)
+                        (build-vararg func forms)
                     </pre>
                     <p class="doc">
-                        <p>reads from a file into C-String (thin wrapper for fread(cstr, item-size, items-count, file) from C standard library). Consider using <a href="#read-file"><code>read-file</code></a> or <a href="#unsafe-read-file"><code>unsafe-read-file</code></a> instead.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fseek">
-                        <h3 id="fseek">
-                            fseek
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE), Int, Int] Int)
-                    </p>
-                    <span>
                         
-                    </span>
-                    <p class="doc">
-                        <p>sets the position indicator of a file  (thin wrapper for fseek(file, offset, whence) from C standard library).</p>
-
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fseek!">
-                        <h3 id="fseek!">
-                            fseek!
+                    <a class="anchor" href="#comment">
+                        <h3 id="comment">
+                            comment
                         </h3>
                     </a>
                     <div class="description">
-                        external
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ptr FILE), Int, Int] ())
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>same as (fseek) but to be used as a side effect.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#ftell">
-                        <h3 id="ftell">
-                            ftell
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ptr FILE)] Int)
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>gets the position indicator of a file (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#fwrite">
-                        <h3 id="fwrite">
-                            fwrite
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] Int)
+                        Macro
                     </p>
                     <pre class="args">
-                        (fwrite data item-size items-count file)
+                        (comment :rest forms)
                     </pre>
                     <p class="doc">
-                        <p>writes a C-string to a file and returns the number of written items (thin wrapper for the C standard library). Consider using <a href="#write-file"><code>write-file</code></a> instead.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#fwrite!">
-                        <h3 id="fwrite!">
-                            fwrite!
+                    <a class="anchor" href="#cond">
+                        <h3 id="cond">
+                            cond
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ref String a), Int, Int, (Ptr FILE)] ())
+                        Macro
                     </p>
                     <pre class="args">
-                        (fwrite! data item-size items-count file)
+                        (cond :rest xs)
                     </pre>
                     <p class="doc">
-                        <p>like fwrite but returns no indicator whether writing to file succeeded. Consider using fwrite instead.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#get-char">
-                        <h3 id="get-char">
-                            get-char
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Fn [] Int)
-                    </p>
-                    <span>
                         
-                    </span>
-                    <p class="doc">
-                        <p>gets a character from stdin (thin wrapper for getchar() from C standard library).</p>
-
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#rewind">
-                        <h3 id="rewind">
-                            rewind
+                    <a class="anchor" href="#cond-internal">
+                        <h3 id="cond-internal">
+                            cond-internal
                         </h3>
                     </a>
                     <div class="description">
-                        external
+                        dynamic
                     </div>
                     <p class="sig">
-                        (Fn [(Ptr FILE)] ())
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>rewinds a file pointer, i.e. puts input and output stream to beginning (thin wrapper for the C standard library). If you want to verify, that this succeeded, use (fseek stream 0, SEEK_SET) instead.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#stderr">
-                        <h3 id="stderr">
-                            stderr
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Ptr FILE)
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>the standard error file (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#stdin">
-                        <h3 id="stdin">
-                            stdin
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Ptr FILE)
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>the standard input file (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#stdout">
-                        <h3 id="stdout">
-                            stdout
-                        </h3>
-                    </a>
-                    <div class="description">
-                        external
-                    </div>
-                    <p class="sig">
-                        (Ptr FILE)
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>the standard output file (thin wrapper for the C standard library).</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#unlink">
-                        <h3 id="unlink">
-                            unlink
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref String a)] Int)
+                        Dynamic
                     </p>
                     <pre class="args">
-                        (unlink file-name)
+                        (cond-internal xs)
                     </pre>
                     <p class="doc">
-                        <p>unlinks a file, i.e. deletes it (thin wrapper for POSIX api in &lt;unistd.h&gt;).</p>
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#const-assert">
+                        <h3 id="const-assert">
+                            const-assert
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (const-assert expr msg)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#def-">
+                        <h3 id="def-">
+                            def-
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (def- name value)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#defdynamic-once">
+                        <h3 id="defdynamic-once">
+                            defdynamic-once
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (defdynamic-once var expr)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#defn-">
+                        <h3 id="defn-">
+                            defn-
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (defn- name args form)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#deprecated">
+                        <h3 id="deprecated">
+                            deprecated
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (deprecated name :rest explanation)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#doc">
+                        <h3 id="doc">
+                            doc
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (doc name :rest strings)
+                    </pre>
+                    <p class="doc">
+                        <p>Set documentation for a binding.</p>
 
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#unlink!">
-                        <h3 id="unlink!">
-                            unlink!
+                    <a class="anchor" href="#hidden">
+                        <h3 id="hidden">
+                            hidden
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ref String a)] ())
+                        Macro
                     </p>
                     <pre class="args">
-                        (unlink! file-name)
+                        (hidden name)
                     </pre>
                     <p class="doc">
-                        <p>same as (unlink) but to be used as a side effect.</p>
-
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#hidden?">
+                        <h3 id="hidden?">
+                            hidden?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (hidden? name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#ignore">
+                        <h3 id="ignore">
+                            ignore
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (ignore form)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#implement-declaration">
+                        <h3 id="implement-declaration">
+                            implement-declaration
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (implement-declaration mod interface)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#implements-all">
+                        <h3 id="implements-all">
+                            implements-all
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (implements-all mod :rest interfaces)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#inline-c">
+                        <h3 id="inline-c">
+                            inline-c
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (inline-c name defcode :rest declcode)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#list-to-array-internal">
+                        <h3 id="list-to-array-internal">
+                            list-to-array-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (list-to-array-internal xs acc)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#load-and-use">
+                        <h3 id="load-and-use">
+                            load-and-use
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (load-and-use name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#map-internal">
+                        <h3 id="map-internal">
+                            map-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (map-internal f xs acc)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#or">
+                        <h3 id="or">
+                            or
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (or :rest xs)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#print-doc">
+                        <h3 id="print-doc">
+                            print-doc
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (print-doc name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#print-sig">
+                        <h3 id="print-sig">
+                            print-sig
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (print-sig name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#private">
+                        <h3 id="private">
+                            private
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (private name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#private?">
+                        <h3 id="private?">
+                            private?
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (private? name)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#refstr">
+                        <h3 id="refstr">
+                            refstr
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (refstr x)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#sig">
+                        <h3 id="sig">
+                            sig
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (sig name signature)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#swap!">
+                        <h3 id="swap!">
+                            swap!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (swap! x y)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#todo">
+                        <h3 id="todo">
+                            todo
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (todo name value)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#unreachable">
+                        <h3 id="unreachable">
+                            unreachable
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (unreachable msg)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#update!">
+                        <h3 id="update!">
+                            update!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (update! x f)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#use-all">
+                        <h3 id="use-all">
+                            use-all
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (use-all :rest names)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#use-all-fn">
+                        <h3 id="use-all-fn">
+                            use-all-fn
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (use-all-fn names)
+                    </pre>
+                    <p class="doc">
+                        
                     </p>
                 </div>
             </div>

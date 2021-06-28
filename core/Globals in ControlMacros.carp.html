@@ -285,288 +285,384 @@
             </div>
             <div class="module">
                 <h1>
-                    Statistics
+                    Globals in ControlMacros.carp
                 </h1>
                 <div class="module-description">
                     
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#grouped-median">
-                        <h3 id="grouped-median">
-                            grouped-median
+                    <a class="anchor" href="#--&gt;">
+                        <h3 id="--&gt;">
+                            --&gt;
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (Array Double) a), Int] Double)
+                        Macro
                     </p>
                     <pre class="args">
-                        (grouped-median data interval)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the grouped median of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#high-median">
-                        <h3 id="high-median">
-                            high-median
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (high-median data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the high median of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#iqr">
-                        <h3 id="iqr">
-                            iqr
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (iqr data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the interquartile range.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#low-median">
-                        <h3 id="low-median">
-                            low-median
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (low-median data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the low median of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#mean">
-                        <h3 id="mean">
-                            mean
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array a) b)] a)
-                    </p>
-                    <pre class="args">
-                        (mean data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the mean of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#median">
-                        <h3 id="median">
-                            median
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (median data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the median of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#pstdev">
-                        <h3 id="pstdev">
-                            pstdev
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (pstdev data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the population standard deviation of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#pstdev-pct">
-                        <h3 id="pstdev-pct">
-                            pstdev-pct
-                        </h3>
-                    </a>
-                    <div class="description">
-                        meta-stub
-                    </div>
-                    <p class="sig">
-                        a
-                    </p>
-                    <span>
-                        
-                    </span>
-                    <p class="doc">
-                        <p>Compute the standard deviation of the samples data as a percentile.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#pvariance">
-                        <h3 id="pvariance">
-                            pvariance
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (pvariance data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the population variance of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#quartiles">
-                        <h3 id="quartiles">
-                            quartiles
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] (Array Double))
-                    </p>
-                    <pre class="args">
-                        (quartiles data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the quartiles of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#stdev">
-                        <h3 id="stdev">
-                            stdev
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (stdev data)
-                    </pre>
-                    <p class="doc">
-                        <p>Compute the standard deviation of the samples data.</p>
-
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#stdev-pct">
-                        <h3 id="stdev-pct">
-                            stdev-pct
-                        </h3>
-                    </a>
-                    <div class="description">
-                        defn
-                    </div>
-                    <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
-                    </p>
-                    <pre class="args">
-                        (stdev-pct data)
+                        (--&gt; :rest forms)
                     </pre>
                     <p class="doc">
                         
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#summary">
-                        <h3 id="summary">
-                            summary
+                    <a class="anchor" href="#-&gt;">
+                        <h3 id="-&gt;">
+                            -&gt;
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Statistics.Summary)
+                        Macro
                     </p>
                     <pre class="args">
-                        (summary samples)
+                        (-&gt; :rest forms)
                     </pre>
                     <p class="doc">
-                        <p>Compute a variety of statistical values from a list of samples.</p>
-
+                        
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#variance">
-                        <h3 id="variance">
-                            variance
+                    <a class="anchor" href="#==&gt;">
+                        <h3 id="==&gt;">
+                            ==&gt;
+                            <span class="deprecation-notice">
+                                deprecated
+                            </span>
                         </h3>
                     </a>
                     <div class="description">
-                        defn
+                        macro
                     </div>
                     <p class="sig">
-                        (Fn [(Ref (Array Double) a)] Double)
+                        Macro
                     </p>
                     <pre class="args">
-                        (variance data)
+                        (==&gt; :rest forms)
                     </pre>
                     <p class="doc">
-                        <p>Compute the variance of the samples data.</p>
+                        
+                    </p>
+                    <div class="deprecation-text">
+                        <p>deprecated in favor of <code>==&gt;</code>.</p>
 
+                    </div>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#=&gt;">
+                        <h3 id="=&gt;">
+                            =&gt;
+                            <span class="deprecation-notice">
+                                deprecated
+                            </span>
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (=&gt; :rest forms)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                    <div class="deprecation-text">
+                        <p>deprecated in favor of <code>-&gt;</code>.</p>
+
+                    </div>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#case">
+                        <h3 id="case">
+                            case
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (case name :rest forms)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#case-internal">
+                        <h3 id="case-internal">
+                            case-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (case-internal name xs)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#comp">
+                        <h3 id="comp">
+                            comp
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (comp :rest fns)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#comp-internal">
+                        <h3 id="comp-internal">
+                            comp-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (comp-internal sym fns)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#defn-do">
+                        <h3 id="defn-do">
+                            defn-do
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (defn-do name arguments :rest body)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#doto">
+                        <h3 id="doto">
+                            doto
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (doto thing :rest expressions)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#doto-ref">
+                        <h3 id="doto-ref">
+                            doto-ref
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (doto-ref thing :rest expressions)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#forever-do">
+                        <h3 id="forever-do">
+                            forever-do
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (forever-do :rest forms)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#let-do">
+                        <h3 id="let-do">
+                            let-do
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (let-do bindings :rest forms)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#thread-first-internal">
+                        <h3 id="thread-first-internal">
+                            thread-first-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (thread-first-internal xs)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#thread-last-internal">
+                        <h3 id="thread-last-internal">
+                            thread-last-internal
+                        </h3>
+                    </a>
+                    <div class="description">
+                        dynamic
+                    </div>
+                    <p class="sig">
+                        Dynamic
+                    </p>
+                    <pre class="args">
+                        (thread-last-internal xs)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#unless">
+                        <h3 id="unless">
+                            unless
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (unless condition form)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#until">
+                        <h3 id="until">
+                            until
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (until cnd body)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#when">
+                        <h3 id="when">
+                            when
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (when condition form)
+                    </pre>
+                    <p class="doc">
+                        
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#while-do">
+                        <h3 id="while-do">
+                            while-do
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (while-do condition :rest forms)
+                    </pre>
+                    <p class="doc">
+                        
                     </p>
                 </div>
             </div>

@@ -270,6 +270,16 @@
                                 VectorN
                             </a>
                         </li>
+                        <li>
+                            <a href="Globals in Macros.carp.html">
+                                Globals in Macros.carp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Globals in ControlMacros.carp.html">
+                                Globals in ControlMacros.carp
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -3336,9 +3346,9 @@ value through successive applications of <code>f</code>.</p>
                     </p>
                 </div>
                 <div class="binder">
-                    <a class="anchor" href="#save-docs-internal">
-                        <h3 id="save-docs-internal">
-                            save-docs-internal
+                    <a class="anchor" href="#save-docs-ex">
+                        <h3 id="save-docs-ex">
+                            save-docs-ex
                         </h3>
                     </a>
                     <div class="description">
@@ -3351,9 +3361,9 @@ value through successive applications of <code>f</code>.</p>
                         
                     </span>
                     <p class="doc">
-                        <p>is the internal companion command to <code>save-docs</code>. <code>save-docs</code> should be called instead.</p>
+                        <p>takes two arrays, one with paths to modules (as symbols), and one with filenames (as strings). The filenames are used to emit global symbols in those files into a 'Global' module.</p>
 <p>Example Usage:</p>
-<pre><code>(save-docs-internal 'Module)
+<pre><code>(save-docs-internal '(ModuleA ModuleB) '(&quot;globals.carp&quot;))
 </code></pre>
 
                     </p>
