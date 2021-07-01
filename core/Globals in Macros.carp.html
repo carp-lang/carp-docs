@@ -306,7 +306,11 @@
                         (and :rest xs)
                     </pre>
                     <p class="doc">
-                        
+                        <p>evaluates the forms <code>xs</code> one at a time, from left to right. If a form
+evaluates to <code>false</code>, <code>and</code> returns that value and doesn't evaluate any of the
+other expressions, otherwise it returns the value of the last form in <code>xs</code>.
+<code>(and)</code> returns <code>true</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -325,45 +329,8 @@
                         (annotate name annotation)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#annotate-helper">
-                        <h3 id="annotate-helper">
-                            annotate-helper
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (annotate-helper name annotation)
-                    </pre>
-                    <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#build-vararg">
-                        <h3 id="build-vararg">
-                            build-vararg
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (build-vararg func forms)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>Add an annotation to this binding.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -382,7 +349,8 @@
                         (comment :rest forms)
                     </pre>
                     <p class="doc">
-                        
+                        <p>ignores <code>forms</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -401,26 +369,14 @@
                         (cond :rest xs)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#cond-internal">
-                        <h3 id="cond-internal">
-                            cond-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (cond-internal xs)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>Executes a block of code if a specified condition is true. Multiple
+such blocks can be chained.</p>
+<pre><code>(cond
+  (&lt; 10 1) (println &quot;Condition 1 is true&quot;)
+  (&gt; 10 1) (println &quot;Condition 2 is true&quot;)
+  (println &quot;Else branch&quot;))
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -439,7 +395,10 @@
                         (const-assert expr msg)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Asserts that the expression <code>expr</code> is true at compile time.
+Otherwise it will fail with the message <code>msg</code>.</p>
+<p>The expression must be evaluable at compile time.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -458,7 +417,8 @@
                         (def- name value)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Declares a variable while marking it as private and hidden.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -477,7 +437,8 @@
                         (defdynamic-once var expr)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Creates a dynamic variable and sets its value if it's not already defined.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -496,7 +457,8 @@
                         (defn- name args form)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Declares a function while marking it as private and hidden.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -515,7 +477,8 @@
                         (deprecated name :rest explanation)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Declares that a binding is deprecated, using an optional explanation.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -554,7 +517,8 @@
                         (hidden name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Mark a binding as hidden, this will make it not print with the 'info' command.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -573,7 +537,8 @@
                         (hidden? name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Is this binding hidden?</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -592,26 +557,8 @@
                         (ignore form)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#implement-declaration">
-                        <h3 id="implement-declaration">
-                            implement-declaration
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (implement-declaration mod interface)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>ignores the return value of the expression <code>form</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -630,7 +577,9 @@
                         (implements-all mod :rest interfaces)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Declares functions in mod with names matching <code>interfaces</code> as implementations
+of those interfaces.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -649,26 +598,8 @@
                         (inline-c name defcode :rest declcode)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#list-to-array-internal">
-                        <h3 id="list-to-array-internal">
-                            list-to-array-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (list-to-array-internal xs acc)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>Inlines some custom C code.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -687,26 +618,9 @@
                         (load-and-use name)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#map-internal">
-                        <h3 id="map-internal">
-                            map-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (map-internal f xs acc)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>loads a file and uses the module with in it. Assumes that
+the filename and module name are the same.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -725,7 +639,11 @@
                         (or :rest xs)
                     </pre>
                     <p class="doc">
-                        
+                        <p>evaluates the forms <code>xs</code> one at a time, from left to right. If a form
+evaluates to <code>true</code>, <code>or</code> returns that value and doesn't evaluate any of the
+other expressions, otherwise it returns the value of the last form in <code>xs</code>.
+<code>(or)</code> returns <code>false</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -744,7 +662,8 @@
                         (print-doc name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Print the documentation for a binding.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -763,7 +682,8 @@
                         (print-sig name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Print the annotated signature for a binding.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -782,7 +702,8 @@
                         (private name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Mark a binding as private, this will make it inaccessible from other modules.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -801,7 +722,8 @@
                         (private? name)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Is this binding private?</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -820,7 +742,8 @@
                         (refstr x)
                     </pre>
                     <p class="doc">
-                        
+                        <p>stringifies <code>x</code> and takes the reference of that string.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -839,7 +762,8 @@
                         (sig name signature)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Annotate a binding with the desired signature.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -858,7 +782,9 @@
                         (swap! x y)
                     </pre>
                     <p class="doc">
-                        
+                        <p>swaps its arguments <code>x</code> and <code>y</code> in place.</p>
+<p><em>Note</em>: Unhygienic!</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -877,7 +803,8 @@
                         (todo name value)
                     </pre>
                     <p class="doc">
-                        
+                        <p>sets the todo property for a binding.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -896,7 +823,9 @@
                         (unreachable msg)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Asserts that a block of code will never be reached. If it is
+the program will be aborted with an error message.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -915,7 +844,8 @@
                         (update! x f)
                     </pre>
                     <p class="doc">
-                        
+                        <p>updates <code>x</code> in place using the function <code>f</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -934,26 +864,8 @@
                         (use-all :rest names)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#use-all-fn">
-                        <h3 id="use-all-fn">
-                            use-all-fn
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (use-all-fn names)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>is a variadic version of <code>use</code>.</p>
+
                     </p>
                 </div>
             </div>

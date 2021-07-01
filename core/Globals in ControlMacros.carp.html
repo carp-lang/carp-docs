@@ -306,7 +306,15 @@
                         (--&gt; :rest forms)
                     </pre>
                     <p class="doc">
-                        
+                        <p>threads the first form through the following ones, making it the last
+argument.</p>
+<p>Example:</p>
+<pre><code>(--&gt; 1
+    (- 10)
+    (/ 45)
+) ; =&gt; 5
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -325,7 +333,15 @@
                         (-&gt; :rest forms)
                     </pre>
                     <p class="doc">
-                        
+                        <p>threads the first form through the following ones, making it the first
+argument.</p>
+<p>Example:</p>
+<pre><code>(-&gt; 1
+    (- 10)
+    (* 5)
+) ; =&gt; -45
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -393,29 +409,20 @@
                         Macro
                     </p>
                     <pre class="args">
-                        (case name :rest forms)
+                        (case form :rest branches)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#case-internal">
-                        <h3 id="case-internal">
-                            case-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (case-internal name xs)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>takes a form and a list of branches which are value and operation
+pairs. If a value matches, the operation is executed. It takes a catch-all else
+branch that is executed if nothing matches.</p>
+<p>Example:</p>
+<pre><code>(case (+ 10 1)
+  10 (println* &quot;nope&quot;)
+  11 (println* &quot;yup&quot;)
+  (println* &quot;else branch&quot;)
+)
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -434,26 +441,8 @@
                         (comp :rest fns)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#comp-internal">
-                        <h3 id="comp-internal">
-                            comp-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (comp-internal sym fns)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>Composes the functions <code>fns</code> into one <code>fn</code>.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -472,7 +461,8 @@
                         (defn-do name arguments :rest body)
                     </pre>
                     <p class="doc">
-                        
+                        <p>is a <code>defn</code> with an implicit <code>do</code> body.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -491,7 +481,16 @@
                         (doto thing :rest expressions)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Evaluates <code>thing</code>, then calls all of the functions on it and
+returns it. Useful for chaining mutating, imperative functions, and thus
+similar to <code>-&gt;</code>. If you need <code>thing</code> to be passed as a <code>ref</code> into <code>expressions</code>
+functions, use <a href="#doto-ref"><code>doto-ref</code></a> instead.</p>
+<pre><code>(let [x @&quot;hi&quot;]
+  @(doto &amp;x
+    (string-set! 0 \o)
+    (string-set! 1 \y)))
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -510,7 +509,15 @@
                         (doto-ref thing :rest expressions)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Evaluates <code>thing</code>, then calls all of the functions on it and
+returns it. Useful for chaining mutating, imperative functions, and thus
+similar to <code>-&gt;</code>. If you need <code>thing</code> not to be passed as a <code>ref</code> into
+<code>expressions</code> functions, use <a href="#doto"><code>doto</code></a> instead.</p>
+<pre><code>(doto-ref @&quot;hi&quot;
+  (string-set! 0 \o)
+  (string-set! 1 \y))
+</code></pre>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -529,7 +536,8 @@
                         (forever-do :rest forms)
                     </pre>
                     <p class="doc">
-                        
+                        <p>is a <code>forever</code> with an implicit <code>do</code> body.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -548,45 +556,8 @@
                         (let-do bindings :rest forms)
                     </pre>
                     <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#thread-first-internal">
-                        <h3 id="thread-first-internal">
-                            thread-first-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (thread-first-internal xs)
-                    </pre>
-                    <p class="doc">
-                        
-                    </p>
-                </div>
-                <div class="binder">
-                    <a class="anchor" href="#thread-last-internal">
-                        <h3 id="thread-last-internal">
-                            thread-last-internal
-                        </h3>
-                    </a>
-                    <div class="description">
-                        dynamic
-                    </div>
-                    <p class="sig">
-                        Dynamic
-                    </p>
-                    <pre class="args">
-                        (thread-last-internal xs)
-                    </pre>
-                    <p class="doc">
-                        
+                        <p>is a <code>let</code> with an implicit <code>do</code> body.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -605,7 +576,8 @@
                         (unless condition form)
                     </pre>
                     <p class="doc">
-                        
+                        <p>is an <code>if</code> without a then branch.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -624,7 +596,8 @@
                         (until cnd body)
                     </pre>
                     <p class="doc">
-                        
+                        <p>Executes <code>body</code> until the condition <code>cnd</code> is true.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -643,7 +616,8 @@
                         (when condition form)
                     </pre>
                     <p class="doc">
-                        
+                        <p>is an <code>if</code> without an else branch.</p>
+
                     </p>
                 </div>
                 <div class="binder">
@@ -662,7 +636,8 @@
                         (while-do condition :rest forms)
                     </pre>
                     <p class="doc">
-                        
+                        <p>is a <code>while</code> with an implicit <code>do</code> body.</p>
+
                     </p>
                 </div>
             </div>
