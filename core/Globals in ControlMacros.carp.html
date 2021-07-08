@@ -413,12 +413,14 @@ argument.</p>
                     </pre>
                     <p class="doc">
                         <p>takes a form and a list of branches which are value and operation
-pairs. If a value matches, the operation is executed. It takes a catch-all else
-branch that is executed if nothing matches.</p>
+pairs. If a value matches (or any in a list of values preced by <code>:or</code>), the
+operation is executed. It takes a catch-all else branch that is executed if
+nothing matches.</p>
 <p>Example:</p>
 <pre><code>(case (+ 10 1)
   10 (println* &quot;nope&quot;)
   11 (println* &quot;yup&quot;)
+  (:or 12 13) (println* &quot;multibranch, but nope&quot;)
   (println* &quot;else branch&quot;)
 )
 </code></pre>
