@@ -803,6 +803,27 @@ stack-allocated. For a more flexible, heap-allocated version, you might want to 
                     </p>
                 </div>
                 <div class="binder">
+                    <a class="anchor" href="#scan!">
+                        <h3 id="scan!">
+                            scan!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [a, a] a b) c), (Ref (StaticArray a) d)] ())
+                    </p>
+                    <pre class="args">
+                        (scan! f xs)
+                    </pre>
+                    <p class="doc">
+                        <p>Scans and replaces the array in-place, using a binary function.</p>
+<p>For example, give <code>(def numbers [1 1 1])</code>, a <code>scan!</code> using <code>Int.+</code> will mutate <code>numbers</code> to be <code>[1 2 3]</code>.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
                     <a class="anchor" href="#str">
                         <h3 id="str">
                             str

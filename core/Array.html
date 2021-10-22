@@ -683,6 +683,28 @@ variant you might want to check out <a href="./StaticArray.html"><code>StaticArr
                     </p>
                 </div>
                 <div class="binder">
+                    <a class="anchor" href="#endo-scan">
+                        <h3 id="endo-scan">
+                            endo-scan
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [(Ref a b), (Ref a c)] a d) e), (Array a)] (Array a))
+                    </p>
+                    <pre class="args">
+                        (endo-scan f xs)
+                    </pre>
+                    <p class="doc">
+                        <p>Like <code>Array.scan</code>, but uses the first element of the array as the starting value.
+Also does not create a new array, but reuses the initial one instead (by taking ownership over <code>xs</code>.)</p>
+<p>For example, an endo-scan using <code>Int.+</code> over the array [1 1 1 1 1] will return [1 2 3 4 5]</p>
+
+                    </p>
+                </div>
+                <div class="binder">
                     <a class="anchor" href="#enumerated">
                         <h3 id="enumerated">
                             enumerated
@@ -1342,6 +1364,28 @@ array on failure.</p>
                     </pre>
                     <p class="doc">
                         <p>reverses an array.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#scan">
+                        <h3 id="scan">
+                            scan
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Fn [(Ref a b), (Ref c d)] a e) f), a, (Ref (Array c) d)] (Array a))
+                    </p>
+                    <pre class="args">
+                        (scan f x xs)
+                    </pre>
+                    <p class="doc">
+                        <p>Similar to <code>Array.reduce</code>, but instead returns an array with the starting element,
+and then all intermediate values.</p>
+<p>For example, a scan using <code>Int.+</code> over the array [1 1 1 1 1] (starting at 0) will return [0 1 2 3 4 5].</p>
 
                     </p>
                 </div>
