@@ -439,6 +439,29 @@ other expressions, otherwise it returns the value of the last form in <code>xs</
                     </p>
                 </div>
                 <div class="binder">
+                    <a class="anchor" href="#c-name">
+                        <h3 id="c-name">
+                            c-name
+                        </h3>
+                    </a>
+                    <div class="description">
+                        macro
+                    </div>
+                    <p class="sig">
+                        Macro
+                    </p>
+                    <pre class="args">
+                        (c-name sym cname)
+                    </pre>
+                    <p class="doc">
+                        <p>Override the identifiers Carp generates for a given symbol in C output.</p>
+<pre><code>(defn foo-bar [] 1)
+(c-name foo-bar &quot;foo_bar&quot;)
+</code></pre>
+
+                    </p>
+                </div>
+                <div class="binder">
                     <a class="anchor" href="#comment">
                         <h3 id="comment">
                             comment
