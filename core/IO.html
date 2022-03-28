@@ -406,14 +406,14 @@ module are wrappers around the C standard library.</p>
                         </h3>
                     </a>
                     <div class="description">
-                        external
+                        defn
                     </div>
                     <p class="sig">
-                        (Fn [(Ptr FILE)] Char)
+                        (Fn [(Ptr FILE)] (Result Char String))
                     </p>
-                    <span>
-                        
-                    </span>
+                    <pre class="args">
+                        (fgetc file)
+                    </pre>
                     <p class="doc">
                         <p>gets a character from a file pointer (thin wrapper for the C standard library).</p>
 
