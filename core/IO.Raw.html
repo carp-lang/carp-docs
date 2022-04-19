@@ -510,7 +510,7 @@
                         
                     </span>
                     <p class="doc">
-                        <p>gets a character from file (thin wrapper for the from C standard library).</p>
+                        <p>gets a character from file (thin wrapper for fgetc from the C standard library).</p>
 
                     </p>
                 </div>
@@ -531,6 +531,26 @@
                     </pre>
                     <p class="doc">
                         <p>opens a file for input/output/appending (thin wrapper for the C standard library). Consider using the function IO.open-file instead.</p>
+
+                    </p>
+                </div>
+                <div class="binder">
+                    <a class="anchor" href="#fputc">
+                        <h3 id="fputc">
+                            fputc
+                        </h3>
+                    </a>
+                    <div class="description">
+                        external
+                    </div>
+                    <p class="sig">
+                        (Fn [Int, (Ptr FILE)] Int)
+                    </p>
+                    <span>
+                        
+                    </span>
+                    <p class="doc">
+                        <p>writes a character to a file (thin wrapper for fputc from the C standard library).</p>
 
                     </p>
                 </div>
