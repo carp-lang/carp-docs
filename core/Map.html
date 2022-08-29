@@ -1179,6 +1179,26 @@ grows and shrinks based on load.</p>
                     </p>
                 </div>
                 <div class="binder">
+                    <a class="anchor" href="#update-with-default!">
+                        <h3 id="update-with-default!">
+                            update-with-default!
+                        </h3>
+                    </a>
+                    <div class="description">
+                        defn
+                    </div>
+                    <p class="sig">
+                        (Fn [(Ref (Map a b) c), (Ref a c), (Ref (Fn [b] b d) e), b] ())
+                    </p>
+                    <pre class="args">
+                        (update-with-default! m k f v)
+                    </pre>
+                    <p class="doc">
+                        <p>Update value at key k in map with function f, in-place. If k doesn't exist in map, set k to (f v).</p>
+
+                    </p>
+                </div>
+                <div class="binder">
                     <a class="anchor" href="#vals">
                         <h3 id="vals">
                             vals
